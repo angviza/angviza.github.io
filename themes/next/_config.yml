@@ -17,7 +17,7 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -101,6 +101,7 @@ creative_commons:
 #scheme: Mist
 scheme: Pisces
 #scheme: Gemini
+#scheme: Custom
 
 # Dark Mode
 darkmode: false
@@ -439,7 +440,7 @@ font:
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: 
+    family:
 
   # Font settings for <code> and code blocks.
   codes:
@@ -997,14 +998,14 @@ js: js
 images: images
 
 neat_enable: true  #打开总开关
-neat_html:      
+neat_html:
   enable: true      #打开压缩html文件开关
   exclude:          #html的排除列表
 
-neat_css:          
+neat_css:
   enable: true      #配置CSS文件开关
   exclude:
-    - '**.min.css'   #配置排除文件  
+    - '**.min.css'   #配置排除文件
 
 neat_js:
   enable: true       #js压缩开关

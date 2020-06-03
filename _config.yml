@@ -5,7 +5,7 @@
 # Site
 title: Angviza
 subtitle: 'Quinn.Zhang'
-description: 'nodesc'
+description: 'Q. W .K'
 keywords: 
 author: angviza
 language: zh-CN
@@ -44,13 +44,15 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
 highlight:
-  enable: false
-  # line_number: true
-  # auto_detect: false
-  # tab_replace: ''
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: '    '
   # wrap: true
   # hljs: false
+  
 search:
   path: search.xml
   field: post
@@ -120,16 +122,36 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
+include: 
+exclude: 
 ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: matery #maupassant #matery
+theme: next #next #yilia #maupassant #matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: 'git'
+  repository: 'git@github.com:angviza/angviza.github.io.git'
+  branch: master
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true

@@ -24,7 +24,7 @@ tags:
 反例： DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 3
 
 **[强制] 类名使用 `UpperCamelCase` 风格，必须遵从[驼峰](https://baike.baidu.com/item/骆驼命名法/7794053?fr=aladdin&fromid=7560610&fromtitle=驼峰命名法)形式，但以下情形例外：`DO` / `BO` /`DTO` / `VO` / `AO`**
-
+<!--more-->
 正例：MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion
 
 反例：macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion

@@ -1,3 +1,12 @@
+---
+title: RocketMQ
+categories: MQ
+toc: true
+tags:
+  - MQ
+  - services
+---
+
 生产者发送消息：
 export NAMESRV_ADDR=127.0.0.1:9876
 sh tools.sh org.apache.rocketmq.example.quickstart.Producer

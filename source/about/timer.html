@@ -1,0 +1,275 @@
+---
+layout: false
+title: "网站运行计时器"
+comments: false
+permalink:
+---
+
+<html lang="zh_CN">
+    <head></head>
+
+<style type="text/css">
+	/* *{margin:0;padding:0}
+	.post-body{overflow-wrap:break-word;line-height:2;text-align:justify;font-size:1.125em}
+	@media(min-width:992px){
+		.post-body{text-align:justify}}
+	@media(min-width:1200px){zh_CN
+		.post-body{font-size:1.125em}}
+	div{display:block}
+	.note{margin-bottom:20px;position:relative;border-radius:3px;padding:15px;border-width:1px;border-style:solid;border-image:initial}
+	.success{color:#3c763d;background:#dff0d8;border-color:#d0e6be}
+	.primary{background:#f3daff;border-color:#e1c2ff;color:#6f42c1}
+	p{letter-spacing:normal;margin:0 0 20px}
+	p:last-child{margin-bottom:0}
+	p:first-child{margin-top:0}
+
+
+    .ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.time {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; } */
+
+
+
+
+
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+} */
+
+.animation-wrapper {
+  width: 100%;
+  max-width: 910px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.easing-visualizer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 910px;
+  height: 455px;
+  margin: -227px 0 0 -455px;
+}
+
+.easing-visualizer .wrapper {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.bars-wrapper,
+.dots-wrapper {
+  transform: translateZ(0);
+}
+
+.easing-visualizer .bar {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  background-image: linear-gradient(180deg, #373734 0%, #242423 52%, #0D0D0C 100%);
+  transform-origin: 50% 50%;
+}
+
+.easing-visualizer .dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+
+</style>
+</head>
+
+<body class="post-body">
+    <div class="animation-wrapper">
+        <div class="feature-animation">
+          <div class="easing-visualizer">
+            <div class="wrapper bars-wrapper"></div>
+            <div class="wrapper dots-wrapper"></div>
+          </div>
+        </div>
+      </div>
+
+ 	<!-- <div class="note primary">
+		<p>本站已经运行了  <span id="sitetime" class="time">已经运行了一年多了</span></p>
+	</div> -->
+</body>
+<script src="https://lib.baomitu.com/animejs/3.2.0/anime.min.js"></script>
+<script language=javascript>
+	function siteTime(){        
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var year = 2018//document.getElementById("year").innerHTML;
+		var month = 02//document.getElementById("month").innerHTML;
+		var day = 13//document.getElementById("day").innerHTML;
+		var hour = 00//document.getElementById("hour").innerHTML;
+		var minute = 00//document.getElementById("minute").innerHTML;
+        var second = 00//document.getElementById("second").innerHTML;//北京时间2018-2-13 00:00:00
+        
+		var t1 = Date.UTC(year,month,day,hour,minute,second); 
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+
+	    document.getElementById("sitetime").innerHTML=(diffYears==0?"":diffYears+" 年 ")+diffDays+" 日 "+diffHours+" 小时 "+diffMinutes+" 分 "+diffSeconds+" 秒";
+
+	}
+    
+
+    // var textWrapper = document.querySelector('.time');
+    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='time'>$&</span>");
+
+//     anime.timeline({loop: true})
+//     .add({
+//     targets: '.time',
+//     scale: [0.3,1],
+//     opacity: [0,1],
+//     translateZ: 0,
+//     easing: "easeOutExpo",
+//     duration: 5000,
+//     //delay: (el, i) => 70 * (i+1),
+//     begin: siteTime
+//   });
+
+
+  //===
+  function fitElementToParent(el, padding) {
+  var timeout = null;
+  function resize() {
+    if (timeout) clearTimeout(timeout);
+    anime.set(el, {scale: 1});
+    var pad = padding || 0;
+    var parentEl = el.parentNode;
+    var elOffsetWidth = el.offsetWidth - pad;
+    var parentOffsetWidth = parentEl.offsetWidth;
+    var ratio = parentOffsetWidth / elOffsetWidth;
+    timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+}
+
+var easingsAnimation = (function() {
+
+  var easingVisualizerEl = document.querySelector('.easing-visualizer');
+  var barsWrapperEl = easingVisualizerEl.querySelector('.bars-wrapper');
+  var dotsWrapperEl = easingVisualizerEl.querySelector('.dots-wrapper');
+  var barsFragment = document.createDocumentFragment();
+  var dotsFragment = document.createDocumentFragment();
+  var numberOfBars = 91;
+  var duration = 450;
+  var animation;
+  
+  fitElementToParent(easingVisualizerEl, 0);
+
+  for (var i = 0; i < numberOfBars; i++) {
+    var barEl = document.createElement('div');
+    var dotEl = document.createElement('div');
+    barEl.classList.add('bar');
+    dotEl.classList.add('dot');
+    dotEl.classList.add('color-red');
+    barsFragment.appendChild(barEl);
+    dotsFragment.appendChild(dotEl);
+  }
+
+  barsWrapperEl.appendChild(barsFragment);
+  dotsWrapperEl.appendChild(dotsFragment);
+  
+  function play() {
+    
+    var easings = [];
+    for (let ease in anime.penner) easings.push(ease);
+    easings.push('steps('+anime.random(5, 20)+')');
+    easings.push('steps('+anime.random(5, 20)+')');
+    easings.push('cubicBezier(0.545, 0.475, 0.145, 1)');
+    var ease = easings[anime.random(0, easings.length - 1)];
+
+    animation = anime.timeline({
+      duration: duration,
+      easing: ease,
+      complete: play
+    })
+    .add({
+      targets: '.easing-visualizer .bar',
+      scaleY: anime.stagger([1, 44], {easing: ease, from: 'center', direction: 'reverse'}),
+      delay: anime.stagger(7, {from: 'center'})
+    })
+    .add({
+      targets: '.easing-visualizer .dot',
+      translateY: anime.stagger(['-160px', '160px'], {easing: ease, from: 'last'}),
+      delay: anime.stagger(7, {from: 'center'})
+    }, 0);
+
+  }
+  
+  play();
+  
+})();
+	</script>
+</html>

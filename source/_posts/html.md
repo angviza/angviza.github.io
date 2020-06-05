@@ -25,7 +25,7 @@ tags:
 4. 一个可选的历史遗留的DOCTYPE字符串 （[DOCTYPE legacy string](http://www.w3.org/TR/2014/REC-html5-20141028/syntax.html#doctype-legacy-string)），或者一个可选的已过时但被允许的DOCTYPE字符串 （[obsolete permitted DOCTYPE string](http://www.w3.org/TR/2014/REC-html5-20141028/syntax.html#obsolete-permitted-doctype-string)） 字符串
 5. 一个或多个空白字符
 6. 一个编码为 U+003E 的字符 “>”
-<!--more-->
+
 ### 团队约定
 
 HTML文件必须加上 DOCTYPE 声明，并统一使用 HTML5 的文档声明：

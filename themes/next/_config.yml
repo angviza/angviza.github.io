@@ -526,7 +526,7 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://github.com/ApoorvSaxena/lozad.js
-lazyload: false
+lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
@@ -1006,7 +1006,7 @@ neat_css:
   enable: true      #配置CSS文件开关
   exclude:
     - '**.min.css'   #配置排除文件
-
+    
 neat_js:
   enable: true       #js压缩开关
   mangle: true       #是否破坏文件名

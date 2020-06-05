@@ -1,14 +1,12 @@
 ---
 title: Maven 打包发布
-categories: 工具
+categories: Java
 toc: true
 tags:
-  - jenkins
-  - ops
+  - maven
+  - java
 ---
 # Python
-
-https://ywnz.com/linuxjc/6033.html
 
 
 

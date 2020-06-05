@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://angviza.github.io
-root: /
+root: /angviza.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -137,6 +137,14 @@ deploy:
   type: 'git'
   repository: 'git@github.com:angviza/angviza.github.io.git'
   branch: master
+# 阅读全文  
+excerpt_description: true
+excerpt:
+  depth: 10
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
+  
 jsonContent:
   meta: false
   pages: false

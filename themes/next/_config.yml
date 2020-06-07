@@ -282,9 +282,10 @@ follow_me:
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
+# true 有bug
 related_posts:
   enable: false
-  title: # Custom header, leave empty to use the default one
+  title: '推荐' # Custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
@@ -376,8 +377,8 @@ reading_progress:
   enable: true
   # Available values: top | bottom
   position: top
-  color: "#37c6c0"
-  height: 3px
+  color: "#c72b26"
+  height: 2px
 
 # Bookmark Support
 bookmark:
@@ -1006,7 +1007,7 @@ neat_css:
   enable: true      #配置CSS文件开关
   exclude:
     - '**.min.css'   #配置排除文件
-    
+
 neat_js:
   enable: true       #js压缩开关
   mangle: true       #是否破坏文件名

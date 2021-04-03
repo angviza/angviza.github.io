@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/angviza.github.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/angviza.github.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/angviza.github.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/angviza.github.io/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/angviza.github.io/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Courier New:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/angviza.github.io/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"angviza.github.io","root":"/angviza.github.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="【转】https:&#x2F;&#x2F;github.com&#x2F;coppyC&#x2F;blog&#x2F;issues&#x2F;6 前言为什么vue中有的文件中的函数不能提示，转到定义提示没有任何定义，而有的文件又正常工作  从第三方库增强提示 （例如 this.$axios）  从已写的代码增强提示 （例如 this.$store）   新手教程  先来个官网教程小改版本。   在根目录新建 global.d.ts 文件，然后加入下面代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="typescript 提示">
+<meta property="og:url" content="https://angviza.github.io/typescript/d.ts/index.html">
+<meta property="og:site_name" content="Angviza">
+<meta property="og:description" content="【转】https:&#x2F;&#x2F;github.com&#x2F;coppyC&#x2F;blog&#x2F;issues&#x2F;6 前言为什么vue中有的文件中的函数不能提示，转到定义提示没有任何定义，而有的文件又正常工作  从第三方库增强提示 （例如 this.$axios）  从已写的代码增强提示 （例如 this.$store）   新手教程  先来个官网教程小改版本。   在根目录新建 global.d.ts 文件，然后加入下面代码">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://user-images.githubusercontent.com/25004510/59961624-c9d77e80-950c-11e9-9fc5-f0db9468d83c.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/25004510/59961709-f5a73400-950d-11e9-9b2f-30fa9076abea.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/25004510/59961497-1de16380-950b-11e9-8a73-9e389fe79d3a.png">
+<meta property="article:published_time" content="2020-06-13T16:31:24.132Z">
+<meta property="article:modified_time" content="2020-06-13T16:31:24.132Z">
+<meta property="article:author" content="angviza">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/25004510/59961624-c9d77e80-950c-11e9-9fc5-f0db9468d83c.png">
+
+<link rel="canonical" href="https://angviza.github.io/typescript/d.ts/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>typescript 提示 | Angviza</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/angviza.github.io/atom.xml" title="Angviza" type="application/atom+xml">
+<link rel="stylesheet" href="/angviza.github.io/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/angviza.github.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Angviza</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Quinn.Zhang</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/angviza.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/angviza.github.io/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/angviza.github.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/angviza.github.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/angviza.github.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/angviza" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://angviza.github.io/typescript/d.ts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/angviza.github.io/assets/blogImg/avatar.jpg">
+      <meta itemprop="name" content="angviza">
+      <meta itemprop="description" content="Q. W .K">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Angviza">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          typescript 提示
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-14 00:31:24" itemprop="dateCreated datePublished" datetime="2020-06-14T00:31:24+08:00">2020-06-14</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/angviza.github.io/typescript/d.ts/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="typescript/d.ts/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>【转】<a target="_blank" rel="noopener" href="https://github.com/coppyC/blog/issues/6">https://github.com/coppyC/blog/issues/6</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为什么vue中有的文件中的函数不能提示，转到定义提示没有任何定义，而有的文件又正常工作</p>
+<ul>
+<li><p>从第三方库增强提示 （例如 <code>this.$axios</code>）</p>
+</li>
+<li><p>从已写的代码增强提示 （例如 <code>this.$store</code>）</p>
+</li>
+</ul>
+<h2 id="新手教程"><a href="#新手教程" class="headerlink" title="新手教程"></a>新手教程</h2><p>  先来个官网教程小改版本。</p>
+<p>  在根目录新建 <code>global.d.ts</code> 文件，然后加入下面代码</p>
+  <figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="built_in">module</span> <span class="string">'vue/types/vue'</span> {</span><br><span class="line">  <span class="comment">// 声明原型链属性: `this.x`</span></span><br><span class="line">  <span class="keyword">interface</span> Vue {</span><br><span class="line">    xx: <span class="built_in">string</span></span><br><span class="line">  }</span><br><span class="line">  <span class="comment">// 声明全局属性: `Vue.xx`</span></span><br><span class="line">  <span class="keyword">interface</span> VueConstructor {</span><br><span class="line">    oo: <span class="built_in">string</span></span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明选项属性: `export default { xxx: '' }`</span></span><br><span class="line"><span class="keyword">declare</span> <span class="built_in">module</span> <span class="string">'vue/types/options'</span> {</span><br><span class="line">  <span class="keyword">interface</span> ComponentOptions&lt;V <span class="keyword">extends</span> Vue&gt; {</span><br><span class="line">    www?: <span class="built_in">string</span></span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>对的，你没有看错，我没有在 data 声明 xx，提示里面却有 xx，<br><code>Vue.oo</code> 也有提示，Vue选项的 <code>ww</code> 也能得到提示。</p>
+<p>（如果没有提示，需要重启一下 vscode，用js的话可能还需要添加 jsconfig.json 文件）</p>
+<p>在 vscode 中增强 Vue 的提示无非就是这三种途径。</p>
+<h2 id="番外-typescript-声明文件了解一下"><a href="#番外-typescript-声明文件了解一下" class="headerlink" title="[番外] typescript 声明文件了解一下"></a>[番外] typescript 声明文件了解一下</h2><p>typescript 作为 vscode 的亲儿子，只要掌握之后，在 vscode 中写 js、ts 确实是能提升幸福度。</p>
+<p>而本文也不可能让大家马上精通 typescript，只能说说上面的代码。</p>
+<p>其实通过图片效果，大家也都了解得差不多了，而且我也打了注释，应该都能看懂，需要注意的可能就是，声明vue选项(即<code>interface ComponentOptions</code>)的时候，要记得加上 <code>?</code> 来表示这是一个可选属性，不然会变成必填属性，然后提示可能会泡汤。</p>
+<p>然后注释使用 <code>/** */</code> 这种注释，不要使用这种 <code>//</code> ，这样的话提示会显示注释</p>
+<p>然后就是typescript 剩下的就要自己去学了，我只能带到这里了。</p>
+<p>如果是解决 mpvue 提示的话，我这里写了一个包放在 github 上开源了。</p>
+<p>可以参考一下。 <a target="_blank" rel="noopener" href="https://github.com/coppyC/types/tree/mpvue">https://github.com/coppyC/types/tree/mpvue</a></p>
+<p>也欢迎安装使用 <code>yarn add -D coppyc/types#mpvue</code></p>
+<p>效果还是很 nice 的</p>
+<h1 id="增强-this-store-提示"><a href="#增强-this-store-提示" class="headerlink" title="增强 this.$store 提示"></a>增强 <code>this.$store 提示</code></h1><p>但是你上面那样加一些无意义的提示是没用的，我们先来解决最常见的一个问题<code>this.$store</code>提示</p>
+<p><code>$store</code> 是 访问 Vuex 的一个常用途径，虽然我们可以通过导入 store 文件来引用，而不是<code>$store</code> 来引用来获得提示，但这似乎不是什么最佳选择，毕竟官方给了这个渠道，不用感觉就亏了。</p>
+<p>好，现在打个比方，我们有这么个 store.js 文件</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex, { Store } <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>  <span class="keyword">new</span> Store({</span><br><span class="line">  state: {</span><br><span class="line">    user: {},     <span class="comment">//用户</span></span><br><span class="line">    sign: {},     <span class="comment">//签到</span></span><br><span class="line">    wallet: {}    <span class="comment">//积分</span></span><br><span class="line">  }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后在 global.d.ts 中这么搞</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'vuex/types/vue'</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./src/store'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="built_in">module</span> <span class="string">'vue/types/vue'</span> {</span><br><span class="line">  <span class="keyword">interface</span> Vue {</span><br><span class="line">    $store: <span class="keyword">typeof</span> store</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意是 <code>typeof store</code> 不是 <code>store</code></p>
+<p>看一下效果，打开，还是和原来一样，重启，还是一样，没变化</p>
+<p>原因是 vuex 中已经定义过 $store 了，而且还不能覆盖，官网是这么说的</p>
+<blockquote>
+<p>接口的非函数的成员应该是唯一的。如果它们不是唯一的，那么它们必须是相同的类型。如果两个接口中同时声明了同名的非函数成员且它们的类型不同，则编译器会报错。</p>
+</blockquote>
+<p>这个就很难搞了，我目前只有一个临时解决方案，按住 control (mac:command)，然后点击</p>
+<p><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/25004510/59961624-c9d77e80-950c-11e9-9fc5-f0db9468d83c.png"><img data-src="https://user-images.githubusercontent.com/25004510/59961624-c9d77e80-950c-11e9-9fc5-f0db9468d83c.png" alt="Screen Shot 2019-06-22 at 4 41 29 PM"></a></p>
+<p>然后跳转到 vuex 的 vue.d.ts 声明文件 把 16 行 （<code>$store: Store&lt;any&gt;;</code>）这一行注释掉</p>
+<p>重启一下 vscode，然后看下效果</p>
+<p><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/25004510/59961709-f5a73400-950d-11e9-9b2f-30fa9076abea.png"><img data-src="https://user-images.githubusercontent.com/25004510/59961709-f5a73400-950d-11e9-9b2f-30fa9076abea.png" alt="image"></a></p>
+<p>还不错，就是有个缺点，npm 的包重新装的话，我们刚才在 vuex 的声明文件改的东西就会被改回去，这个也是没有办法，毕竟是临时工方案，如果你有更好的方案，可以告诉我</p>
+<p>或者你用 ts 而不是 js 的话，就可以用 as 大法来断言，不用这么折腾。</p>
+<h1 id="从第三方库中-增强提示"><a href="#从第三方库中-增强提示" class="headerlink" title="从第三方库中 增强提示"></a>从第三方库中 增强提示</h1><p>上面说的都是自己写的代码，如果是别人写的呢? 从 npm 安装的呢？别急。</p>
+<p>不知什么时候，<code>this.$http</code> 这种网络请求方式就开始流行起来（可能是 angular 中开始的吧）</p>
+<p>然后 vue 本身是没有提供 ajax 的封闭的，比较流行的就是 axios，但是每次都 import 进来的话，还是比较麻烦的，很多人喜欢通过 <code>Vue.prototype.$http = axios</code> 来修改原型链，然后用<code>this.$http</code>这样一个便捷方式来访问，这样一个人还好，不同人维护的话，在原型链中挂了各种这样不同的东西，还是很难维护的，想一下，你在原型上挂点什么，下一个人不知道，然后也挂点什么，然后可能冲突出 bug。这也一直被 react 用户吐嘈，还是 vue 做大型项目难以维护的一个地方。</p>
+<p>但是现在，我们可以用维护性十分强的 typescript 声明文件来避免这个问题，增加提示</p>
+<p>就用 axios 来做例子吧</p>
+<p>先挂上原型中 <code>Vue.prototype.$http = axios</code></p>
+<p>然后在 global.d.ts 中写点什么。</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="built_in">module</span> <span class="string">'vue/types/vue'</span> {</span><br><span class="line">  <span class="keyword">interface</span> Vue {</span><br><span class="line">    $http: <span class="keyword">typeof</span> axios</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>嗯 ，就是这么简单，记得是 <code>typeof axios</code> ，不是 <code>axios</code></p>
+<p>当然了，这个库是要支持 typescript 的才行</p>
+<p>看一下效果</p>
+<p><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/25004510/59961497-1de16380-950b-11e9-8a73-9e389fe79d3a.png"><img data-src="https://user-images.githubusercontent.com/25004510/59961497-1de16380-950b-11e9-8a73-9e389fe79d3a.png" alt="image"></a></p>
+<p>嗯，还不错</p>
+<h1 id="完"><a href="#完" class="headerlink" title="完"></a>完</h1><p>差不多就这样了，有缘再见吧。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/angviza.github.io/redis/redis-script/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/angviza.github.io/typescript/android/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="SOHUCS"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">新手教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%AA%E5%A4%96-typescript-%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B"><span class="nav-number">3.</span> <span class="nav-text">[番外] typescript 声明文件了解一下</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A2%9E%E5%BC%BA-this-store-%E6%8F%90%E7%A4%BA"><span class="nav-number"></span> <span class="nav-text">增强 this.$store 提示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%B8%AD-%E5%A2%9E%E5%BC%BA%E6%8F%90%E7%A4%BA"><span class="nav-number"></span> <span class="nav-text">从第三方库中 增强提示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%8C"><span class="nav-number"></span> <span class="nav-text">完</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="angviza"
+      src="/angviza.github.io/assets/blogImg/avatar.jpg">
+  <p class="site-author-name" itemprop="name">angviza</p>
+  <div class="site-description" itemprop="description">Q. W .K</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/angviza.github.io/archives/">
+        
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/angviza.github.io/categories/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/angviza.github.io/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/angviza" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;angviza" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:angviza@gmail.com" title="E-Mail → mailto:angviza@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/angviza" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;angviza" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/angviza" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;angviza" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/angviza" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;angviza" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/angviza" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;angviza" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="skype:angviza?call|chat" title="Skype → skype:angviza?call|chat" rel="noopener" target="_blank"><i class="fab fa-skype fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">angviza</span>
+</div>
+  <div class="powered-by"> 
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/angviza.github.io/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/angviza.github.io/lib/velocity/velocity.min.js"></script>
+  <script src="/angviza.github.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/angviza.github.io/js/utils.js"></script>
+
+<script src="/angviza.github.io/js/motion.js"></script>
+
+
+<script src="/angviza.github.io/js/schemes/pisces.js"></script>
+
+
+<script src="/angviza.github.io/js/next-boot.js"></script>
+
+<script src="/angviza.github.io/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/angviza.github.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script>
+  NexT.utils.loadComments(document.querySelector('#SOHUCS'), () => {
+    var appid = 'cyuRUhnqF';
+    var conf = 'prod_47cfb7fece13d1565e261731c1414262';
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    } else {
+      var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+    }
+  });
+  </script>
+  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+
+</body>
+</html>

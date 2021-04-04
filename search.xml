@@ -2,12 +2,12 @@
 <search>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/06/11/redis/redis-script/</url>
+    <url>/2020/06/11/redis/redis-script/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/07/09/android/</url>
+    <url>/2020/07/09/android/</url>
     <content><![CDATA[<h2 id="Connecting-WIFI-联网"><a href="#Connecting-WIFI-联网" class="headerlink" title="Connecting WIFI(联网)"></a>Connecting WIFI(联网)</h2><p>依然是熟悉的adb命令和服务启动参数</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb shell am startservice \</span><br><span class="line">    -n com.google.wifisetup/.WifiSetupService \</span><br><span class="line">    -a WifiSetupService.Connect \</span><br><span class="line">    -e ssid SSID \</span><br><span class="line">    -e passphrase password</span><br></pre></td></tr></tbody></table></figure>
 
@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <title>HTML 规范</title>
-    <url>/angviza.github.io/2020/01/16/html/</url>
+    <url>/2020/01/16/html/</url>
     <content><![CDATA[<h1 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h1><h2 id="DOCTYPE-声明"><a href="#DOCTYPE-声明" class="headerlink" title="DOCTYPE 声明"></a>DOCTYPE 声明</h2><p>一个DOCTYPE必须包含以下部分，并严格按照顺序出现：</p>
 <blockquote>
 <ol>
@@ -193,12 +193,12 @@
   </entry>
   <entry>
     <title>技术</title>
-    <url>/angviza.github.io/2020/01/16/index/</url>
+    <url>/2020/01/16/index/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/06/24/minio/</url>
+    <url>/2020/06/24/minio/</url>
     <content><![CDATA[<p>minIO</p>
 <p><a href="https://www.cnblogs.com/eason-d/p/12711041.html">Docker 安装 minio</a></p>
 <p>参考地址: <a href="https://www.jianshu.com/p/52dbc679094a">https://www.jianshu.com/p/52dbc679094a</a></p>
@@ -221,7 +221,7 @@
   </entry>
   <entry>
     <title>TimescaleDB 安装&amp;使用</title>
-    <url>/angviza.github.io/2021/04/03/db/timescaledb/</url>
+    <url>/2021/04/03/db/timescaledb/</url>
     <content><![CDATA[<h2 id="docker-compose-yml"><a href="#docker-compose-yml" class="headerlink" title="docker-compose.yml"></a>docker-compose.yml</h2><figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">timescaledb:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">postgistime</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">timescale/timescaledb-postgis:latest-pg13</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"5432:5432"</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">xxx</span> </span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">xxxxx</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/var/lib/postgresql:rw</span></span><br></pre></td></tr></tbody></table></figure>
 
 
@@ -265,7 +265,7 @@
   </entry>
   <entry>
     <title>uni-cli</title>
-    <url>/angviza.github.io/2020/06/08/dcloud/uni-app/</url>
+    <url>/2020/06/08/dcloud/uni-app/</url>
     <content><![CDATA[<p>【<a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">UNI-CLI</a>】</p>
 <h3 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">环境安装</a></h3><p>全局安装vue-cli</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></tbody></table></figure>
@@ -288,7 +288,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/11/02/es/postgis/</url>
+    <url>/2020/11/02/es/postgis/</url>
     <content><![CDATA[<p>docker 安装(<a href="https://www.vultr.com/docs/install-the-postgis-extension-for-postgresql-on-ubuntu-linux">https://www.vultr.com/docs/install-the-postgis-extension-for-postgresql-on-ubuntu-linux</a>)</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">安装 gis:</span><br><span class="line">sudo apt install postgis postgresql-12-postgis-3</span><br><span class="line">apt-get install postgresql-12-postgis-3-scripts</span><br><span class="line"></span><br><span class="line">选择数据库&gt;sql</span><br><span class="line">CREATE EXTENSION postgis;</span><br></pre></td></tr></tbody></table></figure>
 
@@ -312,7 +312,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/10/28/es/pg-es-fdw/</url>
+    <url>/2020/10/28/es/pg-es-fdw/</url>
     <content><![CDATA[<h2 id="安装ES"><a href="#安装ES" class="headerlink" title="安装ES"></a>安装ES</h2><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html</a></p>
 <figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2.2'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">es01:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.elastic.co/elasticsearch/elasticsearch:7.9.3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">es01</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">discovery.type=single-node</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">    <span class="attr">ulimits:</span></span><br><span class="line">      <span class="attr">memlock:</span></span><br><span class="line">        <span class="attr">soft:</span> <span class="number">-1</span></span><br><span class="line">        <span class="attr">hard:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/usr/share/elasticsearch/data</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">9200</span><span class="string">:9200</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -327,7 +327,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/11/03/es/superset/</url>
+    <url>/2020/11/03/es/superset/</url>
     <content><![CDATA[<h1 id="Superset"><a href="#Superset" class="headerlink" title="Superset"></a>Superset</h1><p><a href="https://blog.csdn.net/whq12789/article/details/89640453">https://blog.csdn.net/whq12789/article/details/89640453</a></p>
 <p>准备环境docker</p>
 <p>然后执行命令</p>
@@ -364,7 +364,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/06/08/nodejs/npm/</url>
+    <url>/2020/06/08/nodejs/npm/</url>
     <content><![CDATA[<p>cnpm</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
 
@@ -383,7 +383,7 @@
   </entry>
   <entry>
     <title>Anime.js</title>
-    <url>/angviza.github.io/2020/06/05/ops/animejs/</url>
+    <url>/2020/06/05/ops/animejs/</url>
     <content><![CDATA[<h2 id="自己查文档"><a href="#自己查文档" class="headerlink" title="自己查文档"></a>自己查文档</h2><p><a href="https://www.animejs.cn/">官网</a></p>
 <p><a href="https://www.animejs.cn/start">使用方法</a> <a href="https://www.animejs.cn/documentation">中文文档</a> <a href="https://codepen.io/collection/XLebem/">Codepen演示</a> <a href="https://www.animejs.cn/demo">基础演示</a> <a href="https://jq.qq.com/?_wv=1027&amp;k=5Xpu4tf">加入QQ群</a> <a href="https://animejs.com/">anime.js 英文网</a> <a href="http://animejs.cc/">备用网址</a></p>
 ]]></content>
@@ -398,7 +398,7 @@
   </entry>
   <entry>
     <title>Docker</title>
-    <url>/angviza.github.io/2020/06/04/ops/docker/</url>
+    <url>/2020/06/04/ops/docker/</url>
     <content><![CDATA[<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。</p>
 <p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p>
 <p>容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>
@@ -420,7 +420,7 @@
   </entry>
   <entry>
     <title>Ansiable安装使用</title>
-    <url>/angviza.github.io/2020/04/29/ops/ansible/</url>
+    <url>/2020/04/29/ops/ansible/</url>
     <content><![CDATA[<p><img data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1591264607708&amp;di=34d399d4cc0f9bd92ae0644723ce34c7&amp;imgtype=0&amp;src=http://img3.imgtn.bdimg.com/it/u=118371233,1275544235&amp;fm=214&amp;gp=0.jpg"></p>
 <p>Ansible is Simple IT Automation</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Ansible 是给 Linux 系统管理员使用的出色自动化工具。它是一种开源配置工具，能让系统管理员可以从一个中心节点（即 Ansible 服务器）管理数百台服务器。将 Ansible 与 Puppet、Chef 和 Salt 等类似工具进行比较时，它是首选的配置工具，因为它不需要任何代理，并且可以工作在 SSH 和 python 上。</p>
@@ -445,7 +445,7 @@
   </entry>
   <entry>
     <title>Frp安装使用</title>
-    <url>/angviza.github.io/2020/04/29/ops/frp/</url>
+    <url>/2020/04/29/ops/frp/</url>
     <content><![CDATA[<h2 id="FRP"><a href="#FRP" class="headerlink" title="FRP"></a>FRP</h2><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</p>
 <p><a href="https://github.com/fatedier/frp">[GitHub]</a>  <a href="https://github.com/fatedier/frp/blob/master/README_zh.md">[官方中文文档]</a>  </p>
 <p><a href="https://github.com/fatedier/frp/blob/master/conf/frps_full.ini">frps 完整配置文件</a></p>
@@ -469,7 +469,7 @@
   </entry>
   <entry>
     <title>Grafana+Promethus+Altermanager</title>
-    <url>/angviza.github.io/2020/06/04/ops/grafana-promethus-altermanager/</url>
+    <url>/2020/06/04/ops/grafana-promethus-altermanager/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://github.com/vegasbrianc/prometheus">【Github】</a></p>
 ]]></content>
       <categories>
@@ -482,7 +482,7 @@
   </entry>
   <entry>
     <title>Grafana安装使用</title>
-    <url>/angviza.github.io/2020/06/04/ops/grafana/</url>
+    <url>/2020/06/04/ops/grafana/</url>
     <content><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>]]></content>
       <categories>
         <category>工具</category>
@@ -494,7 +494,7 @@
   </entry>
   <entry>
     <title>Nginx安装使用</title>
-    <url>/angviza.github.io/2020/04/29/ops/nginx/</url>
+    <url>/2020/04/29/ops/nginx/</url>
     <content><![CDATA[<h1 id="Nginx安装使用"><a href="#Nginx安装使用" class="headerlink" title="Nginx安装使用"></a>Nginx安装使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>docker-compose.yml</p>
 <figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">"host"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">80</span><span class="string">:80</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">443</span><span class="string">:443</span></span><br><span class="line">      </span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/services/nginx/conf:/etc/nginx</span>            <span class="comment">#映射nginx的配置文件到容器里</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/services/nginx/logs:/wwwlogs</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/static/:/www</span>                    <span class="comment">#映射nginx的网页目录到容器里</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -524,7 +524,7 @@
   </entry>
   <entry>
     <title>Maven 打包发布</title>
-    <url>/angviza.github.io/2020/04/29/ops/mavenrelease/</url>
+    <url>/2020/04/29/ops/mavenrelease/</url>
     <content><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1>]]></content>
       <categories>
         <category>Java</category>
@@ -536,7 +536,7 @@
   </entry>
   <entry>
     <title>Jenkins 安装使用</title>
-    <url>/angviza.github.io/2020/04/29/ops/jenkins/</url>
+    <url>/2020/04/29/ops/jenkins/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo https:*//pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key</span><br><span class="line">yum install jenkins -y</span><br><span class="line">systemctl start jenkins</span><br><span class="line">systemctl enable jenkins</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>配置文件位置 /etc/sysconfig/jenkins</strong></p>
@@ -564,7 +564,7 @@
   </entry>
   <entry>
     <title>PostgreSQL 安装使用</title>
-    <url>/angviza.github.io/2020/04/29/ops/postgresql/</url>
+    <url>/2020/04/29/ops/postgresql/</url>
     <content><![CDATA[<p>是的分解哦就</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><a href="https://ywnz.com/linuxjc/6033.html">https://ywnz.com/linuxjc/6033.html</a></p>
 ]]></content>
@@ -578,7 +578,7 @@
   </entry>
   <entry>
     <title>RocketMQ</title>
-    <url>/angviza.github.io/2020/04/29/ops/rocketmq/</url>
+    <url>/2020/04/29/ops/rocketmq/</url>
     <content><![CDATA[<p>生产者发送消息：<br>export NAMESRV_ADDR=127.0.0.1:9876<br>sh tools.sh org.apache.rocketmq.example.quickstart.Producer</p>
 <p>消费者接受消息：<br>sh tools.sh org.apache.rocketmq.example.quickstart.Consumer<br>————————————————<br>版权声明：本文为CSDN博主「森雨海巷」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/qq_33767353/java/article/details/103082730">https://blog.csdn.net/qq_33767353/java/article/details/103082730</a></p>
 ]]></content>
@@ -592,7 +592,7 @@
   </entry>
   <entry>
     <title>Python 安装使用</title>
-    <url>/angviza.github.io/2020/04/29/ops/python/</url>
+    <url>/2020/04/29/ops/python/</url>
     <content><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p><strong>前言</strong></p>
 <p>Python是世界上最受欢迎的编程语言之一，凭借其简单易学的语法，Python是初学者和经验丰富的开发人员的流行选择。</p>
 <p>当前有两个Python版本正在积极开发中，尽管Python 2得到了良好的支持和活跃，但Python 3被应用得更多，也更为高效，参考<a href="https://ywnz.com/linuxrj/5990.html">Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能</a>。</p>
@@ -649,7 +649,7 @@
   </entry>
   <entry>
     <title>Chrome 插件开发</title>
-    <url>/angviza.github.io/2020/06/08/plugins/chrome-plugin/</url>
+    <url>/2020/06/08/plugins/chrome-plugin/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>插件开发</category>
@@ -661,7 +661,7 @@
   </entry>
   <entry>
     <title>VSCode 插件开发</title>
-    <url>/angviza.github.io/2020/06/08/plugins/vscode-plugin/</url>
+    <url>/2020/06/08/plugins/vscode-plugin/</url>
     <content><![CDATA[<h2 id="VSCode自定义插件开发"><a href="#VSCode自定义插件开发" class="headerlink" title="VSCode自定义插件开发"></a>VSCode自定义插件开发</h2><h3 id="VSCode插件开发有什么用"><a href="#VSCode插件开发有什么用" class="headerlink" title="VSCode插件开发有什么用"></a>VSCode插件开发有什么用</h3><p>每个公司、项目组、各人都有自己特殊的定制化、可公用的需求，vscode的已有插件显然不能满足我们各种各样的要求，所以开发一个适用于我们自己的定制化插件，无疑能大大提高我们的开发效率以及团队的语法规范</p>
 <h3 id="VSCode插件开发、发布主要流程"><a href="#VSCode插件开发、发布主要流程" class="headerlink" title="VSCode插件开发、发布主要流程"></a>VSCode插件开发、发布主要流程</h3><ol>
 <li>插件开发前的准备：vscode、nodejs、vscode插件生产工具、git、微软账号</li>
@@ -700,7 +700,7 @@
   </entry>
   <entry>
     <title>Gradle 插件开发</title>
-    <url>/angviza.github.io/2020/06/08/plugins/gradle-plugin/</url>
+    <url>/2020/06/08/plugins/gradle-plugin/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>插件开发</category>
@@ -713,13 +713,13 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/06/10/redis/redis-script/</url>
+    <url>/2020/06/10/redis/redis-script/</url>
     <content><![CDATA[<p>redis-script</p>
 ]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/06/16/typescript/android/</url>
+    <url>/2020/06/16/typescript/android/</url>
     <content><![CDATA[<p>安装ndk</p>
 <figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">sdkmanager <span class="string">'ndk;21.2.6472646'</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -768,7 +768,7 @@
   </entry>
   <entry>
     <title>typescript 提示</title>
-    <url>/angviza.github.io/2020/06/14/typescript/d.ts/</url>
+    <url>/2020/06/14/typescript/d.ts/</url>
     <content><![CDATA[<p>【转】<a href="https://github.com/coppyC/blog/issues/6">https://github.com/coppyC/blog/issues/6</a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为什么vue中有的文件中的函数不能提示，转到定义提示没有任何定义，而有的文件又正常工作</p>
 <ul>
@@ -833,7 +833,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2020/06/08/plugins/vscode/vscode-package/</url>
+    <url>/2020/06/08/plugins/vscode/vscode-package/</url>
     <content><![CDATA[<h1 id="vscode打包问题"><a href="#vscode打包问题" class="headerlink" title="vscode打包问题"></a>vscode打包问题</h1><h2 id="打包过程报错"><a href="#打包过程报错" class="headerlink" title="打包过程报错"></a>打包过程报错</h2><ol>
 <li>npm list错误</li>
 </ol>
@@ -943,7 +943,7 @@
   </entry>
   <entry>
     <title>Redis 安装使用</title>
-    <url>/angviza.github.io/2020/07/22/sql/date/date/</url>
+    <url>/2020/07/22/sql/date/date/</url>
     <content><![CDATA[<h1 id="查询交集"><a href="#查询交集" class="headerlink" title="查询交集"></a>查询交集</h1><figure class="highlight brainfuck"><table><tbody><tr><td class="code"><pre><span class="line">--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line">    <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B1</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>           <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B2</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B3</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B4</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B5</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B6</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line">                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B7</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B8</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B9</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B10</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B11</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B12</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B13</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">(StartDate1</span> &lt;<span class="comment">=</span> <span class="comment">EndDate2)</span> <span class="comment">and</span> <span class="comment">(StartDate2</span> &lt;<span class="comment">=</span> <span class="comment">EndDate1)</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
       <categories>
         <category>工具</category>
@@ -955,7 +955,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/angviza.github.io/2021/04/03/linux/centos/centos7/kai-ji-qi-dong/</url>
+    <url>/2021/04/03/linux/centos/centos7/kai-ji-qi-dong/</url>
     <content><![CDATA[<p>vim /lib/systemd/system/xx.service</p>
 <figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=dflc start up</span><br><span class="line"><span class="attr">After</span>=network.target remote-fs.target nss-lookup.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=forking</span><br><span class="line"><span class="attr">ExecStart</span>=/user/jar/xx-start.sh</span><br><span class="line"><span class="attr">KillSignal</span>=SIGQUIT</span><br><span class="line"><span class="attr">TimeoutStopSec</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">KillMode</span>=process</span><br><span class="line"><span class="attr">PrivateTmp</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></tbody></table></figure>
 
@@ -964,7 +964,7 @@
   </entry>
   <entry>
     <title>Redis 安装使用</title>
-    <url>/angviza.github.io/2020/04/29/redis/redis/</url>
+    <url>/2020/04/29/redis/redis/</url>
     <content><![CDATA[<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><p><a href="https://www.redis.net.cn/">文档</a></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis:</span>  </span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">redis-server</span> <span class="string">/etc/redis.conf</span> <span class="comment"># 启动redis命令</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span> <span class="comment"># 设置容器时区与宿主机保持一致</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data/:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./conf/redis.conf:/etc/redis.conf</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./logs:/logs</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"6379:6379"</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>conf/redis.conf</strong></p>
@@ -985,7 +985,7 @@
   </entry>
   <entry>
     <title>Java 规范</title>
-    <url>/angviza.github.io/2020/01/16/java/java/</url>
+    <url>/2020/01/16/java/java/</url>
     <content><![CDATA[<h1 id="Java-规范"><a href="#Java-规范" class="headerlink" title="Java 规范"></a>Java 规范</h1><h2 id="命名风格"><a href="#命名风格" class="headerlink" title="命名风格"></a>命名风格</h2><hr>
 <p><strong>[强制]代码中的命名均不能以<code>下划线</code>或<code>美元符号</code>开始，也不能以<code>下划线</code>或<code>美元符号</code>结束</strong></p>
 <p>反例： _name / name / $Object / name_  / name$ / Object</p>

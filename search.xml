@@ -1,37 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android命令</title>
-    <url>/2020/07/09/android/</url>
-    <content><![CDATA[<h2 id="Connecting-WIFI-联网"><a href="#Connecting-WIFI-联网" class="headerlink" title="Connecting WIFI(联网)"></a>Connecting WIFI(联网)</h2><p>依然是熟悉的adb命令和服务启动参数</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb shell am startservice \</span><br><span class="line">    -n com.google.wifisetup/.WifiSetupService \</span><br><span class="line">    -a WifiSetupService.Connect \</span><br><span class="line">    -e ssid SSID \</span><br><span class="line">    -e passphrase password</span><br></pre></td></tr></tbody></table></figure>
+    <title>技术</title>
+    <url>/2020/06/04/index/</url>
+    <content><![CDATA[<p><img data-src="http://oz2tkq0zj.bkt.clouddn.com/17-11-9/52323298.jpg" alt="Alt text" title="optional title"></p>
+<img data-src="http://oz2tkq0zj.bkt.clouddn.com/17-11-9/52323298.jpg" class="full-image">
 
-<p>用logcat查看网络状态</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb logcat -d | grep Wifi</span><br><span class="line">...</span><br><span class="line">V WifiWatcher: Network state changed to CONNECTED</span><br><span class="line">V WifiWatcher: SSID changed: ...</span><br><span class="line">I WifiConfigurator: Successfully connected to ...</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Ping检测</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb shell ping 114.114.114.114</span><br><span class="line">PING 114.114.114.114 (114.114.114.114) 56(84) bytes of data.</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=1 ttl=57 time=6.67 ms</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=2 ttl=57 time=55.5 ms</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=3 ttl=57 time=23.0 ms</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=4 ttl=57 time=245 ms</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>#===========</p>
-<figure class="highlight vbscript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">' ws.run "powershell.exe -nologo -file skaldjfw980923sdfjskaodjf238.ps1",0</span></span><br><span class="line"><span class="keyword">set</span> ws=wscript.<span class="built_in">createobject</span>(<span class="string">"wscript.shell"</span>)</span><br><span class="line">ws.run <span class="string">"powershell.exe -nologo -file skaldjfw980923sdfjskaodjf238.ps1"</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>skaldjfw980923sdfjskaodjf238.ps1</p>
-<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="variable">$colorArray</span> = <span class="string">"Blue"</span> ,<span class="string">"Green"</span>,<span class="string">"Cyan"</span></span><br><span class="line"><span class="variable">$file</span> = <span class="string">"./devices.txt"</span></span><br><span class="line"><span class="variable">$debugPort</span>=<span class="number">5709</span></span><br><span class="line"><span class="variable">$i</span>=<span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span><span class="params">(<span class="variable">$txt</span>)</span></span>{</span><br><span class="line">    <span class="built_in">Write-Host</span> <span class="variable">$txt</span> <span class="literal">-ForegroundColor</span> <span class="variable">$colorArray</span>[<span class="variable">$i</span>%<span class="variable">$colorArray</span><span class="type">.length</span>]</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sed</span><span class="params">(<span class="variable">$filespec</span>, <span class="variable">$search</span>, <span class="variable">$replace</span>)</span></span></span><br><span class="line">{</span><br><span class="line">    (<span class="built_in">get-content</span> <span class="variable">$filespec</span>) | <span class="built_in">foreach-object</span> {<span class="variable">$_</span> <span class="operator">-replace</span> <span class="variable">$search</span>, <span class="variable">$replace</span>} | <span class="built_in">set-content</span> <span class="variable">$filespec</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">#adb shell mount -o rw,remount -t ext4 /system</span></span><br><span class="line"><span class="comment">#already connected to 192.168.1.119:5709</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setup</span><span class="params">(<span class="variable">$device</span>)</span></span>{</span><br><span class="line">        print <span class="string">"connect to <span class="variable">$_</span>"</span></span><br><span class="line">        <span class="variable">$ret</span> = adb connect  <span class="variable">$device</span></span><br><span class="line">        <span class="keyword">if</span>(!<span class="variable">$ret</span>.StartsWith(<span class="string">"cannot"</span>)){</span><br><span class="line">            <span class="built_in">echo</span> <span class="variable">$ret</span></span><br><span class="line">           <span class="variable">$ret</span> = adb <span class="literal">-s</span> <span class="variable">$device</span> root</span><br><span class="line">           <span class="variable">$ret</span> = adb <span class="literal">-s</span> <span class="variable">$device</span> remount</span><br><span class="line">            <span class="variable">$oldPort</span>=<span class="variable">$device</span>.split(<span class="string">':'</span>)[<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span>(<span class="variable">$oldPort</span> <span class="operator">-ne</span> <span class="variable">$debugPort</span>){</span><br><span class="line">                print <span class="string">"update debug prot <span class="variable">$oldPort</span> to <span class="variable">$debugPort</span>"</span></span><br><span class="line">                adb <span class="literal">-s</span> <span class="variable">$device</span> shell sed <span class="literal">-i</span> <span class="string">"s/port=<span class="variable">$oldPort</span>/port=<span class="variable">$debugPort</span>/"</span> /system/build.prop</span><br><span class="line">                <span class="variable">$new</span> = <span class="variable">$device</span>.split(<span class="string">':'</span>)[<span class="number">0</span>]+<span class="string">":"</span>+<span class="variable">$debugPort</span></span><br><span class="line">                sed <span class="variable">$file</span> <span class="variable">$device</span> <span class="variable">$new</span></span><br><span class="line">            }</span><br><span class="line">            print <span class="string">"setup screen immersive full"</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell settings put global policy_control immersive.full=*</span><br><span class="line">            <span class="variable">$bootanimation</span>=<span class="built_in">Test-Path</span> <span class="literal">-Path</span> bootanimation.zip</span><br><span class="line">            <span class="keyword">if</span>(<span class="variable">$bootanimation</span>){</span><br><span class="line">                print <span class="string">"setup bootanimation"</span></span><br><span class="line">                adb <span class="literal">-s</span> <span class="variable">$device</span> push bootanimation.zip /system/media/</span><br><span class="line">            }</span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell <span class="built_in">rm</span> <span class="literal">-rf</span> /<span class="keyword">data</span>/app/com.idflc.waste* /system/app/Idflc/*</span><br><span class="line">            <span class="variable">$apk</span> = <span class="built_in">Get-ChildItem</span> <span class="literal">-Filter</span> *.apk <span class="comment"># | Select-Object -First 1</span></span><br><span class="line">            print <span class="string">"upload apk files"</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell mkdir <span class="literal">-p</span> /system/app/Idflc/</span><br><span class="line">            <span class="comment">#adb -s $device push $apk /system/app/Idflc/</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> <span class="literal">-r</span> <span class="literal">-d</span> install <span class="variable">$apk</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell <span class="built_in">cp</span> <span class="literal">-r</span> /<span class="keyword">data</span>/app/com.idflc.waste*/* /system/app/Idflc/</span><br><span class="line">            <span class="comment">#adb -s $device shell rm -rf /system/app/Idflc/base.apk</span></span><br><span class="line">            <span class="comment">#adb -s $device reboot</span></span><br><span class="line">            print <span class="string">"setup <span class="variable">$device</span> success , rebooting now ..."</span></span><br><span class="line">        }<span class="keyword">else</span>{</span><br><span class="line">            <span class="built_in">Write-Host</span> <span class="string">"connect to <span class="variable">$device</span> error"</span> <span class="literal">-ForegroundColor</span> Red</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#adb -s %i install -r %1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># del devices.txt</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏虚拟键及顶部状态栏：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control immersive.full=*</span></span><br><span class="line"><span class="comment"># 隐藏顶部状态栏（底部虚拟键会显示）：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control immersive.status=*</span></span><br><span class="line"><span class="comment"># 隐藏虚拟键（顶部状态栏会显示）：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control immersive.navigation=*</span></span><br><span class="line"><span class="comment"># 恢复原来的设置：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control null</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$content</span> = <span class="built_in">get-content</span> <span class="variable">$file</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$content</span> | <span class="built_in">foreach-object</span> {</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable">$_</span>.StartsWith(<span class="string">"#"</span>)) {</span><br><span class="line">        print <span class="string">""</span></span><br><span class="line">        print  <span class="string">"============================= start setup <span class="variable">$_</span>  ============================="</span></span><br><span class="line">        setup <span class="variable">$_</span></span><br><span class="line">        print <span class="string">"=============================  setup <span class="variable">$_</span> over ============================="</span> </span><br><span class="line">        <span class="variable">$i</span>++</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">pause</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p><a href="https://fengmumu1.github.io/2018/06/29/hexo-markdown-grammar/">https://fengmumu1.github.io/2018/06/29/hexo-markdown-grammar/</a></p>
+<p>链接本地文件</p>
+<span id="more"></span>
+<figure class="highlight django"><table><tbody><tr><td class="code"><pre><span class="line"><span class="template-tag">{% <span class="name">post_link</span> 文件路径(不要后缀) 文章别名(可选) %}</span></span><br><span class="line"><span class="xml">#如</span></span><br><span class="line"><span class="template-tag">{% <span class="name">post_link</span> service/proxy/Frp 文章别名(可选) %}</span></span><br></pre></td></tr></tbody></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Chrome 插件开发</title>
+    <url>/2020/06/08/plugins/chrome-plugin/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>os</category>
-        <category>android</category>
+        <category>plugin</category>
+        <category>chrome</category>
       </categories>
       <tags>
+        <tag>chrome</tag>
+        <tag>plugin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/04/04/os/readme/</url>
+    <content><![CDATA[<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><p>该目录下为各版本系统工具和服务安装步骤，及系统工具使用方法</p>
+<p>不包含服务配置及使用</p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><h4 id="7"><a href="#7" class="headerlink" title="7"></a>7</h4><h4 id="8"><a href="#8" class="headerlink" title="8"></a>8</h4><h3 id="OracleLinux"><a href="#OracleLinux" class="headerlink" title="OracleLinux"></a>OracleLinux</h3><h4 id="7-1"><a href="#7-1" class="headerlink" title="7"></a>7</h4><h4 id="8-1"><a href="#8-1" class="headerlink" title="8"></a>8</h4><h2 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h2><h3 id="7-2"><a href="#7-2" class="headerlink" title="7"></a>7</h3><h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h2 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h2><blockquote>
+<p>有时候，“爱国”，是一个空洞的词语。更多的人是在言语里，在诗歌里”爱国“，他们没有一点点实际行动，甚至充满抱怨。</p>
+</blockquote>
+<p><strong>@余秀华</strong><a href="http://blog.sina.com.cn/yuxiuhua1976">blog.sina.com.cn/yuxiuhua1976</a>链接的地址 “鼠标指上后链接显示的文字”)</p>
+<figure class="highlight django"><table><tbody><tr><td class="code"><pre><span class="line"><span class="template-tag">{% <span class="name">codeblock</span> js控制台输出语句 %}</span></span><br><span class="line"><span class="xml">console.log("我叫丰木木")</span></span><br><span class="line"><span class="template-tag">{% <span class="name">endcodeblock</span> %}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight django"><table><tbody><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 其中 class="blockquote-center" 是必须的 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">"blockquote-center"</span>&gt;</span>blah blah blah<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span></span></span><br><span class="line"><span class="template-tag">{% <span class="name">centerquote</span> %}</span><span class="xml">blah blah blah</span><span class="template-tag">{% <span class="name">endcenterquote</span> %}</span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 标签别名 --&gt;</span></span></span><br><span class="line"><span class="template-tag">{% <span class="name">cq</span> %}</span><span class="xml"> blah blah blah </span><span class="template-tag">{% <span class="name">endcq</span> %}</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Gradle 插件开发</title>
+    <url>/2020/06/08/plugins/gradle-plugin/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>plugin</category>
+        <category>gradle</category>
+      </categories>
+      <tags>
+        <tag>plugin</tag>
+        <tag>gradle</tag>
         <tag>android</tag>
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2021/04/04/plugins/readme/</url>
+    <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>各种插件开发</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>VSCode 插件开发</title>
+    <url>/2020/06/08/plugins/vscode-plugin/</url>
+    <content><![CDATA[<h1 id="VSCode自定义插件开发"><a href="#VSCode自定义插件开发" class="headerlink" title="VSCode自定义插件开发"></a>VSCode自定义插件开发</h1><h2 id="VSCode插件开发有什么用"><a href="#VSCode插件开发有什么用" class="headerlink" title="VSCode插件开发有什么用"></a>VSCode插件开发有什么用</h2><p>每个公司、项目组、各人都有自己特殊的定制化、可公用的需求，vscode的已有插件显然不能满足我们各种各样的要求，所以开发一个适用于我们自己的定制化插件，无疑能大大提高我们的开发效率以及团队的语法规范</p>
+<h2 id="VSCode插件开发、发布主要流程"><a href="#VSCode插件开发、发布主要流程" class="headerlink" title="VSCode插件开发、发布主要流程"></a>VSCode插件开发、发布主要流程</h2><ol>
+<li>插件开发前的准备：vscode、nodejs、vscode插件生产工具、git、微软账号</li>
+<li>插件开发：插件构思、官方文档查阅</li>
+<li>插件发布：打包、上传、插件市场操作</li>
+<li>插件维护：更新迭代后打包、上传、插件市场操作</li>
+</ol>
+<h2 id="插件开发前的准备："><a href="#插件开发前的准备：" class="headerlink" title="插件开发前的准备："></a>插件开发前的准备：</h2><p>vscode、nodejs、git、微软账号<br>vscode插件生产工具：官方推荐使用Yeoman 和 VS Code Extension Generator。用如下命令安装：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g yo generator-code</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="使用生产工具初始化代码"><a href="#使用生产工具初始化代码" class="headerlink" title="使用生产工具初始化代码"></a>使用生产工具初始化代码</h3><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">yo code</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>目录如下</li>
+</ul>
+<figure class="highlight awk"><table><tbody><tr><td class="code"><pre><span class="line">├── .vscode      <span class="regexp">//</span> 资源配置文件</span><br><span class="line">├── CHANGELOG.md <span class="regexp">//</span> 更改记录文件，会展示到vscode插件市场</span><br><span class="line">├── extension.js <span class="regexp">//</span> 拓展源代码文件</span><br><span class="line">├── jsconfig.json</span><br><span class="line">├── package.json <span class="regexp">//</span> 资源配置文件</span><br><span class="line">├── README.md    <span class="regexp">//</span> 插件介绍文件，会展示到vscode插件市场</span><br><span class="line">├── test         <span class="regexp">//</span> 测试文件</span><br><span class="line">└── vsc-extension-quickstart.md</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在js拓展项目下，最重要的就是extension.js和package.json。</p>
+<h2 id="开发的插件功能"><a href="#开发的插件功能" class="headerlink" title="开发的插件功能"></a>开发的插件功能</h2><ol>
+<li>初始化项目的组件模块</li>
+<li>初始化项目里面能共用的模块</li>
+</ol>
+<h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p><a href="https://code.visualstudio.com/api/working-with-extensions/publishing-extension">官方文档</a>   <a href="https://www.yuque.com/chengkuan/web/yr5r7u?language=en-us">Bugs</a></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Make sure you have <a href="https://nodejs.org/">Node.js</a> installed. Then run:</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g vsce</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>You can use <code>vsce</code> to easily <a href="https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions">package</a> and <a href="https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions">publish</a> your extensions:</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> myExtension</span><br><span class="line"><span class="variable">$</span> vsce package</span><br><span class="line"><span class="comment"># myExtension.vsix generated</span></span><br><span class="line"><span class="variable">$</span> vsce publish</span><br><span class="line"><span class="comment"># &lt;publisherID&gt;.myExtension published to VS Code MarketPlace</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>plugin</category>
+        <category>vscode</category>
+      </categories>
+      <tags>
+        <tag>plugin</tag>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML 规范</title>
-    <url>/2020/01/16/html/</url>
+    <url>/2020/01/16/lang/html/html/</url>
     <content><![CDATA[<h1 id="DOCTYPE-声明"><a href="#DOCTYPE-声明" class="headerlink" title="DOCTYPE 声明"></a>DOCTYPE 声明</h1><p>一个DOCTYPE必须包含以下部分，并严格按照顺序出现：</p>
 <blockquote>
 <ol>
@@ -194,213 +264,8 @@
       </tags>
   </entry>
   <entry>
-    <title>minIO</title>
-    <url>/2020/06/24/minio/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/eason-d/p/12711041.html">Docker 安装 minio</a></p>
-<p>参考地址: <a href="https://www.jianshu.com/p/52dbc679094a">https://www.jianshu.com/p/52dbc679094a</a></p>
-<p>注意的地方:</p>
-<p>echo 命令设置 ACCESS_KEY 和 SECRET_KEY</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"admin"</span> | docker secret create access_key -</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"12345678"</span> | docker secret create secret_key </span><br><span class="line">-此处secret_key长度至少8位, 若已经设置密码不足8位，可通过命令</span><br><span class="line">docker secret --<span class="built_in">help</span></span><br><span class="line">查看相关命令中</span><br><span class="line">docker secret rm secret_key</span><br><span class="line">来移除 若执行出现 Error response from daemon: This node is not a swarm manager. Use <span class="string">"docker swarm init"</span> or <span class="string">"docker swarm join"</span> to connect this node to swarm and try again.错误, 需执行</span><br><span class="line">docker swarm init</span><br></pre></td></tr></tbody></table></figure>
-
-<p>启动命令</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -itd -p 9000:9000 --name minio1   -e <span class="string">"MINIO_ACCESS_KEY=admin"</span>   -e <span class="string">"MINIO_SECRET_KEY=admin"</span>   -v /mnt/data:/data   -v /mnt/config:/root/.minio   minio/minio server /data</span><br></pre></td></tr></tbody></table></figure>
-
-<p>打开网址: <a href="http://x.x.x.x:9000/">http://x.x.x.x:9000/</a> 发现启动失败, 但是改回原来的用户密钥 正确 估计是用户名有问题， 最后使用默认的方式启动,</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -itd -p 9000:9000 --name minio1   -e <span class="string">"MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE"</span>   -e <span class="string">"MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"</span>   -v /mnt/data:/data   -v /mnt/config:/root/.minio   minio/minio server /data</span><br></pre></td></tr></tbody></table></figure>
-
-<p>docker-compose.yml</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">minio:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">minio/minio</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">server</span> <span class="string">/data</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MINIO_ACCESS_KEY=admin</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MINIO_SECRET_KEY=admin123456</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">'9000:9000'</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">'minio_data:/data'</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">'config:/root/.minio'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">minio_data:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">local</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -p 9000:9000 --name minio \</span><br><span class="line">  -v /mnt/data1:/data1 \</span><br><span class="line">  -v /mnt/data2:/data2 \</span><br><span class="line">  -v /mnt/data3:/data3 \</span><br><span class="line">  -v /mnt/data4:/data4 \</span><br><span class="line">  -v /mnt/data5:/data5 \</span><br><span class="line">  -v /mnt/data6:/data6 \</span><br><span class="line">  -v /mnt/data7:/data7 \</span><br><span class="line">  -v /mnt/data8:/data8 \</span><br><span class="line">  minio/minio server /data1 /data2 /data3 /data4 /data5 /data6 /data7 /data8</span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>file</category>
-        <category>minio</category>
-      </categories>
-      <tags>
-        <tag>file</tag>
-        <tag>cdn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>技术</title>
-    <url>/2020/01/16/index/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>轻量级BI工具Superset的搭建与使用</title>
-    <url>/2020/11/03/bi/superset/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/whq12789/article/details/89640453">https://blog.csdn.net/whq12789/article/details/89640453</a></p>
-<p>准备环境docker</p>
-<p>然后执行命令</p>
-<p>docker pull amancevice/superset</p>
-<p>docker run –detach –name superset -p 8088:8088 -v ./superset:/usr/local/lib/python3.6/site-packages/superset/ amancevice/superset</p>
-<p>docker exec -it superset  superset db upgrade</p>
-<p>docker exec -it superset superset-init</p>
-<p>回车回车</p>
-<p>输入密码</p>
-<p>——安装完成</p>
-<p>输入IP:8088访问</p>
-<p><a href="http://192.168.91.146:8088/">http://192.168.91.146:8088</a></p>
-<p>用户名admin</p>
-<p>密码是刚才的密码</p>
-<p>加数据源</p>
-<p>sources——databases</p>
-<p>右上角加号：add a new record</p>
-<p>Database中填写个名称</p>
-<p>SQLAlchemy URI中填写</p>
-<p>postgresql://scott:tiger@localhost/mydatabase</p>
-<p>加表</p>
-<p>sources——tables</p>
-<p>右上角加号：add a new record</p>
-<p>选择数据库</p>
-<p>填写schema和table name即可</p>
-<p>点击表进入进行统计处理</p>
-<p>点击Datasource &amp; Chart Type——Visualization Type 下的Table字样可以选择Chart形式</p>
-<p>需要改源码的话，到docker中的</p>
-<p>/usr/local/lib/python3.6/site-packages/superset/</p>
-<p>目录</p>
-<p>汉化</p>
-<p><a href="https://blog.csdn.net/u014589856/article/details/103582824">https://blog.csdn.net/u014589856/article/details/103582824</a></p>
-]]></content>
-      <categories>
-        <category>BI</category>
-        <category>Superset</category>
-      </categories>
-      <tags>
-        <tag>BI</tag>
-        <tag>Superset</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>postgis</title>
-    <url>/2020/11/02/db/postgis/</url>
-    <content><![CDATA[<h2 id="Docker-PG内-安装"><a href="#Docker-PG内-安装" class="headerlink" title="Docker PG内 安装"></a>Docker PG内 <a href="https://www.vultr.com/docs/install-the-postgis-extension-for-postgresql-on-ubuntu-linux">安装</a></h2><figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">#安装 gis:</span></span><br><span class="line">apt-get install-y postgresql-13-postgis-3 postgresql-13-postgis-3-dbgsym postgresql-13-postgis-3-scripts</span><br></pre></td></tr></tbody></table></figure>
-<p>选择数据库&gt;sql</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">-- 进去psql启用扩展</span></span><br><span class="line"><span class="keyword">CREATE</span> EXTENSION postgis;</span><br><span class="line"><span class="comment">-- 测试是否启用成功</span></span><br><span class="line"><span class="keyword">select</span> postgis_full_version();</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-<h2 id="全文检索"><a href="#全文检索" class="headerlink" title="全文检索"></a>全文检索</h2><p> <a href="https://github.com/hightman/scws">https://github.com/hightman/scws</a></p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">install bzip2</span><br><span class="line"><span class="built_in">cd</span> /opt</span><br><span class="line">wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2</span><br><span class="line">tar -jxvf ./scws-1.2.3.tar.bz2</span><br><span class="line"><span class="built_in">cd</span> scws-1.2.3/</span><br><span class="line">./configure </span><br><span class="line">make </span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">ldconfig</span><br><span class="line"><span class="comment">#https://github.com/amutu/zhparser</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-<p>apt install -y postgresql-server-dev-13</p>
-<figure class="highlight pgsql"><table><tbody><tr><td class="code"><pre><span class="line">PG_CONFIG=/usr/lib/postgresql/<span class="number">13</span>/bin/pg_config make </span><br><span class="line">PG_CONFIG=/usr/lib/postgresql/<span class="number">13</span>/bin/pg_config make install</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="https://mlog.club/article/2514326">https://mlog.club/article/2514326</a></p>
-<p> <strong>CREATE</strong> <strong>INDEX</strong> mytable_description_tsvector_idx <strong>ON</strong> mytable(to_tsvector(description))  <strong>WHERE</strong> created_at &gt; <strong>now</strong>() - ‘1 year’::interval;</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">-- 安装扩展</span></span><br><span class="line"><span class="keyword">CREATE</span> EXTENSION zhparser;</span><br><span class="line"><span class="comment">-- 中文分词配置</span></span><br><span class="line"><span class="keyword">CREATE</span> TEXT <span class="keyword">SEARCH</span> CONFIGURATION chinese_parser (PARSER <span class="operator">=</span> zhparser);</span><br><span class="line"><span class="keyword">ALTER</span> TEXT <span class="keyword">SEARCH</span> CONFIGURATION chinese_parser <span class="keyword">ADD</span> MAPPING <span class="keyword">FOR</span> n,v,a,i,e,l,j <span class="keyword">WITH</span> simple;</span><br><span class="line"><span class="comment">-- create test table</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> text_search(</span><br><span class="line">  text_id SERIAL <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    text_name <span class="type">VARCHAR</span>(<span class="number">32</span>),</span><br><span class="line">  text_content TEXT,</span><br><span class="line">  tsv_column tsvector</span><br><span class="line">);</span><br><span class="line"><span class="comment">-- 创建gin_index以加快匹配速度</span></span><br><span class="line"><span class="keyword">CREATE</span> INDEX idx_gin_tsv <span class="keyword">ON</span> text_search <span class="keyword">USING</span> GIN(tsv_column);</span><br><span class="line"><span class="comment">-- 创建触发器以从目标同步tsvector列</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> sync_trigger </span><br><span class="line">   BEFORE <span class="keyword">INSERT</span> <span class="keyword">OR</span> UPDATE <span class="keyword">ON</span> text_search <span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="type">ROW</span> </span><br><span class="line">   <span class="keyword">EXECUTE</span> <span class="keyword">PROCEDURE</span> </span><br><span class="line">   tsvector_update_trigger(tsv_column, <span class="string">'public.chinese_parser'</span>, text_name , text_content);</span><br><span class="line"><span class="comment">-- 插入数据</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> text_search(text_name,text_content) <span class="keyword">VALUES</span> (<span class="string">'黄国宋'</span>,<span class="string">'ThinkPad 小红点多功能蓝牙键盘多平台WIN安卓IOS支持 4X30K12182'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> text_search(text_name,text_content) <span class="keyword">VALUES</span> (<span class="string">'陈家豪'</span>,<span class="string">'多平台 富文本 写作软件'</span>);</span><br><span class="line"><span class="comment">-- 搜索关键词</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> text_search <span class="keyword">WHERE</span> tsv_column @@ to_tsquery(<span class="string">'chinese_parser'</span>, <span class="string">'多平台黄国宋'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> text_search <span class="keyword">WHERE</span> tsv_column @@ to_tsquery(<span class="string">'chinese_parser'</span>, <span class="string">'小红点&amp;多平台'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> CONCAT(text_name ,<span class="string">','</span> , text_content) <span class="keyword">FROM</span> text_search</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>关系</category>
-        <category>postgis</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>postgis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>uni-cli</title>
-    <url>/2020/06/08/dcloud/uni-app/</url>
-    <content><![CDATA[<h2 id="【UNI-CLI官网】"><a href="#【UNI-CLI官网】" class="headerlink" title="【UNI-CLI官网】"></a>【<a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">UNI-CLI官网</a>】</h2><h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">环境安装</a></h2><p>全局安装vue-cli</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="创建uni-app"><a href="#创建uni-app" class="headerlink" title="创建uni-app"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E5%88%9B%E5%BB%BAuni-app-1">创建uni-app</a></h2><p><strong>使用正式版</strong>（对应HBuilderX最新正式版）</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue my-project</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>使用alpha版</strong>（对应HBuilderX最新alpha版）</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue#alpha my-alpha-project</span><br></pre></td></tr></tbody></table></figure>
-
-<p>此时，会提示选择项目模板，初次体验建议选择 <code>hello uni-app</code> 项目模板，如下所示：</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>uni</category>
-      </categories>
-      <tags>
-        <tag>uniapp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pg-es-fdw</title>
-    <url>/2020/10/28/db/pg-es-fdw/</url>
-    <content><![CDATA[<h2 id="安装ES"><a href="#安装ES" class="headerlink" title="安装ES"></a>安装ES</h2><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html</a></p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2.2'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">es01:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.elastic.co/elasticsearch/elasticsearch:7.9.3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">es01</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">discovery.type=single-node</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">    <span class="attr">ulimits:</span></span><br><span class="line">      <span class="attr">memlock:</span></span><br><span class="line">        <span class="attr">soft:</span> <span class="number">-1</span></span><br><span class="line">        <span class="attr">hard:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/usr/share/elasticsearch/data</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">9200</span><span class="string">:9200</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  apt-get update &amp;&amp;    apt-get -y install</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  <span class="comment">#apt-get install python python-pip -y (Python3)</span></span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>安装python3</p>
-<p><a href="https://blog.csdn.net/bz0446/article/details/105500585">https://blog.csdn.net/bz0446/article/details/105500585</a></p>
-<h2 id="安装fdw"><a href="#安装fdw" class="headerlink" title="安装fdw"></a>安装fdw</h2><p><a href="https://github.com/matthewfranglen/postgres-elasticsearch-fdw">GitHub</a></p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> pg_terminate_backend(pid) <span class="keyword">from</span> pg_stat_activity <span class="keyword">where</span> DATNAME <span class="operator">=</span> <span class="string">'gis'</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>时序</category>
-        <category>TimescaleDB</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>TimescaleDB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TimescaleDB 安装&amp;使用</title>
-    <url>/2021/04/03/db/timescaledb/</url>
-    <content><![CDATA[<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">timescaledb:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">postgistime</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">timescale/timescaledb-postgis:latest-pg13</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"5432:5432"</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">xxx</span> </span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">xxxxx</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/var/lib/postgresql:rw</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>使用TimescaleDB建表时，最好将非超表字段默认设为null警告：如果将任何其他列的默认值设置为NULL，则更改表的架构将非常有效。如果默认值设置为非null值，则TimescaleDB将需要为属于该超表的所有行（所有块）填充该值。</p>
-<h2 id="创建超表"><a href="#创建超表" class="headerlink" title="创建超表:"></a>创建超表:</h2><figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">--1.创建标准表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> conditions (</span><br><span class="line">  <span class="type">time</span>        TIMESTAMPTZ       <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  location    TEXT              <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  temperature <span class="type">DOUBLE PRECISION</span>  <span class="keyword">NULL</span>,</span><br><span class="line">  humidity    <span class="type">DOUBLE PRECISION</span>  <span class="keyword">NULL</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 2.将标准表转换成超表，将时间字段作为分片字段</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">--3.操作超表，跟普通数据库操作一样</span></span><br><span class="line"><span class="comment">--插入与查询</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions(<span class="type">time</span>, location, temperature, humidity)</span><br><span class="line">  <span class="keyword">VALUES</span> (NOW(), <span class="string">'office'</span>, <span class="number">70.0</span>, <span class="number">50.0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> conditions <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="type">time</span> <span class="keyword">DESC</span> LIMIT <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 修改超级表</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> conditions</span><br><span class="line">  <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> humidity <span class="type">DOUBLE PRECISION</span> <span class="keyword">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除超表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> conditions;</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>TimescaleDB的用户经常有两个常见问题：<br><strong>我应该为时间分割配置多长时间？</strong><br><strong>我应该使用空间分区吗？应该使用多少个空间分区？</strong><br>时间间隔：超表默认时间间隔是，从v0.11.0开始的7天和v0.11.0之前的1个月。<br>设置时间间隔原则：所有超表时间间隔总块的大小不超过主内存的25%。比如电脑内存是16G，总共10台设备，每50ms存一条数据，1秒钟存20条数据，一天存的数据条数为：2036002410约等于1千700万条，大小大概约为1G，一天存1G数据，电脑内存为16G，总块大小不超过4G，所以时间间隔设为小于4天。<br>虽然通常将块做成较小而不是太大是比较安全的，但是将间隔设置得太小会导致很多块，这对应于某些类型的查询的计划等待时间的增加，所以将时间间隔设为3天比较合适。<br>设置时间间隔：1.通过chunk_time_interval在创建超表时进行设置来显式配置时间间隔<br>chunk_time_interval：块覆盖时间精确到纳秒，一天是100010006060*24<br>实例：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>, chunk_time_interval <span class="operator">=</span><span class="operator">&gt;</span> <span class="number">86400000000</span>);</span><br><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>, chunk_time_interval <span class="operator">=</span><span class="operator">&gt;</span> <span class="type">interval</span> <span class="string">'1 day'</span>)<span class="comment">--：指定块的覆盖时间是1天</span></span><br></pre></td></tr></tbody></table></figure>
-<p>2.创建超表之后，可以通过调用更改用于新块的间隔set_chunk_time_interval<br>例子：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> set_chunk_time_interval(<span class="string">'conditions'</span>, <span class="type">interval</span> <span class="string">'24 hours'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> set_chunk_time_interval(<span class="string">'conditions'</span>, <span class="number">86400000000</span>);</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="模式管理"><a href="#模式管理" class="headerlink" title="模式管理"></a>模式管理</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX <span class="keyword">ON</span> conditions (location, <span class="type">time</span> <span class="keyword">DESC</span>);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>创建索引的好处：创建索引之后，能有效地提高查询数据效率。<br>创建索引和使用查询语句的原则：查询语句的筛选条件顺序根据创建索引的规则来排序。<br>按时间分区建超表时，timescaledb会自动在表数据上创建时间索引。<br>建议：一个表建一个复合索引，然后查询语句按照创建的索引字段顺序来查询语句</p>
-<h4 id="创建触发器"><a href="#创建触发器" class="headerlink" title="创建触发器"></a>创建触发器</h4><p>TimescaleDB支持触发器的全域（也即是触发器触发的时刻）：BEFORE INSERT，AFTER INSERT，BEFORE UPDATE，AFTER UPDATE，BEFORE DELETE，AFTER DELETE<br>创建触发器：创建一个触发器，只要在超表中插入新行，该触发器便会调用此函数</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> record_error</span><br><span class="line">  BEFORE <span class="keyword">INSERT</span> <span class="keyword">ON</span> conditions</span><br><span class="line">  <span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="type">ROW</span></span><br><span class="line">  <span class="keyword">EXECUTE</span> <span class="keyword">PROCEDURE</span> record_error();</span><br></pre></td></tr></tbody></table></figure>
-<p>创建触发器函数：</p>
-<p>好处，减少程序执行的代码，让数据库来执行。更加好的来分配任务。</p>
-<h4 id="添加约束"><a href="#添加约束" class="headerlink" title="添加约束"></a>添加约束</h4><p>1.约束某个字段值得范围<br>2.某个字段外键约束<br>3.将两个字段设为主键</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> conditions (</span><br><span class="line">    <span class="type">time</span>       TIMESTAMPTZ</span><br><span class="line">    temp       <span class="type">FLOAT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    device_id  <span class="type">INTEGER</span> <span class="keyword">CHECK</span> (device_id <span class="operator">&gt;</span> <span class="number">0</span>),</span><br><span class="line">    location   <span class="type">INTEGER</span> <span class="keyword">REFERENCES</span> locations (id),</span><br><span class="line">    <span class="keyword">PRIMARY</span> KEY(<span class="type">time</span>, device_id)</span><br><span class="line">    <span class="operator">/</span><span class="operator">/</span><span class="operator">/</span><span class="keyword">UNIQUE</span>(<span class="type">time</span>, device_id, location)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>);</span><br></pre></td></tr></tbody></table></figure>
-<p>创建Json类型表字段</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> metrics (</span><br><span class="line">  <span class="type">time</span> TIMESTAMPTZ,</span><br><span class="line">  user_id <span class="type">INT</span>,</span><br><span class="line">  device_id <span class="type">INT</span>,</span><br><span class="line">  data JSONB</span><br><span class="line">);</span><br></pre></td></tr></tbody></table></figure>
-<p>创建Json类型表字段慎用,最好别用。<br>数据库JSON字段设计思路：<a href="https://www.cnblogs.com/xiashiwendao/p/6985093.html">https://www.cnblogs.com/xiashiwendao/p/6985093.html</a></p>
-<p>插入数据<br>在插入语句时使用ON CONFLICT不执行任何操作：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions</span><br><span class="line">  <span class="keyword">VALUES</span> (<span class="string">'2017-07-28 11:42:42.846621+00'</span>, <span class="string">'office'</span>, <span class="number">70.1</span>, <span class="number">50.0</span>)</span><br><span class="line">  <span class="keyword">ON</span> CONFLICT DO NOTHING;</span><br></pre></td></tr></tbody></table></figure>
-<p>在插入语句时更新现有数据：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions</span><br><span class="line">  <span class="keyword">VALUES</span> (<span class="string">'2017-07-28 11:42:42.846621+00'</span>, <span class="string">'office'</span>, <span class="number">70.2</span>, <span class="number">50.1</span>)</span><br><span class="line">  <span class="keyword">ON</span> CONFLICT (<span class="type">time</span>, location) DO UPDATE</span><br><span class="line">    <span class="keyword">SET</span> temperature <span class="operator">=</span> excluded.temperature,</span><br><span class="line">        humidity <span class="operator">=</span> excluded.humidity;</span><br></pre></td></tr></tbody></table></figure>
-<p>使用ON CONFLICT的好处，当批量插入数据时，使用ON CONFLICT，整个事务不会失败，仅仅只是跳过有冲突的行。</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions</span><br><span class="line">  <span class="keyword">VALUES</span></span><br><span class="line">    (NOW(), <span class="string">'office'</span>, <span class="number">70.0</span>, <span class="number">50.0</span>),</span><br><span class="line">    (NOW(), <span class="string">'basement'</span>, <span class="number">66.5</span>, <span class="number">60.0</span>),</span><br><span class="line">    (NOW(), <span class="string">'garage'</span>, <span class="number">77.0</span>, <span class="number">65.2</span>);</span><br></pre></td></tr></tbody></table></figure>
-<p>提醒：在后面着重的去看看读取数据，可视化数据，提取数据，超表管理，分析工具，实用程序/统计。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>时序</category>
-        <category>TimescaleDB</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>TimescaleDB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>npm常用命令</title>
-    <url>/2020/06/08/nodejs/npm/</url>
+    <url>/2020/06/08/lang/nodejs/npm/</url>
     <content><![CDATA[<p>cnpm</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
 
@@ -420,290 +285,6 @@
         <category>nodejs</category>
         <category>npm</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Ansiable安装使用</title>
-    <url>/2020/04/29/ops/ansible/</url>
-    <content><![CDATA[<p><img data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1591264607708&amp;di=34d399d4cc0f9bd92ae0644723ce34c7&amp;imgtype=0&amp;src=http://img3.imgtn.bdimg.com/it/u=118371233,1275544235&amp;fm=214&amp;gp=0.jpg"></p>
-<p>Ansible is Simple IT Automation</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Ansible 是给 Linux 系统管理员使用的出色自动化工具。它是一种开源配置工具，能让系统管理员可以从一个中心节点（即 Ansible 服务器）管理数百台服务器。将 Ansible 与 Puppet、Chef 和 Salt 等类似工具进行比较时，它是首选的配置工具，因为它不需要任何代理，并且可以工作在 SSH 和 python 上。</p>
-<p>[Centos8] <a href="https://blog.csdn.net/F8qG7f9YD02Pe/article/details/103379794">https://blog.csdn.net/F8qG7f9YD02Pe/article/details/103379794</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">yum install epel-release -y #安装epel源</span><br><span class="line">yum install ansible -y</span><br><span class="line">ansible --version #查看ansible版本</span><br><span class="line"> </span><br></pre></td></tr></tbody></table></figure>
-
-
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vim /etc/ansible/hosts</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="3-设置SSH无密码登录"><a href="#3-设置SSH无密码登录" class="headerlink" title="3.设置SSH无密码登录"></a>3.设置SSH无密码登录</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-agent bash</span><br><span class="line">ssh-add xx</span><br><span class="line">ssh-copy-id root@xx.xx.xx.xx</span><br></pre></td></tr></tbody></table></figure>
-
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Ansiable</tag>
-        <tag>tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Frp安装使用</title>
-    <url>/2020/04/29/ops/frp/</url>
-    <content><![CDATA[<h2 id="FRP"><a href="#FRP" class="headerlink" title="FRP"></a>FRP</h2><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</p>
-<p><a href="https://github.com/fatedier/frp">[GitHub]</a>  <a href="https://github.com/fatedier/frp/blob/master/README_zh.md">[官方中文文档]</a>  </p>
-<p><a href="https://github.com/fatedier/frp/blob/master/conf/frps_full.ini">frps 完整配置文件</a></p>
-<p><a href="https://github.com/fatedier/frp/blob/master/conf/frpc_full.ini">frpc 完整配置文件</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>docker-compose.yml</p>
-<p><a href="https://hub.docker.com/r/snowdreamtech/frps">https://hub.docker.com/r/snowdreamtech/frps</a></p>
-<p>start frps</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps</span><br></pre></td></tr></tbody></table></figure>
-<p>start frpc</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc</span><br></pre></td></tr></tbody></table></figure>
-
-<p>frps.ini</p>
-<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="comment">#服务器端端口</span></span><br><span class="line"><span class="attr">bind_port</span>=<span class="number">7000</span></span><br><span class="line"><span class="comment">#客户端连接凭证</span></span><br><span class="line"><span class="attr">privilege_token</span>=foo</span><br><span class="line"><span class="comment">#最大连接数</span></span><br><span class="line"><span class="attr">max_pool_count</span>=<span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#客户端映射的端口</span></span><br><span class="line"><span class="attr">vhost_http_port</span> = <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#服务器看板的访问端口</span></span><br><span class="line"><span class="attr">dashboard_port</span>=<span class="number">7500</span></span><br><span class="line"><span class="comment">#服务器看板账户</span></span><br><span class="line"><span class="attr">dashboard_user</span>=root</span><br><span class="line"><span class="attr">dashboard_pwd</span>=rot12</span><br><span class="line"></span><br><span class="line">frpc.ini</span><br><span class="line">​```ini</span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = <span class="number">111.230</span>.<span class="number">248.124</span> </span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"><span class="comment"># protocol = kcp</span></span><br><span class="line"><span class="attr">privilege_token</span>=foo</span><br><span class="line"></span><br><span class="line"><span class="section">[proxycn]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">custom_domains</span> = *.domain.cn</span><br><span class="line"></span><br><span class="line"><span class="section">[ws]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">custom_domains</span> = proxy.domain.cn</span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">45635</span></span><br><span class="line"></span><br><span class="line"><span class="section">[proxycom]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">custom_domains</span> = *.domain.com</span><br><span class="line"></span><br><span class="line"><span class="section">[ssh]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">14222</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>frp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker</title>
-    <url>/2020/06/04/ops/docker/</url>
-    <content><![CDATA[<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。</p>
-<p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p>
-<p>容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>
-<p>Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版），我们用社区版就可以了。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装依赖</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils&nbsp; device-mapper-persistent-data&nbsp; lvm2</span><br><span class="line">sudo yum-config-manager&nbsp; --add-repo&nbsp; &nbsp;https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果报错：Problem: package docker-ce-3:19.03.4-3.el7.x86_64 requires containerd.io &gt;= 1.2.2-3 那就先装新版的 containerd.io</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm</span><br></pre></td></tr></tbody></table></figure>
-<p>再装剩下两个</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">docker --version</span><br><span class="line">sudo systemctl enable docker #开机自启</span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Grafana安装使用</title>
-    <url>/2020/06/04/ops/grafana/</url>
-    <content><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>Grafana</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Grafana+Promethus+Altermanager</title>
-    <url>/2020/06/04/ops/grafana-promethus-altermanager/</url>
-    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://github.com/vegasbrianc/prometheus">【Github】</a></p>
-]]></content>
-      <categories>
-        <category>运维</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>grafana</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Jenkins 安装使用</title>
-    <url>/2020/04/29/ops/jenkins/</url>
-    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo https:*//pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key</span><br><span class="line">yum install jenkins -y</span><br><span class="line">systemctl start jenkins</span><br><span class="line">systemctl enable jenkins</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>配置文件位置 /etc/sysconfig/jenkins</strong></p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">cat /root/.jenkins/secrets/initialAdminPassword #查看密码</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="Groovy-postbuild-插件"><a href="#Groovy-postbuild-插件" class="headerlink" title="Groovy postbuild 插件"></a>Groovy postbuild 插件</h2><h3 id="使用-unirest"><a href="#使用-unirest" class="headerlink" title="使用 unirest"></a>使用 unirest</h3><p>到jenkins 工作目录，plugins/随便找一个包，如jdk-tools/WEB-INF/lib/放入依赖jar</p>
-<figure class="highlight groovy"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = manager.getResult()</span><br><span class="line"><span class="keyword">def</span> jobName = manager.getEnvVariable(<span class="string">"JOB_NAME"</span>)</span><br><span class="line"><span class="keyword">def</span> prod = manager.getEnvVariable(<span class="string">"PROD"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        LinkedHashMap textcard = <span class="keyword">new</span> LinkedHashMap()</span><br><span class="line">        textcard.put(<span class="string">"title"</span>, <span class="string">"构建通知"</span>)</span><br><span class="line"></span><br><span class="line">        textcard.put(<span class="string">"description"</span>, <span class="string">"&lt;div class='gray'&gt;"</span> + jobName + <span class="string">"&lt;/div&gt; &lt;br/&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;div class='normal'&gt; 渠　　道："</span> + prod + <span class="string">"&lt;/div&gt; "</span> +</span><br><span class="line">                <span class="string">"&lt;div class='highlight'&gt; 结　　果："</span> + result + <span class="string">"&lt;/div&gt;"</span>)</span><br><span class="line">        textcard.put(<span class="string">"url"</span>, <span class="string">"https://ops.idflc.cn/ci/job/logistics-android/"</span>)</span><br><span class="line">        textcard.put(<span class="string">"btntxt"</span>, <span class="string">"前往"</span>)</span><br><span class="line"></span><br><span class="line">        LinkedHashMap body = <span class="keyword">new</span> LinkedHashMap()</span><br><span class="line"></span><br><span class="line">        body.put(<span class="string">"msgtype"</span>, <span class="string">"textcard"</span>)</span><br><span class="line">        body.put(<span class="string">"enable_id_trans"</span>, <span class="number">0</span>)</span><br><span class="line">        body.put(<span class="string">"enable_duplicate_check"</span>, <span class="number">0</span>)</span><br><span class="line">        body.put(<span class="string">"duplicate_check_interval"</span>, <span class="number">1800</span>)</span><br><span class="line">        body.put(<span class="string">"textcard"</span>, textcard)</span><br><span class="line"></span><br><span class="line">        Object res = kong.unirest.Unirest.post(<span class="string">"http://push.domain.cn/wechat/push/cp001"</span>).</span><br><span class="line">                header(<span class="string">"token"</span>, <span class="string">"test"</span>).</span><br><span class="line">                header(<span class="string">"accept"</span>, <span class="string">"*/*"</span>).header(<span class="string">"content-type"</span>, <span class="string">"application/json"</span>).body(body).</span><br><span class="line">                asJson().getBody().</span><br><span class="line">                getObject()</span><br><span class="line">manager.listener.logger.println(res)</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>jenkins</tag>
-        <tag>ops</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Maven 打包发布</title>
-    <url>/2020/04/29/ops/mavenrelease/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>maven</tag>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nginx安装使用</title>
-    <url>/2020/04/29/ops/nginx/</url>
-    <content><![CDATA[<h1 id="Nginx安装使用"><a href="#Nginx安装使用" class="headerlink" title="Nginx安装使用"></a>Nginx安装使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>docker-compose.yml</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">"host"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">80</span><span class="string">:80</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">443</span><span class="string">:443</span></span><br><span class="line">      </span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/services/nginx/conf:/etc/nginx</span>            <span class="comment">#映射nginx的配置文件到容器里</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/services/nginx/logs:/wwwlogs</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/static/:/www</span>                    <span class="comment">#映射nginx的网页目录到容器里</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>nginx.conf</p>
-<figure class="highlight nginx"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attribute">user</span>  nginx;</span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">error_log</span>  /var/log/nginx/error.log <span class="literal">warn</span>;</span><br><span class="line"><span class="attribute">pid</span>        /var/run/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> {</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">102400</span>; <span class="comment">#设置单个工作进程最大连接数102400</span></span><br><span class="line">    <span class="attribute">accept_mutex</span> <span class="literal">on</span>; <span class="comment">#优化同一时刻只有一个请求而避免多个睡眠进程被唤醒的设置，on为防止被同时唤醒，默认为off，因此nginx刚安装完以后要进行适当的优化。</span></span><br><span class="line">    <span class="attribute">multi_accept</span> <span class="literal">on</span>; <span class="comment">#打开同时接受多个新网络连接请求的功能。</span></span><br><span class="line">    <span class="attribute">use</span> <span class="literal">epoll</span>; <span class="comment">#使用epoll事件驱动，因为epoll的性能相比其他事件驱动要好很多</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">http</span> {</span><br><span class="line">    <span class="attribute">include</span>       /etc/nginx/mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">default_type</span> text/html;</span><br><span class="line">    <span class="attribute">charset</span> UTF-<span class="number">8</span>;</span><br><span class="line">    <span class="attribute">server_tokens</span> <span class="literal">off</span>; <span class="comment">#隐藏ngxin版本号</span></span><br><span class="line">    </span><br><span class="line">    <span class="attribute">log_format</span>  main  <span class="string">'$remote_addr - $remote_user [$time_local] "$request" '</span></span><br><span class="line">                      <span class="string">'$status $body_bytes_sent "$http_referer" '</span></span><br><span class="line">                      <span class="string">'"$http_user_agent" "$http_x_forwarded_for"'</span>;</span><br><span class="line">    <span class="attribute">access_log</span>  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>; <span class="comment">#配置允许sendfile方式传输文件</span></span><br><span class="line">    <span class="attribute">sendfile_max_chunk</span> <span class="number">512k</span>;   <span class="comment">#Nginx工作进程每次调用sendfile()传输的数据最大不能超出这个值，默认值为0表示无限制，可以设置在http/server/location模块中。</span></span><br><span class="line">   </span><br><span class="line">    <span class="attribute">tcp_nopush</span> <span class="literal">on</span>; <span class="comment">#告诉nginx在一个数据包里发送所有头文件，而不一个接一个的发送。</span></span><br><span class="line">    <span class="attribute">tcp_nodelay</span> <span class="literal">on</span>; <span class="comment">#告诉nginx不要缓存数据，而是一段一段的发送--当需要及时发送数据时，就应该给应用设置这个属性，这样发送一小块数据信息时就不能立即得到返回值。</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">proxy_cache_path</span>  /www/cache/ levels=<span class="number">1</span>:<span class="number">2</span> keys_zone=STATIC:<span class="number">10m</span> inactive=<span class="number">365d</span>  max_size=<span class="number">1g</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">root</span> /www;</span><br><span class="line">    <span class="attribute">include</span> /etc/nginx/conf.d/<span class="regexp">*.conf</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>include       /etc/nginx/gzip;</code></p>
-<figure class="highlight nginx"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span>  <span class="literal">on</span>; <span class="comment"># 开启gzip压缩</span></span><br><span class="line"><span class="attribute">gzip_min_length</span> <span class="number">1k</span>; <span class="comment"># 表示当请求的资源超过1k时，才开启压缩</span></span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">4</span> <span class="number">16k</span>; 	<span class="comment"># 设置压缩所需要的缓冲区大小</span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>; 	<span class="comment"># 针对的http版本</span></span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">2</span>; 	<span class="comment"># 压缩级别，级别越底压缩速度越快文件压缩比越小，反之速度越慢文件压缩比越大</span></span><br><span class="line"><span class="comment"># 支持压缩的资源类型，对于前后分离的项目而言，注意下json的压缩支持</span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain application/x-javascript text/css application/xml application/json text/javascript application/x-httpd-php image/jpeg image/gif image/png;</span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>; 	<span class="comment"># 是否在http header中添加Vary: Accept-Encoding，建议开启</span></span><br><span class="line"><span class="attribute">gzip_disable</span> <span class="string">"MSIE [1-6]\."</span>; 	<span class="comment"># 禁用IE 6 gzip</span></span><br><span class="line"><span class="attribute">gzip_proxied</span> any;<span class="comment">#nginx 做前端代理时启用该选项，表示无论后端服务器的headers头返回什么信息，都无条件启用压缩</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p><strong>结合frp内网穿透统一代理配置</strong></p>
-<figure class="highlight nginx"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 匹配到指定主机，最后要加$ 不然get参数丢失</span></span><br><span class="line"><span class="attribute">location</span> <span class="regexp">~ ^/dev_(\d+)_(\d+)/(.*)$</span> {</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://192.168.1.<span class="variable">$1</span>:<span class="variable">$2</span>/<span class="variable">$3</span>?$args;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>个人开发机外网地址规则:<a href="https://angviza.com/dev_$%7Bip%7D_$%7Bport%7D/">https://angviza.com/dev_${ip}_${port}/</a></p>
-<p>ex：<br>内网访问地址为： <a href="http://192.168.1.117:8080/logistics/">http://192.168.1.117:8080/logistics/</a><br>对外网访问地址 :   <a href="https://angviza.com/dev_117_8080/logistics">https://angviza.com/dev_117_8080/logistics</a></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 安装使用</title>
-    <url>/2020/04/29/ops/python/</url>
-    <content><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p><strong>前言</strong></p>
-<p>Python是世界上最受欢迎的编程语言之一，凭借其简单易学的语法，Python是初学者和经验丰富的开发人员的流行选择。</p>
-<p>当前有两个Python版本正在积极开发中，尽管Python 2得到了良好的支持和活跃，但Python 3被应用得更多，也更为高效，参考<a href="https://ywnz.com/linuxrj/5990.html">Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能</a>。</p>
-<p>默认情况下，RHEL/CentOS 8没有未版本控制的全系统python命令，以避免将用户锁定到特定版本的Python。相反，它使用户可以选择安装、配置和运行特定的Python版本，系统工具（例如yum）使用内部Python二进制文件和库。</p>
-<p>本文将引导你逐步在CentOS 8操作系统上安装Python 3和Python 2。</p>
-<p><strong>在CentOS 8上安装Python 3</strong></p>
-<p>要在CentOS 8上安装Python 3，请以root或sudo用户身份在终端中运行以下命令：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dnf install python3</span></span><br></pre></td></tr></tbody></table></figure>
-<p>要验证安装，请输入以下命令检查Python版本：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3 --version</span></span><br></pre></td></tr></tbody></table></figure>
-<p>参考：<a href="https://ywnz.com/linuxjc/5833.html">在Linux系统中检查Python版本（Python Version）的方法</a>。</p>
-<p>在选写本文时，CentOS存储库中可用的Python 3的最新版本是“3.6.x”：</p>
-<p>Python 3.6.8</p>
-<p>注：该命令还会安装pip。</p>
-<p>要运行Python，你需要明确输入python3并运行pip输入pip3。</p>
-<p>你应该始终喜欢使用yum或dnf安装发行版提供的python模块，因为它们受支持并经过测试可以在CentOS 8上正常工作，仅在虚拟环境中使用pip，Python虚拟环境允许你将Python模块安装在特定项目的隔离位置，而不必全局安装，这样，你不必担心会影响其他Python项目。</p>
-<p>Python 3模块软件包的名称以“python3”为前缀，例如，要安装paramiko模块，应运行：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dnf install python3-paramiko</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-<p><strong>在CentOS 8上安装Python 2</strong></p>
-<p>Python 2软件包也包含在默认的CentOS 8存储库中。</p>
-<p>要安装Python 2，请输入以下命令：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dnf install python2</span></span><br></pre></td></tr></tbody></table></figure>
-<p>通过键入以下命令验证安装：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python2 --version</span></span><br></pre></td></tr></tbody></table></figure>
-<p>输出应如下所示内容：</p>
-<p>Python 2.7.15</p>
-<p>要执行Python 2，请输入python2，然后运行pip并输入pip2。</p>
-<p><strong>设置默认Python版本（Unversioned Python命令）</strong></p>
-<p>如果你有希望在系统路径中找到python命令的应用程序，则需要创建unversioned python命令并设置默认版本。</p>
-<p>要将Python 3设置为系统范围内的非版本化python命令，请使用Alternatives实用程序：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo alternatives --<span class="built_in">set</span> python /usr/bin/python3</span></span><br></pre></td></tr></tbody></table></figure>
-<p>对于Python 2，输入：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo alternatives --<span class="built_in">set</span> python /usr/bin/python2</span></span><br></pre></td></tr></tbody></table></figure>
-<p>Alternatives命令创建一个指向指定python版本的symlink python。</p>
-<p>在终端中键入python –version，你应该看到默认的Python版本。</p>
-<p>要更改默认版本，请使用上面的命令之一，如果要删除未版本控制的python命令，请输入：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo alternatives --auto python</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-<p><strong>结论</strong></p>
-<p>在CentOS 8操作系统中，默认情况下未安装Python，如果有需要，按照以上方法操作即可。</p>
-<p>如果做一个总结的话，那就是：要安装Python 3，请键入dnf install python3，如果是安装python 2，请键入dnf install python2。</p>
-<p><a href="https://ywnz.com/linuxjc/6033.html">https://ywnz.com/linuxjc/6033.html</a></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>jenkins</tag>
-        <tag>ops</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PostgreSQL 安装使用</title>
-    <url>/2020/04/29/ops/postgresql/</url>
-    <content><![CDATA[<p>是的分解哦就</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><a href="https://ywnz.com/linuxjc/6033.html">https://ywnz.com/linuxjc/6033.html</a></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>jenkins</tag>
-        <tag>ops</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chrome 插件开发</title>
-    <url>/2020/06/08/plugins/chrome-plugin/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>plugin</category>
-        <category>chrome</category>
-      </categories>
-      <tags>
-        <tag>chrome</tag>
-        <tag>plugin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Gradle 插件开发</title>
-    <url>/2020/06/08/plugins/gradle-plugin/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>plugin</category>
-        <category>gradle</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-        <tag>plugin</tag>
-        <tag>gradle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RocketMQ</title>
-    <url>/2020/04/29/ops/rocketmq/</url>
-    <content><![CDATA[<p>生产者发送消息：<br>export NAMESRV_ADDR=127.0.0.1:9876<br>sh tools.sh org.apache.rocketmq.example.quickstart.Producer</p>
-<p>消费者接受消息：<br>sh tools.sh org.apache.rocketmq.example.quickstart.Consumer<br>————————————————<br>版权声明：本文为CSDN博主「森雨海巷」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/qq_33767353/java/article/details/103082730">https://blog.csdn.net/qq_33767353/java/article/details/103082730</a></p>
-]]></content>
-      <categories>
-        <category>MQ</category>
-      </categories>
-      <tags>
-        <tag>MQ</tag>
-        <tag>services</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/06/10/redis/redis-script/</url>
-    <content><![CDATA[<p>redis-script</p>
-]]></content>
   </entry>
   <entry>
     <title>vscode打包问题</title>
@@ -824,6 +405,353 @@
       </tags>
   </entry>
   <entry>
+    <title>postgis</title>
+    <url>/2020/11/02/service/db/postgis/</url>
+    <content><![CDATA[<h2 id="Docker-PG内-安装"><a href="#Docker-PG内-安装" class="headerlink" title="Docker PG内 安装"></a>Docker PG内 <a href="https://www.vultr.com/docs/install-the-postgis-extension-for-postgresql-on-ubuntu-linux">安装</a></h2><figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">#安装 gis:</span></span><br><span class="line">apt-get install-y postgresql-13-postgis-3 postgresql-13-postgis-3-dbgsym postgresql-13-postgis-3-scripts</span><br></pre></td></tr></tbody></table></figure>
+<p>选择数据库&gt;sql</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">-- 进去psql启用扩展</span></span><br><span class="line"><span class="keyword">CREATE</span> EXTENSION postgis;</span><br><span class="line"><span class="comment">-- 测试是否启用成功</span></span><br><span class="line"><span class="keyword">select</span> postgis_full_version();</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+<h2 id="全文检索"><a href="#全文检索" class="headerlink" title="全文检索"></a>全文检索</h2><p> <a href="https://github.com/hightman/scws">https://github.com/hightman/scws</a></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">install bzip2</span><br><span class="line"><span class="built_in">cd</span> /opt</span><br><span class="line">wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2</span><br><span class="line">tar -jxvf ./scws-1.2.3.tar.bz2</span><br><span class="line"><span class="built_in">cd</span> scws-1.2.3/</span><br><span class="line">./configure </span><br><span class="line">make </span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">ldconfig</span><br><span class="line"><span class="comment">#https://github.com/amutu/zhparser</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+<p>apt install -y postgresql-server-dev-13</p>
+<figure class="highlight pgsql"><table><tbody><tr><td class="code"><pre><span class="line">PG_CONFIG=/usr/lib/postgresql/<span class="number">13</span>/bin/pg_config make </span><br><span class="line">PG_CONFIG=/usr/lib/postgresql/<span class="number">13</span>/bin/pg_config make install</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="https://mlog.club/article/2514326">https://mlog.club/article/2514326</a></p>
+<p> <strong>CREATE</strong> <strong>INDEX</strong> mytable_description_tsvector_idx <strong>ON</strong> mytable(to_tsvector(description))  <strong>WHERE</strong> created_at &gt; <strong>now</strong>() - ‘1 year’::interval;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">-- 安装扩展</span></span><br><span class="line"><span class="keyword">CREATE</span> EXTENSION zhparser;</span><br><span class="line"><span class="comment">-- 中文分词配置</span></span><br><span class="line"><span class="keyword">CREATE</span> TEXT <span class="keyword">SEARCH</span> CONFIGURATION chinese_parser (PARSER <span class="operator">=</span> zhparser);</span><br><span class="line"><span class="keyword">ALTER</span> TEXT <span class="keyword">SEARCH</span> CONFIGURATION chinese_parser <span class="keyword">ADD</span> MAPPING <span class="keyword">FOR</span> n,v,a,i,e,l,j <span class="keyword">WITH</span> simple;</span><br><span class="line"><span class="comment">-- create test table</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> text_search(</span><br><span class="line">  text_id SERIAL <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    text_name <span class="type">VARCHAR</span>(<span class="number">32</span>),</span><br><span class="line">  text_content TEXT,</span><br><span class="line">  tsv_column tsvector</span><br><span class="line">);</span><br><span class="line"><span class="comment">-- 创建gin_index以加快匹配速度</span></span><br><span class="line"><span class="keyword">CREATE</span> INDEX idx_gin_tsv <span class="keyword">ON</span> text_search <span class="keyword">USING</span> GIN(tsv_column);</span><br><span class="line"><span class="comment">-- 创建触发器以从目标同步tsvector列</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> sync_trigger </span><br><span class="line">   BEFORE <span class="keyword">INSERT</span> <span class="keyword">OR</span> UPDATE <span class="keyword">ON</span> text_search <span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="type">ROW</span> </span><br><span class="line">   <span class="keyword">EXECUTE</span> <span class="keyword">PROCEDURE</span> </span><br><span class="line">   tsvector_update_trigger(tsv_column, <span class="string">'public.chinese_parser'</span>, text_name , text_content);</span><br><span class="line"><span class="comment">-- 插入数据</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> text_search(text_name,text_content) <span class="keyword">VALUES</span> (<span class="string">'黄国宋'</span>,<span class="string">'ThinkPad 小红点多功能蓝牙键盘多平台WIN安卓IOS支持 4X30K12182'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> text_search(text_name,text_content) <span class="keyword">VALUES</span> (<span class="string">'陈家豪'</span>,<span class="string">'多平台 富文本 写作软件'</span>);</span><br><span class="line"><span class="comment">-- 搜索关键词</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> text_search <span class="keyword">WHERE</span> tsv_column @@ to_tsquery(<span class="string">'chinese_parser'</span>, <span class="string">'多平台黄国宋'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> text_search <span class="keyword">WHERE</span> tsv_column @@ to_tsquery(<span class="string">'chinese_parser'</span>, <span class="string">'小红点&amp;多平台'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> CONCAT(text_name ,<span class="string">','</span> , text_content) <span class="keyword">FROM</span> text_search</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>关系</category>
+        <category>postgis</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>postgis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TimescaleDB 安装&amp;使用</title>
+    <url>/2021/04/03/service/db/timescaledb/</url>
+    <content><![CDATA[<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">timescaledb:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">postgistime</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">timescale/timescaledb-postgis:latest-pg13</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"5432:5432"</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">xxx</span> </span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">xxxxx</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/var/lib/postgresql:rw</span></span><br></pre></td></tr></tbody></table></figure>
+
+<span id="more"></span>
+<!-- more -->
+<p>使用TimescaleDB建表时，最好将非超表字段默认设为null警告：如果将任何其他列的默认值设置为NULL，则更改表的架构将非常有效。如果默认值设置为非null值，则TimescaleDB将需要为属于该超表的所有行（所有块）填充该值。</p>
+<h2 id="创建超表"><a href="#创建超表" class="headerlink" title="创建超表:"></a>创建超表:</h2><figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">--1.创建标准表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> conditions (</span><br><span class="line">  <span class="type">time</span>        TIMESTAMPTZ       <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  location    TEXT              <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  temperature <span class="type">DOUBLE PRECISION</span>  <span class="keyword">NULL</span>,</span><br><span class="line">  humidity    <span class="type">DOUBLE PRECISION</span>  <span class="keyword">NULL</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 2.将标准表转换成超表，将时间字段作为分片字段</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">--3.操作超表，跟普通数据库操作一样</span></span><br><span class="line"><span class="comment">--插入与查询</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions(<span class="type">time</span>, location, temperature, humidity)</span><br><span class="line">  <span class="keyword">VALUES</span> (NOW(), <span class="string">'office'</span>, <span class="number">70.0</span>, <span class="number">50.0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> conditions <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="type">time</span> <span class="keyword">DESC</span> LIMIT <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 修改超级表</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> conditions</span><br><span class="line">  <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> humidity <span class="type">DOUBLE PRECISION</span> <span class="keyword">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除超表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> conditions;</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>TimescaleDB的用户经常有两个常见问题：<br><strong>我应该为时间分割配置多长时间？</strong><br><strong>我应该使用空间分区吗？应该使用多少个空间分区？</strong><br>时间间隔：超表默认时间间隔是，从v0.11.0开始的7天和v0.11.0之前的1个月。<br>设置时间间隔原则：所有超表时间间隔总块的大小不超过主内存的25%。比如电脑内存是16G，总共10台设备，每50ms存一条数据，1秒钟存20条数据，一天存的数据条数为：2036002410约等于1千700万条，大小大概约为1G，一天存1G数据，电脑内存为16G，总块大小不超过4G，所以时间间隔设为小于4天。<br>虽然通常将块做成较小而不是太大是比较安全的，但是将间隔设置得太小会导致很多块，这对应于某些类型的查询的计划等待时间的增加，所以将时间间隔设为3天比较合适。<br>设置时间间隔：1.通过chunk_time_interval在创建超表时进行设置来显式配置时间间隔<br>chunk_time_interval：块覆盖时间精确到纳秒，一天是100010006060*24<br>实例：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>, chunk_time_interval <span class="operator">=</span><span class="operator">&gt;</span> <span class="number">86400000000</span>);</span><br><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>, chunk_time_interval <span class="operator">=</span><span class="operator">&gt;</span> <span class="type">interval</span> <span class="string">'1 day'</span>)<span class="comment">--：指定块的覆盖时间是1天</span></span><br></pre></td></tr></tbody></table></figure>
+<p>2.创建超表之后，可以通过调用更改用于新块的间隔set_chunk_time_interval<br>例子：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> set_chunk_time_interval(<span class="string">'conditions'</span>, <span class="type">interval</span> <span class="string">'24 hours'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> set_chunk_time_interval(<span class="string">'conditions'</span>, <span class="number">86400000000</span>);</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="模式管理"><a href="#模式管理" class="headerlink" title="模式管理"></a>模式管理</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX <span class="keyword">ON</span> conditions (location, <span class="type">time</span> <span class="keyword">DESC</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建索引的好处：创建索引之后，能有效地提高查询数据效率。<br>创建索引和使用查询语句的原则：查询语句的筛选条件顺序根据创建索引的规则来排序。<br>按时间分区建超表时，timescaledb会自动在表数据上创建时间索引。<br>建议：一个表建一个复合索引，然后查询语句按照创建的索引字段顺序来查询语句</p>
+<h4 id="创建触发器"><a href="#创建触发器" class="headerlink" title="创建触发器"></a>创建触发器</h4><p>TimescaleDB支持触发器的全域（也即是触发器触发的时刻）：BEFORE INSERT，AFTER INSERT，BEFORE UPDATE，AFTER UPDATE，BEFORE DELETE，AFTER DELETE<br>创建触发器：创建一个触发器，只要在超表中插入新行，该触发器便会调用此函数</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> record_error</span><br><span class="line">  BEFORE <span class="keyword">INSERT</span> <span class="keyword">ON</span> conditions</span><br><span class="line">  <span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="type">ROW</span></span><br><span class="line">  <span class="keyword">EXECUTE</span> <span class="keyword">PROCEDURE</span> record_error();</span><br></pre></td></tr></tbody></table></figure>
+<p>创建触发器函数：</p>
+<p>好处，减少程序执行的代码，让数据库来执行。更加好的来分配任务。</p>
+<h4 id="添加约束"><a href="#添加约束" class="headerlink" title="添加约束"></a>添加约束</h4><p>1.约束某个字段值得范围<br>2.某个字段外键约束<br>3.将两个字段设为主键</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> conditions (</span><br><span class="line">    <span class="type">time</span>       TIMESTAMPTZ</span><br><span class="line">    temp       <span class="type">FLOAT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    device_id  <span class="type">INTEGER</span> <span class="keyword">CHECK</span> (device_id <span class="operator">&gt;</span> <span class="number">0</span>),</span><br><span class="line">    location   <span class="type">INTEGER</span> <span class="keyword">REFERENCES</span> locations (id),</span><br><span class="line">    <span class="keyword">PRIMARY</span> KEY(<span class="type">time</span>, device_id)</span><br><span class="line">    <span class="operator">/</span><span class="operator">/</span><span class="operator">/</span><span class="keyword">UNIQUE</span>(<span class="type">time</span>, device_id, location)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">SELECT</span> create_hypertable(<span class="string">'conditions'</span>, <span class="string">'time'</span>);</span><br></pre></td></tr></tbody></table></figure>
+<p>创建Json类型表字段</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> metrics (</span><br><span class="line">  <span class="type">time</span> TIMESTAMPTZ,</span><br><span class="line">  user_id <span class="type">INT</span>,</span><br><span class="line">  device_id <span class="type">INT</span>,</span><br><span class="line">  data JSONB</span><br><span class="line">);</span><br></pre></td></tr></tbody></table></figure>
+<p>创建Json类型表字段慎用,最好别用。<br>数据库JSON字段设计思路：<a href="https://www.cnblogs.com/xiashiwendao/p/6985093.html">https://www.cnblogs.com/xiashiwendao/p/6985093.html</a></p>
+<p>插入数据<br>在插入语句时使用ON CONFLICT不执行任何操作：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions</span><br><span class="line">  <span class="keyword">VALUES</span> (<span class="string">'2017-07-28 11:42:42.846621+00'</span>, <span class="string">'office'</span>, <span class="number">70.1</span>, <span class="number">50.0</span>)</span><br><span class="line">  <span class="keyword">ON</span> CONFLICT DO NOTHING;</span><br></pre></td></tr></tbody></table></figure>
+<p>在插入语句时更新现有数据：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions</span><br><span class="line">  <span class="keyword">VALUES</span> (<span class="string">'2017-07-28 11:42:42.846621+00'</span>, <span class="string">'office'</span>, <span class="number">70.2</span>, <span class="number">50.1</span>)</span><br><span class="line">  <span class="keyword">ON</span> CONFLICT (<span class="type">time</span>, location) DO UPDATE</span><br><span class="line">    <span class="keyword">SET</span> temperature <span class="operator">=</span> excluded.temperature,</span><br><span class="line">        humidity <span class="operator">=</span> excluded.humidity;</span><br></pre></td></tr></tbody></table></figure>
+<p>使用ON CONFLICT的好处，当批量插入数据时，使用ON CONFLICT，整个事务不会失败，仅仅只是跳过有冲突的行。</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> conditions</span><br><span class="line">  <span class="keyword">VALUES</span></span><br><span class="line">    (NOW(), <span class="string">'office'</span>, <span class="number">70.0</span>, <span class="number">50.0</span>),</span><br><span class="line">    (NOW(), <span class="string">'basement'</span>, <span class="number">66.5</span>, <span class="number">60.0</span>),</span><br><span class="line">    (NOW(), <span class="string">'garage'</span>, <span class="number">77.0</span>, <span class="number">65.2</span>);</span><br></pre></td></tr></tbody></table></figure>
+<p>提醒：在后面着重的去看看读取数据，可视化数据，提取数据，超表管理，分析工具，实用程序/统计。</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>时序</category>
+        <category>TimescaleDB</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>TimescaleDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pg-es-fdw</title>
+    <url>/2020/10/28/service/db/pg-es-fdw/</url>
+    <content><![CDATA[<h2 id="安装ES"><a href="#安装ES" class="headerlink" title="安装ES"></a>安装ES</h2><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html</a></p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2.2'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">es01:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.elastic.co/elasticsearch/elasticsearch:7.9.3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">es01</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">discovery.type=single-node</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">    <span class="attr">ulimits:</span></span><br><span class="line">      <span class="attr">memlock:</span></span><br><span class="line">        <span class="attr">soft:</span> <span class="number">-1</span></span><br><span class="line">        <span class="attr">hard:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/usr/share/elasticsearch/data</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">9200</span><span class="string">:9200</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  apt-get update &amp;&amp;    apt-get -y install</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  <span class="comment">#apt-get install python python-pip -y (Python3)</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装python3</p>
+<p><a href="https://blog.csdn.net/bz0446/article/details/105500585">https://blog.csdn.net/bz0446/article/details/105500585</a></p>
+<h2 id="安装fdw"><a href="#安装fdw" class="headerlink" title="安装fdw"></a>安装fdw</h2><p><a href="https://github.com/matthewfranglen/postgres-elasticsearch-fdw">GitHub</a></p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> pg_terminate_backend(pid) <span class="keyword">from</span> pg_stat_activity <span class="keyword">where</span> DATNAME <span class="operator">=</span> <span class="string">'gis'</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>时序</category>
+        <category>TimescaleDB</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>TimescaleDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Grafana+Promethus+Altermanager</title>
+    <url>/2020/06/04/service/monitor/grafana-promethus-altermanager/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://github.com/vegasbrianc/prometheus">【Github】</a></p>
+]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>grafana</tag>
+        <tag>tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>minIO</title>
+    <url>/2020/06/24/service/file/minio/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/eason-d/p/12711041.html">Docker 安装 minio</a></p>
+<p>参考地址: <a href="https://www.jianshu.com/p/52dbc679094a">https://www.jianshu.com/p/52dbc679094a</a></p>
+<p>注意的地方:</p>
+<p>echo 命令设置 ACCESS_KEY 和 SECRET_KEY</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"admin"</span> | docker secret create access_key -</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"12345678"</span> | docker secret create secret_key </span><br><span class="line">-此处secret_key长度至少8位, 若已经设置密码不足8位，可通过命令</span><br><span class="line">docker secret --<span class="built_in">help</span></span><br><span class="line">查看相关命令中</span><br><span class="line">docker secret rm secret_key</span><br><span class="line">来移除 若执行出现 Error response from daemon: This node is not a swarm manager. Use <span class="string">"docker swarm init"</span> or <span class="string">"docker swarm join"</span> to connect this node to swarm and try again.错误, 需执行</span><br><span class="line">docker swarm init</span><br></pre></td></tr></tbody></table></figure>
+
+<p>启动命令</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -itd -p 9000:9000 --name minio1   -e <span class="string">"MINIO_ACCESS_KEY=admin"</span>   -e <span class="string">"MINIO_SECRET_KEY=admin"</span>   -v /mnt/data:/data   -v /mnt/config:/root/.minio   minio/minio server /data</span><br></pre></td></tr></tbody></table></figure>
+
+<p>打开网址: <a href="http://x.x.x.x:9000/">http://x.x.x.x:9000/</a> 发现启动失败, 但是改回原来的用户密钥 正确 估计是用户名有问题， 最后使用默认的方式启动,</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -itd -p 9000:9000 --name minio1   -e <span class="string">"MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE"</span>   -e <span class="string">"MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"</span>   -v /mnt/data:/data   -v /mnt/config:/root/.minio   minio/minio server /data</span><br></pre></td></tr></tbody></table></figure>
+
+<p>docker-compose.yml</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">minio:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">minio/minio</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">server</span> <span class="string">/data</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MINIO_ACCESS_KEY=admin</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MINIO_SECRET_KEY=admin123456</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">'9000:9000'</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">'minio_data:/data'</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">'config:/root/.minio'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">minio_data:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">local</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -p 9000:9000 --name minio \</span><br><span class="line">  -v /mnt/data1:/data1 \</span><br><span class="line">  -v /mnt/data2:/data2 \</span><br><span class="line">  -v /mnt/data3:/data3 \</span><br><span class="line">  -v /mnt/data4:/data4 \</span><br><span class="line">  -v /mnt/data5:/data5 \</span><br><span class="line">  -v /mnt/data6:/data6 \</span><br><span class="line">  -v /mnt/data7:/data7 \</span><br><span class="line">  -v /mnt/data8:/data8 \</span><br><span class="line">  minio/minio server /data1 /data2 /data3 /data4 /data5 /data6 /data7 /data8</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>file</category>
+        <category>minio</category>
+      </categories>
+      <tags>
+        <tag>file</tag>
+        <tag>cdn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RocketMQ</title>
+    <url>/2020/04/29/service/mq/rocketmq/</url>
+    <content><![CDATA[<p>生产者发送消息：<br>export NAMESRV_ADDR=127.0.0.1:9876<br>sh tools.sh org.apache.rocketmq.example.quickstart.Producer</p>
+<p>消费者接受消息：<br>sh tools.sh org.apache.rocketmq.example.quickstart.Consumer<br>————————————————<br>版权声明：本文为CSDN博主「森雨海巷」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/qq_33767353/java/article/details/103082730">https://blog.csdn.net/qq_33767353/java/article/details/103082730</a></p>
+]]></content>
+      <categories>
+        <category>MQ</category>
+      </categories>
+      <tags>
+        <tag>MQ</tag>
+        <tag>services</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Frp安装使用</title>
+    <url>/2020/04/29/service/proxy/frp/</url>
+    <content><![CDATA[<h2 id="FRP"><a href="#FRP" class="headerlink" title="FRP"></a>FRP</h2><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</p>
+<p><a href="https://github.com/fatedier/frp">[GitHub]</a>  <a href="https://github.com/fatedier/frp/blob/master/README_zh.md">[官方中文文档]</a>  </p>
+<p><a href="https://github.com/fatedier/frp/blob/master/conf/frps_full.ini">frps 完整配置文件</a></p>
+<p><a href="https://github.com/fatedier/frp/blob/master/conf/frpc_full.ini">frpc 完整配置文件</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>docker-compose.yml</p>
+<p><a href="https://hub.docker.com/r/snowdreamtech/frps">https://hub.docker.com/r/snowdreamtech/frps</a></p>
+<p>start frps</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps</span><br></pre></td></tr></tbody></table></figure>
+<p>start frpc</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc</span><br></pre></td></tr></tbody></table></figure>
+
+<p>frps.ini</p>
+<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="comment">#服务器端端口</span></span><br><span class="line"><span class="attr">bind_port</span>=<span class="number">7000</span></span><br><span class="line"><span class="comment">#客户端连接凭证</span></span><br><span class="line"><span class="attr">privilege_token</span>=foo</span><br><span class="line"><span class="comment">#最大连接数</span></span><br><span class="line"><span class="attr">max_pool_count</span>=<span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#客户端映射的端口</span></span><br><span class="line"><span class="attr">vhost_http_port</span> = <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#服务器看板的访问端口</span></span><br><span class="line"><span class="attr">dashboard_port</span>=<span class="number">7500</span></span><br><span class="line"><span class="comment">#服务器看板账户</span></span><br><span class="line"><span class="attr">dashboard_user</span>=root</span><br><span class="line"><span class="attr">dashboard_pwd</span>=rot12</span><br><span class="line"></span><br><span class="line">frpc.ini</span><br><span class="line">​```ini</span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = <span class="number">111.230</span>.<span class="number">248.124</span> </span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"><span class="comment"># protocol = kcp</span></span><br><span class="line"><span class="attr">privilege_token</span>=foo</span><br><span class="line"></span><br><span class="line"><span class="section">[proxycn]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">custom_domains</span> = *.domain.cn</span><br><span class="line"></span><br><span class="line"><span class="section">[ws]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">custom_domains</span> = proxy.domain.cn</span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">45635</span></span><br><span class="line"></span><br><span class="line"><span class="section">[proxycom]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">custom_domains</span> = *.domain.com</span><br><span class="line"></span><br><span class="line"><span class="section">[ssh]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">172.17</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">14222</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>frp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx安装使用</title>
+    <url>/2020/04/29/service/proxy/nginx/</url>
+    <content><![CDATA[<h1 id="Nginx安装使用"><a href="#Nginx安装使用" class="headerlink" title="Nginx安装使用"></a>Nginx安装使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>docker-compose.yml</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">"host"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/services/nginx/conf:/etc/nginx</span>            <span class="comment">#映射nginx的配置文件到容器里</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/services/nginx/logs:/wwwlogs</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/data/static/:/www</span>                    <span class="comment">#映射nginx的网页目录到容器里</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>nginx.conf</p>
+<figure class="highlight nginx"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attribute">user</span>  nginx;</span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">error_log</span>  /var/log/nginx/error.log <span class="literal">warn</span>;</span><br><span class="line"><span class="attribute">pid</span>        /var/run/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> {</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">102400</span>; <span class="comment">#设置单个工作进程最大连接数102400</span></span><br><span class="line">    <span class="attribute">accept_mutex</span> <span class="literal">on</span>; <span class="comment">#优化同一时刻只有一个请求而避免多个睡眠进程被唤醒的设置，on为防止被同时唤醒，默认为off，因此nginx刚安装完以后要进行适当的优化。</span></span><br><span class="line">    <span class="attribute">multi_accept</span> <span class="literal">on</span>; <span class="comment">#打开同时接受多个新网络连接请求的功能。</span></span><br><span class="line">    <span class="attribute">use</span> <span class="literal">epoll</span>; <span class="comment">#使用epoll事件驱动，因为epoll的性能相比其他事件驱动要好很多</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">http</span> {</span><br><span class="line">    <span class="attribute">include</span>       /etc/nginx/mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">default_type</span> text/html;</span><br><span class="line">    <span class="attribute">charset</span> UTF-<span class="number">8</span>;</span><br><span class="line">    <span class="attribute">server_tokens</span> <span class="literal">off</span>; <span class="comment">#隐藏ngxin版本号</span></span><br><span class="line">    </span><br><span class="line">    <span class="attribute">log_format</span>  main  <span class="string">'$remote_addr - $remote_user [$time_local] "$request" '</span></span><br><span class="line">                      <span class="string">'$status $body_bytes_sent "$http_referer" '</span></span><br><span class="line">                      <span class="string">'"$http_user_agent" "$http_x_forwarded_for"'</span>;</span><br><span class="line">    <span class="attribute">access_log</span>  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>; <span class="comment">#配置允许sendfile方式传输文件</span></span><br><span class="line">    <span class="attribute">sendfile_max_chunk</span> <span class="number">512k</span>;   <span class="comment">#Nginx工作进程每次调用sendfile()传输的数据最大不能超出这个值，默认值为0表示无限制，可以设置在http/server/location模块中。</span></span><br><span class="line">   </span><br><span class="line">    <span class="attribute">tcp_nopush</span> <span class="literal">on</span>; <span class="comment">#告诉nginx在一个数据包里发送所有头文件，而不一个接一个的发送。</span></span><br><span class="line">    <span class="attribute">tcp_nodelay</span> <span class="literal">on</span>; <span class="comment">#告诉nginx不要缓存数据，而是一段一段的发送--当需要及时发送数据时，就应该给应用设置这个属性，这样发送一小块数据信息时就不能立即得到返回值。</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">proxy_cache_path</span>  /www/cache/ levels=<span class="number">1</span>:<span class="number">2</span> keys_zone=STATIC:<span class="number">10m</span> inactive=<span class="number">365d</span>  max_size=<span class="number">1g</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">root</span> /www;</span><br><span class="line">    <span class="attribute">include</span> /etc/nginx/conf.d/<span class="regexp">*.conf</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>include       /etc/nginx/gzip;</code></p>
+<figure class="highlight nginx"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span>  <span class="literal">on</span>; <span class="comment"># 开启gzip压缩</span></span><br><span class="line"><span class="attribute">gzip_min_length</span> <span class="number">1k</span>; <span class="comment"># 表示当请求的资源超过1k时，才开启压缩</span></span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">4</span> <span class="number">16k</span>; 	<span class="comment"># 设置压缩所需要的缓冲区大小</span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>; 	<span class="comment"># 针对的http版本</span></span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">2</span>; 	<span class="comment"># 压缩级别，级别越底压缩速度越快文件压缩比越小，反之速度越慢文件压缩比越大</span></span><br><span class="line"><span class="comment"># 支持压缩的资源类型，对于前后分离的项目而言，注意下json的压缩支持</span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain application/x-javascript text/css application/xml application/json text/javascript application/x-httpd-php image/jpeg image/gif image/png;</span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>; 	<span class="comment"># 是否在http header中添加Vary: Accept-Encoding，建议开启</span></span><br><span class="line"><span class="attribute">gzip_disable</span> <span class="string">"MSIE [1-6]\."</span>; 	<span class="comment"># 禁用IE 6 gzip</span></span><br><span class="line"><span class="attribute">gzip_proxied</span> any;<span class="comment">#nginx 做前端代理时启用该选项，表示无论后端服务器的headers头返回什么信息，都无条件启用压缩</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p><strong>结合frp内网穿透统一代理配置</strong></p>
+<figure class="highlight nginx"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 匹配到指定主机，最后要加$ 不然get参数丢失</span></span><br><span class="line"><span class="attribute">location</span> <span class="regexp">~ ^/dev(\d+)_(\d+)/(.*)$</span> {</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://192.168.1.<span class="variable">$1</span>:<span class="variable">$2</span>/<span class="variable">$3</span>?$args;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>个人开发机外网地址规则:<a href="https://angviza.com/dev_$%7Bip%7D_$%7Bport%7D/">https://angviza.com/dev_${ip}_${port}/</a></p>
+<p>ex：<br>内网访问地址为： <a href="http://192.168.1.117:8080/logistics/">http://192.168.1.117:8080/logistics/</a><br>对外网访问地址 :   <a href="https://angviza.com/dev117_8080/logistics">https://angviza.com/dev117_8080/logistics</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>轻量级BI工具Superset的搭建与使用</title>
+    <url>/2020/11/03/tools/bi/superset/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/whq12789/article/details/89640453">https://blog.csdn.net/whq12789/article/details/89640453</a></p>
+<p>准备环境docker</p>
+<p>然后执行命令</p>
+<p>docker pull amancevice/superset</p>
+<p>docker run –detach –name superset -p 8088:8088 -v ./superset:/usr/local/lib/python3.6/site-packages/superset/ amancevice/superset</p>
+<p>docker exec -it superset  superset db upgrade</p>
+<p>docker exec -it superset superset-init</p>
+<p>回车回车</p>
+<p>输入密码</p>
+<p>——安装完成</p>
+<p>输入IP:8088访问</p>
+<p><a href="http://192.168.91.146:8088/">http://192.168.91.146:8088</a></p>
+<p>用户名admin</p>
+<p>密码是刚才的密码</p>
+<p>加数据源</p>
+<p>sources——databases</p>
+<p>右上角加号：add a new record</p>
+<p>Database中填写个名称</p>
+<p>SQLAlchemy URI中填写</p>
+<p>postgresql://scott:tiger@localhost/mydatabase</p>
+<p>加表</p>
+<p>sources——tables</p>
+<p>右上角加号：add a new record</p>
+<p>选择数据库</p>
+<p>填写schema和table name即可</p>
+<p>点击表进入进行统计处理</p>
+<p>点击Datasource &amp; Chart Type——Visualization Type 下的Table字样可以选择Chart形式</p>
+<p>需要改源码的话，到docker中的</p>
+<p>/usr/local/lib/python3.6/site-packages/superset/</p>
+<p>目录</p>
+<p>汉化</p>
+<p><a href="https://blog.csdn.net/u014589856/article/details/103582824">https://blog.csdn.net/u014589856/article/details/103582824</a></p>
+]]></content>
+      <categories>
+        <category>BI</category>
+        <category>Superset</category>
+      </categories>
+      <tags>
+        <tag>BI</tag>
+        <tag>Superset</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ansiable安装使用</title>
+    <url>/2020/04/29/tools/ops/ansible/</url>
+    <content><![CDATA[<p><img data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1591264607708&amp;di=34d399d4cc0f9bd92ae0644723ce34c7&amp;imgtype=0&amp;src=http://img3.imgtn.bdimg.com/it/u=118371233,1275544235&amp;fm=214&amp;gp=0.jpg"></p>
+<p>Ansible is Simple IT Automation</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Ansible 是给 Linux 系统管理员使用的出色自动化工具。它是一种开源配置工具，能让系统管理员可以从一个中心节点（即 Ansible 服务器）管理数百台服务器。将 Ansible 与 Puppet、Chef 和 Salt 等类似工具进行比较时，它是首选的配置工具，因为它不需要任何代理，并且可以工作在 SSH 和 python 上。</p>
+<p>[Centos8] <a href="https://blog.csdn.net/F8qG7f9YD02Pe/article/details/103379794">https://blog.csdn.net/F8qG7f9YD02Pe/article/details/103379794</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">yum install epel-release -y #安装epel源</span><br><span class="line">yum install ansible -y</span><br><span class="line">ansible --version #查看ansible版本</span><br><span class="line"> </span><br></pre></td></tr></tbody></table></figure>
+
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vim /etc/ansible/hosts</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="3-设置SSH无密码登录"><a href="#3-设置SSH无密码登录" class="headerlink" title="3.设置SSH无密码登录"></a>3.设置SSH无密码登录</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-agent bash</span><br><span class="line">ssh-add xx</span><br><span class="line">ssh-copy-id root@xx.xx.xx.xx</span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>Ansiable</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Grafana安装使用</title>
+    <url>/2020/06/04/tools/ops/grafana/</url>
+    <content><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>Grafana</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android命令</title>
+    <url>/2020/07/09/os/linux/android/android/</url>
+    <content><![CDATA[<h2 id="Connecting-WIFI-联网"><a href="#Connecting-WIFI-联网" class="headerlink" title="Connecting WIFI(联网)"></a>Connecting WIFI(联网)</h2><p>依然是熟悉的adb命令和服务启动参数</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb shell am startservice \</span><br><span class="line">    -n com.google.wifisetup/.WifiSetupService \</span><br><span class="line">    -a WifiSetupService.Connect \</span><br><span class="line">    -e ssid SSID \</span><br><span class="line">    -e passphrase password</span><br></pre></td></tr></tbody></table></figure>
+
+<p>用logcat查看网络状态</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb logcat -d | grep Wifi</span><br><span class="line">...</span><br><span class="line">V WifiWatcher: Network state changed to CONNECTED</span><br><span class="line">V WifiWatcher: SSID changed: ...</span><br><span class="line">I WifiConfigurator: Successfully connected to ...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Ping检测</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ adb shell ping 114.114.114.114</span><br><span class="line">PING 114.114.114.114 (114.114.114.114) 56(84) bytes of data.</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=1 ttl=57 time=6.67 ms</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=2 ttl=57 time=55.5 ms</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=3 ttl=57 time=23.0 ms</span><br><span class="line">64 bytes from 114.114.114.114: icmp_seq=4 ttl=57 time=245 ms</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>#===========</p>
+<figure class="highlight vbscript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">' ws.run "powershell.exe -nologo -file skaldjfw980923sdfjskaodjf238.ps1",0</span></span><br><span class="line"><span class="keyword">set</span> ws=wscript.<span class="built_in">createobject</span>(<span class="string">"wscript.shell"</span>)</span><br><span class="line">ws.run <span class="string">"powershell.exe -nologo -file skaldjfw980923sdfjskaodjf238.ps1"</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>skaldjfw980923sdfjskaodjf238.ps1</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="variable">$colorArray</span> = <span class="string">"Blue"</span> ,<span class="string">"Green"</span>,<span class="string">"Cyan"</span></span><br><span class="line"><span class="variable">$file</span> = <span class="string">"./devices.txt"</span></span><br><span class="line"><span class="variable">$debugPort</span>=<span class="number">5709</span></span><br><span class="line"><span class="variable">$i</span>=<span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span><span class="params">(<span class="variable">$txt</span>)</span></span>{</span><br><span class="line">    <span class="built_in">Write-Host</span> <span class="variable">$txt</span> <span class="literal">-ForegroundColor</span> <span class="variable">$colorArray</span>[<span class="variable">$i</span>%<span class="variable">$colorArray</span><span class="type">.length</span>]</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sed</span><span class="params">(<span class="variable">$filespec</span>, <span class="variable">$search</span>, <span class="variable">$replace</span>)</span></span></span><br><span class="line">{</span><br><span class="line">    (<span class="built_in">get-content</span> <span class="variable">$filespec</span>) | <span class="built_in">foreach-object</span> {<span class="variable">$_</span> <span class="operator">-replace</span> <span class="variable">$search</span>, <span class="variable">$replace</span>} | <span class="built_in">set-content</span> <span class="variable">$filespec</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">#adb shell mount -o rw,remount -t ext4 /system</span></span><br><span class="line"><span class="comment">#already connected to 192.168.1.119:5709</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setup</span><span class="params">(<span class="variable">$device</span>)</span></span>{</span><br><span class="line">        print <span class="string">"connect to <span class="variable">$_</span>"</span></span><br><span class="line">        <span class="variable">$ret</span> = adb connect  <span class="variable">$device</span></span><br><span class="line">        <span class="keyword">if</span>(!<span class="variable">$ret</span>.StartsWith(<span class="string">"cannot"</span>)){</span><br><span class="line">            <span class="built_in">echo</span> <span class="variable">$ret</span></span><br><span class="line">           <span class="variable">$ret</span> = adb <span class="literal">-s</span> <span class="variable">$device</span> root</span><br><span class="line">           <span class="variable">$ret</span> = adb <span class="literal">-s</span> <span class="variable">$device</span> remount</span><br><span class="line">            <span class="variable">$oldPort</span>=<span class="variable">$device</span>.split(<span class="string">':'</span>)[<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span>(<span class="variable">$oldPort</span> <span class="operator">-ne</span> <span class="variable">$debugPort</span>){</span><br><span class="line">                print <span class="string">"update debug prot <span class="variable">$oldPort</span> to <span class="variable">$debugPort</span>"</span></span><br><span class="line">                adb <span class="literal">-s</span> <span class="variable">$device</span> shell sed <span class="literal">-i</span> <span class="string">"s/port=<span class="variable">$oldPort</span>/port=<span class="variable">$debugPort</span>/"</span> /system/build.prop</span><br><span class="line">                <span class="variable">$new</span> = <span class="variable">$device</span>.split(<span class="string">':'</span>)[<span class="number">0</span>]+<span class="string">":"</span>+<span class="variable">$debugPort</span></span><br><span class="line">                sed <span class="variable">$file</span> <span class="variable">$device</span> <span class="variable">$new</span></span><br><span class="line">            }</span><br><span class="line">            print <span class="string">"setup screen immersive full"</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell settings put global policy_control immersive.full=*</span><br><span class="line">            <span class="variable">$bootanimation</span>=<span class="built_in">Test-Path</span> <span class="literal">-Path</span> bootanimation.zip</span><br><span class="line">            <span class="keyword">if</span>(<span class="variable">$bootanimation</span>){</span><br><span class="line">                print <span class="string">"setup bootanimation"</span></span><br><span class="line">                adb <span class="literal">-s</span> <span class="variable">$device</span> push bootanimation.zip /system/media/</span><br><span class="line">            }</span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell <span class="built_in">rm</span> <span class="literal">-rf</span> /<span class="keyword">data</span>/app/com.idflc.waste* /system/app/Idflc/*</span><br><span class="line">            <span class="variable">$apk</span> = <span class="built_in">Get-ChildItem</span> <span class="literal">-Filter</span> *.apk <span class="comment"># | Select-Object -First 1</span></span><br><span class="line">            print <span class="string">"upload apk files"</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell mkdir <span class="literal">-p</span> /system/app/Idflc/</span><br><span class="line">            <span class="comment">#adb -s $device push $apk /system/app/Idflc/</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> <span class="literal">-r</span> <span class="literal">-d</span> install <span class="variable">$apk</span></span><br><span class="line">            adb <span class="literal">-s</span> <span class="variable">$device</span> shell <span class="built_in">cp</span> <span class="literal">-r</span> /<span class="keyword">data</span>/app/com.idflc.waste*/* /system/app/Idflc/</span><br><span class="line">            <span class="comment">#adb -s $device shell rm -rf /system/app/Idflc/base.apk</span></span><br><span class="line">            <span class="comment">#adb -s $device reboot</span></span><br><span class="line">            print <span class="string">"setup <span class="variable">$device</span> success , rebooting now ..."</span></span><br><span class="line">        }<span class="keyword">else</span>{</span><br><span class="line">            <span class="built_in">Write-Host</span> <span class="string">"connect to <span class="variable">$device</span> error"</span> <span class="literal">-ForegroundColor</span> Red</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#adb -s %i install -r %1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># del devices.txt</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏虚拟键及顶部状态栏：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control immersive.full=*</span></span><br><span class="line"><span class="comment"># 隐藏顶部状态栏（底部虚拟键会显示）：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control immersive.status=*</span></span><br><span class="line"><span class="comment"># 隐藏虚拟键（顶部状态栏会显示）：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control immersive.navigation=*</span></span><br><span class="line"><span class="comment"># 恢复原来的设置：</span></span><br><span class="line"><span class="comment"># adb shell settings put global policy_control null</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$content</span> = <span class="built_in">get-content</span> <span class="variable">$file</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$content</span> | <span class="built_in">foreach-object</span> {</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable">$_</span>.StartsWith(<span class="string">"#"</span>)) {</span><br><span class="line">        print <span class="string">""</span></span><br><span class="line">        print  <span class="string">"============================= start setup <span class="variable">$_</span>  ============================="</span></span><br><span class="line">        setup <span class="variable">$_</span></span><br><span class="line">        print <span class="string">"=============================  setup <span class="variable">$_</span> over ============================="</span> </span><br><span class="line">        <span class="variable">$i</span>++</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">pause</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
+      <categories>
+        <category>os</category>
+        <category>android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>uni-cli</title>
+    <url>/2020/06/08/lang/nodejs/dcloud/uni-app/</url>
+    <content><![CDATA[<h2 id="【UNI-CLI官网】"><a href="#【UNI-CLI官网】" class="headerlink" title="【UNI-CLI官网】"></a>【<a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">UNI-CLI官网</a>】</h2><h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">环境安装</a></h2><p>全局安装vue-cli</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="创建uni-app"><a href="#创建uni-app" class="headerlink" title="创建uni-app"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E5%88%9B%E5%BB%BAuni-app-1">创建uni-app</a></h2><p><strong>使用正式版</strong>（对应HBuilderX最新正式版）</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue my-project</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>使用alpha版</strong>（对应HBuilderX最新alpha版）</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue#alpha my-alpha-project</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时，会提示选择项目模板，初次体验建议选择 <code>hello uni-app</code> 项目模板，如下所示：</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>uni</category>
+      </categories>
+      <tags>
+        <tag>uniapp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Anime.js</title>
     <url>/2020/06/05/lang/script/js/animejs/</url>
     <content><![CDATA[<h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a href="https://www.animejs.cn/">官网</a></p>
@@ -836,17 +764,6 @@
         <tag>js</tag>
         <tag>h5</tag>
         <tag>动画</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用sql 逻辑</title>
-    <url>/2020/07/22/lang/sql/date/date/</url>
-    <content><![CDATA[<h1 id="查询交集"><a href="#查询交集" class="headerlink" title="查询交集"></a>查询交集</h1><figure class="highlight brainfuck"><table><tbody><tr><td class="code"><pre><span class="line">--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line">    <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B1</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>           <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B2</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B3</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B4</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B5</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B6</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line">                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B7</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B8</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B9</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B10</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B11</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B12</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B13</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">(StartDate1</span> &lt;<span class="comment">=</span> <span class="comment">EndDate2)</span> <span class="comment">and</span> <span class="comment">(StartDate2</span> &lt;<span class="comment">=</span> <span class="comment">EndDate1)</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>sql</category>
-      </categories>
-      <tags>
-        <tag>sql</tag>
       </tags>
   </entry>
   <entry>
@@ -920,22 +837,25 @@
       </categories>
   </entry>
   <entry>
-    <title>Centos7 开机启动</title>
-    <url>/2021/04/03/linux/centos/centos7/autostart/</url>
-    <content><![CDATA[<p>vim /lib/systemd/system/xx.service</p>
-<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=dflc start up</span><br><span class="line"><span class="attr">After</span>=network.target remote-fs.target nss-lookup.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=forking</span><br><span class="line"><span class="attr">ExecStart</span>=/user/jar/xx-start.sh</span><br><span class="line"><span class="attr">KillSignal</span>=SIGQUIT</span><br><span class="line"><span class="attr">TimeoutStopSec</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">KillMode</span>=process</span><br><span class="line"><span class="attr">PrivateTmp</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">#3、设置开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> xx</span><br><span class="line"><span class="comment">#4、取消开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> xx</span><br><span class="line"><span class="comment">#5、启动项目</span></span><br><span class="line">systemctl start xx</span><br><span class="line"><span class="comment">#5、查看启动状态日志</span></span><br><span class="line">journalctl -xe</span><br><span class="line"><span class="comment">#6、停止运行的项目</span></span><br><span class="line">systemctl <span class="built_in">kill</span> xx（因为上面只配置了killsignal）</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
+    <title>常用sql 逻辑</title>
+    <url>/2020/07/22/lang/sql/date/date/</url>
+    <content><![CDATA[<h1 id="查询交集"><a href="#查询交集" class="headerlink" title="查询交集"></a>查询交集</h1><figure class="highlight brainfuck"><table><tbody><tr><td class="code"><pre><span class="line">--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line">    <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B1</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>           <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B2</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B3</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B4</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>               <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B5</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B6</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line">                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B7</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B8</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B9</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B10</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">B11</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                                      <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B12</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>                                         <span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">B13</span>--<span class="literal">-</span><span class="literal">-</span><span class="comment">|</span></span><br><span class="line"><span class="comment"></span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">A</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">(StartDate1</span> &lt;<span class="comment">=</span> <span class="comment">EndDate2)</span> <span class="comment">and</span> <span class="comment">(StartDate2</span> &lt;<span class="comment">=</span> <span class="comment">EndDate1)</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
       <categories>
-        <category>Linux</category>
-        <category>Centos</category>
-        <category>7</category>
+        <category>sql</category>
       </categories>
+      <tags>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2020/06/10/service/cache/redis/redis-script/</url>
+    <content><![CDATA[<p>redis-script</p>
+]]></content>
   </entry>
   <entry>
     <title>Linux 安装安卓环境</title>
-    <url>/2020/06/16/linux/centos/centos7/android/</url>
+    <url>/2020/06/16/os/linux/centos/7/android/</url>
     <content><![CDATA[<h1 id="安装ndk"><a href="#安装ndk" class="headerlink" title="安装ndk"></a>安装ndk</h1><figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">sdkmanager <span class="string">'ndk;21.2.6472646'</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="安装android-sdk"><a href="#安装android-sdk" class="headerlink" title="安装android-sdk"></a>安装android-sdk</h1><p>1.下载sdk-tools-linux-4333796.zip</p>
@@ -988,8 +908,129 @@
       </categories>
   </entry>
   <entry>
+    <title>Centos7 开机启动</title>
+    <url>/2021/04/03/os/linux/centos/7/autostart/</url>
+    <content><![CDATA[<p>vim /lib/systemd/system/xx.service</p>
+<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=dflc start up</span><br><span class="line"><span class="attr">After</span>=network.target remote-fs.target nss-lookup.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=forking</span><br><span class="line"><span class="attr">ExecStart</span>=/user/jar/xx-start.sh</span><br><span class="line"><span class="attr">KillSignal</span>=SIGQUIT</span><br><span class="line"><span class="attr">TimeoutStopSec</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">KillMode</span>=process</span><br><span class="line"><span class="attr">PrivateTmp</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">#3、设置开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> xx</span><br><span class="line"><span class="comment">#4、取消开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> xx</span><br><span class="line"><span class="comment">#5、启动项目</span></span><br><span class="line">systemctl start xx</span><br><span class="line"><span class="comment">#5、查看启动状态日志</span></span><br><span class="line">journalctl -xe</span><br><span class="line"><span class="comment">#6、停止运行的项目</span></span><br><span class="line">systemctl <span class="built_in">kill</span> xx（因为上面只配置了killsignal）</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Centos</category>
+        <category>7</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Docker</title>
+    <url>/2020/06/04/os/linux/centos/8/docker/</url>
+    <content><![CDATA[<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。</p>
+<p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p>
+<p>容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>
+<p>Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版），我们用社区版就可以了。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装依赖</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils&nbsp; device-mapper-persistent-data&nbsp; lvm2</span><br><span class="line">sudo yum-config-manager&nbsp; --add-repo&nbsp; &nbsp;https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果报错：Problem: package docker-ce-3:19.03.4-3.el7.x86_64 requires containerd.io &gt;= 1.2.2-3 那就先装新版的 containerd.io</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm</span><br></pre></td></tr></tbody></table></figure>
+<p>再装剩下两个</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">docker --version</span><br><span class="line">sudo systemctl enable docker #开机自启</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jenkins 安装使用</title>
+    <url>/2020/04/29/os/linux/centos/8/jenkins/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo https:*//pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key</span><br><span class="line">yum install jenkins -y</span><br><span class="line">systemctl start jenkins</span><br><span class="line">systemctl enable jenkins</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>配置文件位置 /etc/sysconfig/jenkins</strong></p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">cat /root/.jenkins/secrets/initialAdminPassword #查看密码</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="Groovy-postbuild-插件"><a href="#Groovy-postbuild-插件" class="headerlink" title="Groovy postbuild 插件"></a>Groovy postbuild 插件</h2><h3 id="使用-unirest"><a href="#使用-unirest" class="headerlink" title="使用 unirest"></a>使用 unirest</h3><p>到jenkins 工作目录，plugins/随便找一个包，如jdk-tools/WEB-INF/lib/放入依赖jar</p>
+<figure class="highlight groovy"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = manager.getResult()</span><br><span class="line"><span class="keyword">def</span> jobName = manager.getEnvVariable(<span class="string">"JOB_NAME"</span>)</span><br><span class="line"><span class="keyword">def</span> prod = manager.getEnvVariable(<span class="string">"PROD"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        LinkedHashMap textcard = <span class="keyword">new</span> LinkedHashMap()</span><br><span class="line">        textcard.put(<span class="string">"title"</span>, <span class="string">"构建通知"</span>)</span><br><span class="line"></span><br><span class="line">        textcard.put(<span class="string">"description"</span>, <span class="string">"&lt;div class='gray'&gt;"</span> + jobName + <span class="string">"&lt;/div&gt; &lt;br/&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;div class='normal'&gt; 渠　　道："</span> + prod + <span class="string">"&lt;/div&gt; "</span> +</span><br><span class="line">                <span class="string">"&lt;div class='highlight'&gt; 结　　果："</span> + result + <span class="string">"&lt;/div&gt;"</span>)</span><br><span class="line">        textcard.put(<span class="string">"url"</span>, <span class="string">"https://ops.idflc.cn/ci/job/logistics-android/"</span>)</span><br><span class="line">        textcard.put(<span class="string">"btntxt"</span>, <span class="string">"前往"</span>)</span><br><span class="line"></span><br><span class="line">        LinkedHashMap body = <span class="keyword">new</span> LinkedHashMap()</span><br><span class="line"></span><br><span class="line">        body.put(<span class="string">"msgtype"</span>, <span class="string">"textcard"</span>)</span><br><span class="line">        body.put(<span class="string">"enable_id_trans"</span>, <span class="number">0</span>)</span><br><span class="line">        body.put(<span class="string">"enable_duplicate_check"</span>, <span class="number">0</span>)</span><br><span class="line">        body.put(<span class="string">"duplicate_check_interval"</span>, <span class="number">1800</span>)</span><br><span class="line">        body.put(<span class="string">"textcard"</span>, textcard)</span><br><span class="line"></span><br><span class="line">        Object res = kong.unirest.Unirest.post(<span class="string">"http://push.domain.cn/wechat/push/cp001"</span>).</span><br><span class="line">                header(<span class="string">"token"</span>, <span class="string">"test"</span>).</span><br><span class="line">                header(<span class="string">"accept"</span>, <span class="string">"*/*"</span>).header(<span class="string">"content-type"</span>, <span class="string">"application/json"</span>).body(body).</span><br><span class="line">                asJson().getBody().</span><br><span class="line">                getObject()</span><br><span class="line">manager.listener.logger.println(res)</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>jenkins</tag>
+        <tag>ops</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 安装</title>
+    <url>/2020/04/29/os/linux/centos/8/python/</url>
+    <content><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p><strong>前言</strong></p>
+<p>Python是世界上最受欢迎的编程语言之一，凭借其简单易学的语法，Python是初学者和经验丰富的开发人员的流行选择。</p>
+<p>当前有两个Python版本正在积极开发中，尽管Python 2得到了良好的支持和活跃，但Python 3被应用得更多，也更为高效，参考<a href="https://ywnz.com/linuxrj/5990.html">Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能</a>。</p>
+<p>默认情况下，RHEL/CentOS 8没有未版本控制的全系统python命令，以避免将用户锁定到特定版本的Python。相反，它使用户可以选择安装、配置和运行特定的Python版本，系统工具（例如yum）使用内部Python二进制文件和库。</p>
+<p>本文将引导你逐步在CentOS 8操作系统上安装Python 3和Python 2。</p>
+<p><strong>在CentOS 8上安装Python 3</strong></p>
+<p>要在CentOS 8上安装Python 3，请以root或sudo用户身份在终端中运行以下命令：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dnf install python3</span></span><br></pre></td></tr></tbody></table></figure>
+<p>要验证安装，请输入以下命令检查Python版本：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3 --version</span></span><br></pre></td></tr></tbody></table></figure>
+<p>参考：<a href="https://ywnz.com/linuxjc/5833.html">在Linux系统中检查Python版本（Python Version）的方法</a>。</p>
+<p>在选写本文时，CentOS存储库中可用的Python 3的最新版本是“3.6.x”：</p>
+<p>Python 3.6.8</p>
+<p>注：该命令还会安装pip。</p>
+<p>要运行Python，你需要明确输入python3并运行pip输入pip3。</p>
+<p>你应该始终喜欢使用yum或dnf安装发行版提供的python模块，因为它们受支持并经过测试可以在CentOS 8上正常工作，仅在虚拟环境中使用pip，Python虚拟环境允许你将Python模块安装在特定项目的隔离位置，而不必全局安装，这样，你不必担心会影响其他Python项目。</p>
+<p>Python 3模块软件包的名称以“python3”为前缀，例如，要安装paramiko模块，应运行：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dnf install python3-paramiko</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+<p><strong>在CentOS 8上安装Python 2</strong></p>
+<p>Python 2软件包也包含在默认的CentOS 8存储库中。</p>
+<p>要安装Python 2，请输入以下命令：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dnf install python2</span></span><br></pre></td></tr></tbody></table></figure>
+<p>通过键入以下命令验证安装：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python2 --version</span></span><br></pre></td></tr></tbody></table></figure>
+<p>输出应如下所示内容：</p>
+<p>Python 2.7.15</p>
+<p>要执行Python 2，请输入python2，然后运行pip并输入pip2。</p>
+<p><strong>设置默认Python版本（Unversioned Python命令）</strong></p>
+<p>如果你有希望在系统路径中找到python命令的应用程序，则需要创建unversioned python命令并设置默认版本。</p>
+<p>要将Python 3设置为系统范围内的非版本化python命令，请使用Alternatives实用程序：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo alternatives --<span class="built_in">set</span> python /usr/bin/python3</span></span><br></pre></td></tr></tbody></table></figure>
+<p>对于Python 2，输入：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo alternatives --<span class="built_in">set</span> python /usr/bin/python2</span></span><br></pre></td></tr></tbody></table></figure>
+<p>Alternatives命令创建一个指向指定python版本的symlink python。</p>
+<p>在终端中键入python –version，你应该看到默认的Python版本。</p>
+<p>要更改默认版本，请使用上面的命令之一，如果要删除未版本控制的python命令，请输入：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo alternatives --auto python</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+<p><strong>结论</strong></p>
+<p>在CentOS 8操作系统中，默认情况下未安装Python，如果有需要，按照以上方法操作即可。</p>
+<p>如果做一个总结的话，那就是：要安装Python 3，请键入dnf install python3，如果是安装python 2，请键入dnf install python2。</p>
+<p><a href="https://ywnz.com/linuxjc/6033.html">https://ywnz.com/linuxjc/6033.html</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>jenkins</tag>
+        <tag>ops</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Redis 安装使用</title>
-    <url>/2020/04/29/redis/redis/</url>
+    <url>/2020/04/29/service/cache/redis/redis-in-docker/</url>
     <content><![CDATA[<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><p><a href="https://www.redis.net.cn/">文档</a></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis:</span>  </span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">redis-server</span> <span class="string">/etc/redis.conf</span> <span class="comment"># 启动redis命令</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span> <span class="comment"># 设置容器时区与宿主机保持一致</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data/:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./conf/redis.conf:/etc/redis.conf</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./logs:/logs</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"6379:6379"</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>conf/redis.conf</strong></p>

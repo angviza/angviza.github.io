@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angviza.github.io/2021/04/04/os/readme/</loc>
+    
+    <lastmod>2021-04-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/2021/04/04/plugins/readme/</loc>
+    
+    <lastmod>2021-04-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angviza.github.io/about/timer.html</loc>
     
     <lastmod>2021-04-04</lastmod>
@@ -9,35 +23,35 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2021/04/03/linux/centos/centos7/autostart/</loc>
+    <loc>https://angviza.github.io/2021/04/03/os/linux/centos/7/autostart/</loc>
     
     <lastmod>2021-04-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2021/04/03/db/timescaledb/</loc>
+    <loc>https://angviza.github.io/2021/04/03/service/db/timescaledb/</loc>
     
     <lastmod>2021-04-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/11/03/bi/superset/</loc>
+    <loc>https://angviza.github.io/2020/11/03/tools/bi/superset/</loc>
     
     <lastmod>2020-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/11/02/db/postgis/</loc>
+    <loc>https://angviza.github.io/2020/11/02/service/db/postgis/</loc>
     
     <lastmod>2020-11-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/10/28/db/pg-es-fdw/</loc>
+    <loc>https://angviza.github.io/2020/10/28/service/db/pg-es-fdw/</loc>
     
     <lastmod>2020-10-28</lastmod>
     
@@ -51,21 +65,21 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/07/09/android/</loc>
+    <loc>https://angviza.github.io/2020/07/09/os/linux/android/android/</loc>
     
     <lastmod>2020-07-09</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/24/minio/</loc>
+    <loc>https://angviza.github.io/2020/06/24/service/file/minio/</loc>
     
     <lastmod>2020-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/16/linux/centos/centos7/android/</loc>
+    <loc>https://angviza.github.io/2020/06/16/os/linux/centos/7/android/</loc>
     
     <lastmod>2020-06-16</lastmod>
     
@@ -79,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/10/redis/redis-script/</loc>
+    <loc>https://angviza.github.io/2020/06/10/service/cache/redis/redis-script/</loc>
     
     <lastmod>2020-06-10</lastmod>
     
@@ -93,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/08/nodejs/npm/</loc>
+    <loc>https://angviza.github.io/2020/06/08/lang/nodejs/npm/</loc>
     
     <lastmod>2020-06-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/08/dcloud/uni-app/</loc>
+    <loc>https://angviza.github.io/2020/06/08/lang/nodejs/dcloud/uni-app/</loc>
     
     <lastmod>2020-06-08</lastmod>
     
@@ -121,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://angviza.github.io/2020/06/08/plugins/vscode-plugin/</loc>
+    
+    <lastmod>2020-06-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angviza.github.io/2020/06/05/lang/script/js/animejs/</loc>
     
     <lastmod>2020-06-05</lastmod>
@@ -128,28 +149,35 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/04/ops/grafana/</loc>
+    <loc>https://angviza.github.io/2020/06/04/tools/ops/grafana/</loc>
     
     <lastmod>2020-06-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/04/ops/grafana-promethus-altermanager/</loc>
+    <loc>https://angviza.github.io/2020/06/04/service/monitor/grafana-promethus-altermanager/</loc>
     
     <lastmod>2020-06-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/06/04/ops/docker/</loc>
+    <loc>https://angviza.github.io/2020/06/04/os/linux/centos/8/docker/</loc>
     
     <lastmod>2020-06-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/rocketmq/</loc>
+    <loc>https://angviza.github.io/2020/06/04/index/</loc>
+    
+    <lastmod>2020-06-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/2020/04/29/service/mq/rocketmq/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
@@ -163,56 +191,42 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/python/</loc>
+    <loc>https://angviza.github.io/2020/04/29/os/linux/centos/8/python/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/redis/redis/</loc>
+    <loc>https://angviza.github.io/2020/04/29/service/cache/redis/redis-in-docker/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/postgresql/</loc>
+    <loc>https://angviza.github.io/2020/04/29/service/proxy/nginx/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/nginx/</loc>
+    <loc>https://angviza.github.io/2020/04/29/os/linux/centos/8/jenkins/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/mavenrelease/</loc>
+    <loc>https://angviza.github.io/2020/04/29/service/proxy/frp/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/jenkins/</loc>
-    
-    <lastmod>2020-04-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/frp/</loc>
-    
-    <lastmod>2020-04-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/2020/04/29/ops/ansible/</loc>
+    <loc>https://angviza.github.io/2020/04/29/tools/ops/ansible/</loc>
     
     <lastmod>2020-04-29</lastmod>
     
@@ -226,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/2020/01/16/html/</loc>
+    <loc>https://angviza.github.io/2020/01/16/lang/html/html/</loc>
     
     <lastmod>2020-01-16</lastmod>
     
@@ -248,13 +262,6 @@
   
   <url>
     <loc>https://angviza.github.io/about/index.html</loc>
-    
-    <lastmod>2020-01-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/2020/01/16/index/</loc>
     
     <lastmod>2020-01-16</lastmod>
     
@@ -284,160 +291,6 @@
 
   
   <url>
-    <loc>https://angviza.github.io/tags/android/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/HTML/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/file/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/cdn/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/BI/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/Superset/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/postgis/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/uniapp/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/TimescaleDB/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/Ansiable/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/tools/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/frp/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/docker/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/Grafana/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/grafana/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/jenkins/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/ops/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/maven/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/java/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/tags/nginx/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://angviza.github.io/tags/chrome/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
@@ -459,6 +312,83 @@
   </url>
   
   <url>
+    <loc>https://angviza.github.io/tags/android/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/vscode/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/HTML/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/postgis/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/TimescaleDB/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/grafana/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/tools/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/file/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/cdn/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://angviza.github.io/tags/MQ/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
@@ -473,7 +403,49 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/tags/vscode/</loc>
+    <loc>https://angviza.github.io/tags/frp/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/nginx/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/BI/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/Superset/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/Ansiable/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/Grafana/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/uniapp/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -508,6 +480,27 @@
   </url>
   
   <url>
+    <loc>https://angviza.github.io/tags/docker/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/jenkins/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/tags/ops/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://angviza.github.io/tags/redis/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
@@ -521,178 +514,17 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://angviza.github.io/tags/java/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://angviza.github.io/categories/os/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/file/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/os/android/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/BI/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/file/minio/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/nodejs/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/Docker/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/BI/Superset/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/Java/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E5%89%8D%E7%AB%AF/uni/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://angviza.github.io/categories/plugin/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/MQ/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/nodejs/npm/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/sql/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/Linux/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB/postgis/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/TimescaleDB/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -706,13 +538,6 @@
   </url>
   
   <url>
-    <loc>https://angviza.github.io/categories/plugin/gradle/</loc>
-    <lastmod>2021-04-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://angviza.github.io/categories/plugin/vscode/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
@@ -720,7 +545,175 @@
   </url>
   
   <url>
+    <loc>https://angviza.github.io/categories/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/plugin/gradle/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/nodejs/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/file/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/MQ/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/BI/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/nodejs/npm/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/os/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/Linux/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/sql/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/Docker/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/file/minio/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/BI/Superset/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/os/android/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E5%89%8D%E7%AB%AF/uni/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB/postgis/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://angviza.github.io/categories/Linux/Centos/</loc>
+    <lastmod>2021-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/TimescaleDB/</loc>
     <lastmod>2021-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

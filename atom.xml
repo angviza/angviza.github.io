@@ -6,7 +6,7 @@
   <link href="https://angviza.github.io/atom.xml" rel="self"/>
   
   <link href="https://angviza.github.io/"/>
-  <updated>2021-04-03T05:56:45.912Z</updated>
+  <updated>2021-04-04T07:57:21.726Z</updated>
   <id>https://angviza.github.io/</id>
   
   <author>
@@ -17,9 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://angviza.github.io/2021/04/04/os/readme/"/>
+    <id>https://angviza.github.io/2021/04/04/os/readme/</id>
+    <published>2021-04-04T07:57:21.726Z</published>
+    <updated>2021-04-04T07:57:21.726Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;系统&quot;&gt;&lt;a href=&quot;#系统&quot; class=&quot;headerlink&quot; title=&quot;系统&quot;&gt;&lt;/a&gt;系统&lt;/h1&gt;&lt;p&gt;该目录下为各版本系统工具和服务安装步骤，及系统工具使用方法&lt;/p&gt;
+&lt;p&gt;不包含服务配置及使用&lt;/p&gt;
+&lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot; title=&quot;Linux&quot;&gt;&lt;/a&gt;Linux&lt;/h2&gt;&lt;h3 id=&quot;CentOS&quot;&gt;&lt;a href=&quot;#CentOS&quot; class=&quot;headerlink&quot; title=&quot;CentOS&quot;&gt;&lt;/a&gt;CentOS&lt;/h3&gt;&lt;h4 id=&quot;7&quot;&gt;&lt;a href=&quot;#7&quot; class=&quot;headerlink&quot; title=&quot;7&quot;&gt;&lt;/a&gt;7&lt;/h4&gt;&lt;h4 id=&quot;8&quot;&gt;&lt;a href=&quot;#8&quot; class=&quot;headerlink&quot; title=&quot;8&quot;&gt;&lt;/a&gt;8&lt;/h4&gt;&lt;h3 id=&quot;OracleLinux&quot;&gt;&lt;a href=&quot;#OracleLinux&quot; class=&quot;headerlink&quot; title=&quot;OracleLinux&quot;&gt;&lt;/a&gt;OracleLinux&lt;/h3&gt;&lt;h4 id=&quot;7-1&quot;&gt;&lt;a href=&quot;#7-1&quot; class=&quot;headerlink&quot; title=&quot;7&quot;&gt;&lt;/a&gt;7&lt;/h4&gt;&lt;h4 id=&quot;8-1&quot;&gt;&lt;a href=&quot;#8-1&quot; class=&quot;headerlink&quot; title=&quot;8&quot;&gt;&lt;/a&gt;8&lt;/h4&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://angviza.github.io/2021/04/04/plugins/readme/"/>
+    <id>https://angviza.github.io/2021/04/04/plugins/readme/</id>
+    <published>2021-04-04T07:47:31.994Z</published>
+    <updated>2021-04-04T07:47:31.994Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;插件&quot;&gt;&lt;a href=&quot;#插件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Centos7 开机启动</title>
-    <link href="https://angviza.github.io/2021/04/03/linux/centos/centos7/autostart/"/>
-    <id>https://angviza.github.io/2021/04/03/linux/centos/centos7/autostart/</id>
+    <link href="https://angviza.github.io/2021/04/03/os/linux/centos/7/autostart/"/>
+    <id>https://angviza.github.io/2021/04/03/os/linux/centos/7/autostart/</id>
     <published>2021-04-03T05:56:45.912Z</published>
     <updated>2021-04-03T05:56:45.912Z</updated>
     
@@ -46,22 +84,13 @@
   
   <entry>
     <title>TimescaleDB 安装&amp;使用</title>
-    <link href="https://angviza.github.io/2021/04/03/db/timescaledb/"/>
-    <id>https://angviza.github.io/2021/04/03/db/timescaledb/</id>
+    <link href="https://angviza.github.io/2021/04/03/service/db/timescaledb/"/>
+    <id>https://angviza.github.io/2021/04/03/service/db/timescaledb/</id>
     <published>2021-04-03T05:32:57.365Z</published>
     <updated>2021-04-03T05:32:57.365Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;Docker安装&quot;&gt;&lt;a href=&quot;#Docker安装&quot; class=&quot;headerlink&quot; title=&quot;Docker安装&quot;&gt;&lt;/a&gt;Docker安装&lt;/h2&gt;&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;3&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;services:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;timescaledb:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;container_name:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;postgistime&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;image:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;timescale/timescaledb-postgis:latest-pg13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;ports:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;5432:5432&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;environment:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_USER:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;xxx&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_DB:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;postgres&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_PASSWORD:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;xxxxx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;./data:/var/lib/postgresql:rw&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;使用TimescaleDB建表时，最好将非超表字段默认设为null警告：如果将任何其他列的默认值设置为NULL，则更改表的架构将非常有效。如果默认值设置为非null值，则TimescaleDB将需要为属于该超表的所有行（所有块）填充该值。&lt;/p&gt;
-&lt;h2 id=&quot;创建超表&quot;&gt;&lt;a href=&quot;#创建超表&quot; class=&quot;headerlink&quot; title=&quot;创建超表:&quot;&gt;&lt;/a&gt;创建超表:&lt;/h2&gt;&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;--1.创建标准表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TABLE&lt;/span&gt; conditions (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;type&quot;&gt;time&lt;/span&gt;        TIMESTAMPTZ       &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  location    TEXT              &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  temperature &lt;span class=&quot;type&quot;&gt;DOUBLE PRECISION&lt;/span&gt;  &lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  humidity    &lt;span class=&quot;type&quot;&gt;DOUBLE PRECISION&lt;/span&gt;  &lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;-- 2.将标准表转换成超表，将时间字段作为分片字段&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; create_hypertable(&lt;span class=&quot;string&quot;&gt;&#39;conditions&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;time&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;--3.操作超表，跟普通数据库操作一样&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;--插入与查询&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;INTO&lt;/span&gt; conditions(&lt;span class=&quot;type&quot;&gt;time&lt;/span&gt;, location, temperature, humidity)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;VALUES&lt;/span&gt; (NOW(), &lt;span class=&quot;string&quot;&gt;&#39;office&#39;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;70.0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;50.0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; conditions &lt;span class=&quot;keyword&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;DESC&lt;/span&gt; LIMIT &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;-- 修改超级表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TABLE&lt;/span&gt; conditions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;COLUMN&lt;/span&gt; humidity &lt;span class=&quot;type&quot;&gt;DOUBLE PRECISION&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;-- 删除超表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TABLE&lt;/span&gt; conditions;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;最佳实践&quot;&gt;&lt;a href=&quot;#最佳实践&quot; class=&quot;headerlink&quot; title=&quot;最佳实践&quot;&gt;&lt;/a&gt;最佳实践&lt;/h2&gt;&lt;p&gt;TimescaleDB的用户经常有两个常见问题：&lt;br&gt;&lt;strong&gt;我应该为时间分割配置多长时间？&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;我应该使用空间分区吗？应该使用多少个空间分区？&lt;/strong&gt;&lt;br&gt;时间间隔：超表默认时间间隔是，从v0.11.0开始的7天和v0.11.0之前的1个月。&lt;br&gt;设置时间间隔原则：所有超表时间间隔总块的大小不超过主内存的25%。比如电脑内存是16G，总共10台设备，每50ms存一条数据，1秒钟存20条数据，一天存的数据条数为：2036002410约等于1千700万条，大小大概约为1G，一天存1G数据，电脑内存为16G，总块大小不超过4G，所以时间间隔设为小于4天。&lt;br&gt;虽然通常将块做成较小而不是太大是比较安全的，但是将间隔设置得太小会导致很多块，这对应于某些类型的查询的计划等待时间的增加，所以将时间间隔设为3天比较合适。&lt;br&gt;设置时间间隔：1.通过chunk_time_interval在创建超表时进行设置来显式配置时间间隔&lt;br&gt;chunk_time_interval：块覆盖时间精确到纳秒，一天是100010006060*24&lt;br&gt;实例：&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; create_hypertable(&lt;span class=&quot;string&quot;&gt;&#39;conditions&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;time&#39;&lt;/span&gt;, chunk_time_interval &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;86400000000&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; create_hypertable(&lt;span class=&quot;string&quot;&gt;&#39;conditions&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;time&#39;&lt;/span&gt;, chunk_time_interval &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;interval&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;1 day&#39;&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;--：指定块的覆盖时间是1天&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2.创建超表之后，可以通过调用更改用于新块的间隔set_chunk_time_interval&lt;br&gt;例子：&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; set_chunk_time_interval(&lt;span class=&quot;string&quot;&gt;&#39;conditions&#39;&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;interval&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;24 hours&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; set_chunk_time_interval(&lt;span class=&quot;string&quot;&gt;&#39;conditions&#39;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;86400000000&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;Docker安装&quot;&gt;&lt;a href=&quot;#Docker安装&quot; class=&quot;headerlink&quot; title=&quot;Docker安装&quot;&gt;&lt;/a&gt;Docker安装&lt;/h2&gt;&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;3&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;services:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;timescaledb:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;container_name:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;postgistime&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;image:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;timescale/timescaledb-postgis:latest-pg13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;ports:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;5432:5432&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;environment:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_USER:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;xxx&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_DB:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;postgres&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_PASSWORD:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;xxxxx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;./data:/var/lib/postgresql:rw&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -80,8 +109,8 @@
   
   <entry>
     <title>轻量级BI工具Superset的搭建与使用</title>
-    <link href="https://angviza.github.io/2020/11/03/bi/superset/"/>
-    <id>https://angviza.github.io/2020/11/03/bi/superset/</id>
+    <link href="https://angviza.github.io/2020/11/03/tools/bi/superset/"/>
+    <id>https://angviza.github.io/2020/11/03/tools/bi/superset/</id>
     <published>2020-11-03T10:26:14.895Z</published>
     <updated>2020-11-03T10:26:14.895Z</updated>
     
@@ -112,8 +141,8 @@
   
   <entry>
     <title>postgis</title>
-    <link href="https://angviza.github.io/2020/11/02/db/postgis/"/>
-    <id>https://angviza.github.io/2020/11/02/db/postgis/</id>
+    <link href="https://angviza.github.io/2020/11/02/service/db/postgis/"/>
+    <id>https://angviza.github.io/2020/11/02/service/db/postgis/</id>
     <published>2020-11-02T03:32:50.318Z</published>
     <updated>2020-11-02T03:32:50.318Z</updated>
     
@@ -155,8 +184,8 @@
   
   <entry>
     <title>pg-es-fdw</title>
-    <link href="https://angviza.github.io/2020/10/28/db/pg-es-fdw/"/>
-    <id>https://angviza.github.io/2020/10/28/db/pg-es-fdw/</id>
+    <link href="https://angviza.github.io/2020/10/28/service/db/pg-es-fdw/"/>
+    <id>https://angviza.github.io/2020/10/28/service/db/pg-es-fdw/</id>
     <published>2020-10-28T10:10:35.464Z</published>
     <updated>2020-10-28T10:10:35.464Z</updated>
     
@@ -211,8 +240,8 @@
   
   <entry>
     <title>Android命令</title>
-    <link href="https://angviza.github.io/2020/07/09/android/"/>
-    <id>https://angviza.github.io/2020/07/09/android/</id>
+    <link href="https://angviza.github.io/2020/07/09/os/linux/android/android/"/>
+    <id>https://angviza.github.io/2020/07/09/os/linux/android/android/</id>
     <published>2020-07-09T02:56:18.504Z</published>
     <updated>2020-07-09T02:56:18.504Z</updated>
     
@@ -246,8 +275,8 @@
   
   <entry>
     <title>minIO</title>
-    <link href="https://angviza.github.io/2020/06/24/minio/"/>
-    <id>https://angviza.github.io/2020/06/24/minio/</id>
+    <link href="https://angviza.github.io/2020/06/24/service/file/minio/"/>
+    <id>https://angviza.github.io/2020/06/24/service/file/minio/</id>
     <published>2020-06-24T06:47:05.720Z</published>
     <updated>2020-06-24T06:47:05.720Z</updated>
     
@@ -281,8 +310,8 @@
   
   <entry>
     <title>Linux 安装安卓环境</title>
-    <link href="https://angviza.github.io/2020/06/16/linux/centos/centos7/android/"/>
-    <id>https://angviza.github.io/2020/06/16/linux/centos/centos7/android/</id>
+    <link href="https://angviza.github.io/2020/06/16/os/linux/centos/7/android/"/>
+    <id>https://angviza.github.io/2020/06/16/os/linux/centos/7/android/</id>
     <published>2020-06-16T07:28:05.977Z</published>
     <updated>2020-06-16T07:28:05.977Z</updated>
     
@@ -348,8 +377,8 @@
   
   <entry>
     <title></title>
-    <link href="https://angviza.github.io/2020/06/10/redis/redis-script/"/>
-    <id>https://angviza.github.io/2020/06/10/redis/redis-script/</id>
+    <link href="https://angviza.github.io/2020/06/10/service/cache/redis/redis-script/"/>
+    <id>https://angviza.github.io/2020/06/10/service/cache/redis/redis-script/</id>
     <published>2020-06-10T12:43:28.386Z</published>
     <updated>2020-06-10T12:43:28.386Z</updated>
     
@@ -414,8 +443,8 @@
   
   <entry>
     <title>npm常用命令</title>
-    <link href="https://angviza.github.io/2020/06/08/nodejs/npm/"/>
-    <id>https://angviza.github.io/2020/06/08/nodejs/npm/</id>
+    <link href="https://angviza.github.io/2020/06/08/lang/nodejs/npm/"/>
+    <id>https://angviza.github.io/2020/06/08/lang/nodejs/npm/</id>
     <published>2020-06-08T03:16:31.562Z</published>
     <updated>2020-06-08T03:16:31.562Z</updated>
     
@@ -440,8 +469,8 @@
   
   <entry>
     <title>uni-cli</title>
-    <link href="https://angviza.github.io/2020/06/08/dcloud/uni-app/"/>
-    <id>https://angviza.github.io/2020/06/08/dcloud/uni-app/</id>
+    <link href="https://angviza.github.io/2020/06/08/lang/nodejs/dcloud/uni-app/"/>
+    <id>https://angviza.github.io/2020/06/08/lang/nodejs/dcloud/uni-app/</id>
     <published>2020-06-08T03:08:46.168Z</published>
     <updated>2020-06-08T03:08:46.168Z</updated>
     
@@ -504,11 +533,44 @@
     <category term="gradle" scheme="https://angviza.github.io/categories/plugin/gradle/"/>
     
     
-    <category term="android" scheme="https://angviza.github.io/tags/android/"/>
-    
     <category term="plugin" scheme="https://angviza.github.io/tags/plugin/"/>
     
     <category term="gradle" scheme="https://angviza.github.io/tags/gradle/"/>
+    
+    <category term="android" scheme="https://angviza.github.io/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 插件开发</title>
+    <link href="https://angviza.github.io/2020/06/08/plugins/vscode-plugin/"/>
+    <id>https://angviza.github.io/2020/06/08/plugins/vscode-plugin/</id>
+    <published>2020-06-08T01:35:21.477Z</published>
+    <updated>2020-06-08T01:35:21.477Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;VSCode自定义插件开发&quot;&gt;&lt;a href=&quot;#VSCode自定义插件开发&quot; class=&quot;headerlink&quot; title=&quot;VSCode自定义插件开发&quot;&gt;&lt;/a&gt;VSCode自定义插件开发&lt;/h1&gt;&lt;h2 id=&quot;VSCode插件开发有什么用&quot;&gt;&lt;a href=&quot;#VSCode插件开发有什么用&quot; class=&quot;headerlink&quot; title=&quot;VSCode插件开发有什么用&quot;&gt;&lt;/a&gt;VSCode插件开发有什么用&lt;/h2&gt;&lt;p&gt;每个公司、项目组、各人都有自己特殊的定制化、可公用的需求，vscode的已有插件显然不能满足我们各种各样的要求，所以开发一个适用于我们自己的定制化插件，无疑能大大提高我们的开发效率以及团队的语法规范&lt;/p&gt;
+&lt;h2 id=&quot;VSCode插件开发、发布主要流程&quot;&gt;&lt;a href=&quot;#VSCode插件开发、发布主要流程&quot; class=&quot;headerlink&quot; title=&quot;VSCode插件开发、发布主要流程&quot;&gt;&lt;/a&gt;VSCode插件开发、发布主要流程&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;插件开发前的准备：vscode、nodejs、vscode插件生产工具、git、微软账号&lt;/li&gt;
+&lt;li&gt;插件开发：插件构思、官方文档查阅&lt;/li&gt;
+&lt;li&gt;插件发布：打包、上传、插件市场操作&lt;/li&gt;
+&lt;li&gt;插件维护：更新迭代后打包、上传、插件市场操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;插件开发前的准备：&quot;&gt;&lt;a href=&quot;#插件开发前的准备：&quot; class=&quot;headerlink&quot; title=&quot;插件开发前的准备：&quot;&gt;&lt;/a&gt;插件开发前的准备：&lt;/h2&gt;&lt;p&gt;vscode、nodejs、git、微软账号&lt;br&gt;vscode插件生产工具：官方推荐使用Yeoman 和 VS Code Extension Generator。用如下命令安装：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g yo generator-code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;使用生产工具初始化代码&quot;&gt;&lt;a href=&quot;#使用生产工具初始化代码&quot; class=&quot;headerlink&quot; title=&quot;使用生产工具初始化代码&quot;&gt;&lt;/a&gt;使用生产工具初始化代码&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yo code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="plugin" scheme="https://angviza.github.io/categories/plugin/"/>
+    
+    <category term="vscode" scheme="https://angviza.github.io/categories/plugin/vscode/"/>
+    
+    
+    <category term="plugin" scheme="https://angviza.github.io/tags/plugin/"/>
+    
+    <category term="vscode" scheme="https://angviza.github.io/tags/vscode/"/>
     
   </entry>
   
@@ -539,89 +601,6 @@
     <category term="h5" scheme="https://angviza.github.io/tags/h5/"/>
     
     <category term="动画" scheme="https://angviza.github.io/tags/%E5%8A%A8%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Grafana安装使用</title>
-    <link href="https://angviza.github.io/2020/06/04/ops/grafana/"/>
-    <id>https://angviza.github.io/2020/06/04/ops/grafana/</id>
-    <published>2020-06-04T09:28:07.719Z</published>
-    <updated>2020-06-04T09:28:07.719Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
-    
-    <category term="Grafana" scheme="https://angviza.github.io/tags/Grafana/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Grafana+Promethus+Altermanager</title>
-    <link href="https://angviza.github.io/2020/06/04/ops/grafana-promethus-altermanager/"/>
-    <id>https://angviza.github.io/2020/06/04/ops/grafana-promethus-altermanager/</id>
-    <published>2020-06-04T09:24:03.258Z</published>
-    <updated>2020-06-04T09:24:03.258Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="运维" scheme="https://angviza.github.io/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
-    
-    <category term="grafana" scheme="https://angviza.github.io/tags/grafana/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker</title>
-    <link href="https://angviza.github.io/2020/06/04/ops/docker/"/>
-    <id>https://angviza.github.io/2020/06/04/ops/docker/</id>
-    <published>2020-06-04T07:34:29.865Z</published>
-    <updated>2020-06-04T07:34:29.865Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h2&gt;&lt;p&gt;Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。&lt;/p&gt;
-&lt;p&gt;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。&lt;/p&gt;
-&lt;p&gt;容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。&lt;/p&gt;
-&lt;p&gt;Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版），我们用社区版就可以了。&lt;/p&gt;
-&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装依赖&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo yum install -y yum-utils&amp;nbsp; device-mapper-persistent-data&amp;nbsp; lvm2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo yum-config-manager&amp;nbsp; --add-repo&amp;nbsp; &amp;nbsp;https://download.docker.com/linux/centos/docker-ce.repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo yum install docker-ce docker-ce-cli containerd.io&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如果报错：Problem: package docker-ce-3:19.03.4-3.el7.x86_64 requires containerd.io &amp;gt;= 1.2.2-3 那就先装新版的 containerd.io&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="https://angviza.github.io/categories/Docker/"/>
-    
-    
-    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
-    
-    <category term="docker" scheme="https://angviza.github.io/tags/docker/"/>
     
   </entry>
   

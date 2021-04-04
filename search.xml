@@ -220,29 +220,6 @@
 <figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">docker run -p 9000:9000 --name minio \</span><br><span class="line">  -v /mnt/data1:/data1 \</span><br><span class="line">  -v /mnt/data2:/data2 \</span><br><span class="line">  -v /mnt/data3:/data3 \</span><br><span class="line">  -v /mnt/data4:/data4 \</span><br><span class="line">  -v /mnt/data5:/data5 \</span><br><span class="line">  -v /mnt/data6:/data6 \</span><br><span class="line">  -v /mnt/data7:/data7 \</span><br><span class="line">  -v /mnt/data8:/data8 \</span><br><span class="line">  minio/minio server /data1 /data2 /data3 /data4 /data5 /data6 /data7 /data8</span><br></pre></td></tr></tbody></table></figure>]]></content>
   </entry>
   <entry>
-    <title>uni-cli</title>
-    <url>/2020/06/08/dcloud/uni-app/</url>
-    <content><![CDATA[<p>【<a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">UNI-CLI</a>】</p>
-<h3 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">环境安装</a></h3><p>全局安装vue-cli</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="创建uni-app"><a href="#创建uni-app" class="headerlink" title="创建uni-app"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E5%88%9B%E5%BB%BAuni-app-1">创建uni-app</a></h3><p><strong>使用正式版</strong>（对应HBuilderX最新正式版）</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue my-project</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>使用alpha版</strong>（对应HBuilderX最新alpha版）</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue#alpha my-alpha-project</span><br></pre></td></tr></tbody></table></figure>
-
-<p>此时，会提示选择项目模板，初次体验建议选择 <code>hello uni-app</code> 项目模板，如下所示：</p>
-]]></content>
-      <categories>
-        <category>uni-app</category>
-      </categories>
-      <tags>
-        <tag>uni</tag>
-        <tag>cli</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>TimescaleDB 安装&amp;使用</title>
     <url>/2021/04/03/db/timescaledb/</url>
     <content><![CDATA[<h2 id="docker-compose-yml"><a href="#docker-compose-yml" class="headerlink" title="docker-compose.yml"></a>docker-compose.yml</h2><figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">timescaledb:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">postgistime</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">timescale/timescaledb-postgis:latest-pg13</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"5432:5432"</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">xxx</span> </span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">xxxxx</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/var/lib/postgresql:rw</span></span><br></pre></td></tr></tbody></table></figure>
@@ -287,41 +264,27 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/11/03/es/superset/</url>
-    <content><![CDATA[<h1 id="Superset"><a href="#Superset" class="headerlink" title="Superset"></a>Superset</h1><p><a href="https://blog.csdn.net/whq12789/article/details/89640453">https://blog.csdn.net/whq12789/article/details/89640453</a></p>
-<p>准备环境docker</p>
-<p>然后执行命令</p>
-<p>docker pull amancevice/superset</p>
-<p>docker run –detach –name superset -p 8088:8088 -v ./superset:/usr/local/lib/python3.6/site-packages/superset/ amancevice/superset</p>
-<p>docker exec -it superset  superset db upgrade</p>
-<p>docker exec -it superset superset-init</p>
-<p>回车回车</p>
-<p>输入密码</p>
-<p>——安装完成</p>
-<p>输入IP:8088访问</p>
-<p><a href="http://192.168.91.146:8088/">http://192.168.91.146:8088</a></p>
-<p>用户名admin</p>
-<p>密码是刚才的密码</p>
-<p>加数据源</p>
-<p>sources——databases</p>
-<p>右上角加号：add a new record</p>
-<p>Database中填写个名称</p>
-<p>SQLAlchemy URI中填写</p>
-<p>postgresql://scott:tiger@localhost/mydatabase</p>
-<p>加表</p>
-<p>sources——tables</p>
-<p>右上角加号：add a new record</p>
-<p>选择数据库</p>
-<p>填写schema和table name即可</p>
-<p>点击表进入进行统计处理</p>
-<p>点击Datasource &amp; Chart Type——Visualization Type 下的Table字样可以选择Chart形式</p>
-<p>需要改源码的话，到docker中的</p>
-<p>/usr/local/lib/python3.6/site-packages/superset/</p>
-<p>目录</p>
-<p>汉化</p>
-<p><a href="https://blog.csdn.net/u014589856/article/details/103582824">https://blog.csdn.net/u014589856/article/details/103582824</a></p>
+    <title>uni-cli</title>
+    <url>/2020/06/08/dcloud/uni-app/</url>
+    <content><![CDATA[<p>【<a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">UNI-CLI</a>】</p>
+<h3 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">环境安装</a></h3><p>全局安装vue-cli</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="创建uni-app"><a href="#创建uni-app" class="headerlink" title="创建uni-app"></a><a href="https://uniapp.dcloud.io/quickstart?id=%E5%88%9B%E5%BB%BAuni-app-1">创建uni-app</a></h3><p><strong>使用正式版</strong>（对应HBuilderX最新正式版）</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue my-project</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>使用alpha版</strong>（对应HBuilderX最新alpha版）</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue#alpha my-alpha-project</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时，会提示选择项目模板，初次体验建议选择 <code>hello uni-app</code> 项目模板，如下所示：</p>
 ]]></content>
+      <categories>
+        <category>uni-app</category>
+      </categories>
+      <tags>
+        <tag>uni</tag>
+        <tag>cli</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
@@ -364,21 +327,39 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2020/06/08/nodejs/npm/</url>
-    <content><![CDATA[<p>cnpm</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm adduser --registry http://nexus.domain.cn/repository/npm-hosted/</span><br><span class="line">user: user</span><br><span class="line">password: dev123</span><br><span class="line">email :  dev@domain.com</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="node-sass-修改地址"><a href="#node-sass-修改地址" class="headerlink" title="node-sass 修改地址"></a>node-sass 修改地址</h3><figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Linux 执行命令权限问题，加上参数：</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">--unsafe-perm</span><br></pre></td></tr></tbody></table></figure>
-
+    <url>/2020/11/03/es/superset/</url>
+    <content><![CDATA[<h1 id="Superset"><a href="#Superset" class="headerlink" title="Superset"></a>Superset</h1><p><a href="https://blog.csdn.net/whq12789/article/details/89640453">https://blog.csdn.net/whq12789/article/details/89640453</a></p>
+<p>准备环境docker</p>
+<p>然后执行命令</p>
+<p>docker pull amancevice/superset</p>
+<p>docker run –detach –name superset -p 8088:8088 -v ./superset:/usr/local/lib/python3.6/site-packages/superset/ amancevice/superset</p>
+<p>docker exec -it superset  superset db upgrade</p>
+<p>docker exec -it superset superset-init</p>
+<p>回车回车</p>
+<p>输入密码</p>
+<p>——安装完成</p>
+<p>输入IP:8088访问</p>
+<p><a href="http://192.168.91.146:8088/">http://192.168.91.146:8088</a></p>
+<p>用户名admin</p>
+<p>密码是刚才的密码</p>
+<p>加数据源</p>
+<p>sources——databases</p>
+<p>右上角加号：add a new record</p>
+<p>Database中填写个名称</p>
+<p>SQLAlchemy URI中填写</p>
+<p>postgresql://scott:tiger@localhost/mydatabase</p>
+<p>加表</p>
+<p>sources——tables</p>
+<p>右上角加号：add a new record</p>
+<p>选择数据库</p>
+<p>填写schema和table name即可</p>
+<p>点击表进入进行统计处理</p>
+<p>点击Datasource &amp; Chart Type——Visualization Type 下的Table字样可以选择Chart形式</p>
+<p>需要改源码的话，到docker中的</p>
+<p>/usr/local/lib/python3.6/site-packages/superset/</p>
+<p>目录</p>
+<p>汉化</p>
+<p><a href="https://blog.csdn.net/u014589856/article/details/103582824">https://blog.csdn.net/u014589856/article/details/103582824</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -444,6 +425,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Grafana安装使用</title>
+    <url>/2020/06/04/ops/grafana/</url>
+    <content><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>Grafana</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Frp安装使用</title>
     <url>/2020/04/29/ops/frp/</url>
     <content><![CDATA[<h2 id="FRP"><a href="#FRP" class="headerlink" title="FRP"></a>FRP</h2><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</p>
@@ -481,30 +474,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven 打包发布</title>
-    <url>/2020/04/29/ops/mavenrelease/</url>
-    <content><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>maven</tag>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Grafana安装使用</title>
-    <url>/2020/06/04/ops/grafana/</url>
-    <content><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>Grafana</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Jenkins 安装使用</title>
     <url>/2020/04/29/ops/jenkins/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo https:*//pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key</span><br><span class="line">yum install jenkins -y</span><br><span class="line">systemctl start jenkins</span><br><span class="line">systemctl enable jenkins</span><br></pre></td></tr></tbody></table></figure>
@@ -530,6 +499,18 @@
       <tags>
         <tag>jenkins</tag>
         <tag>ops</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven 打包发布</title>
+    <url>/2020/04/29/ops/mavenrelease/</url>
+    <content><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>maven</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -660,17 +641,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Gradle 插件开发</title>
-    <url>/2020/06/08/plugins/gradle-plugin/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>插件开发</category>
-      </categories>
-      <tags>
-        <tag>plugin</tag>
-        <tag>gradle</tag>
-        <tag>android</tag>
-      </tags>
+    <title></title>
+    <url>/2020/06/08/nodejs/npm/</url>
+    <content><![CDATA[<p>cnpm</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm adduser --registry http://nexus.domain.cn/repository/npm-hosted/</span><br><span class="line">user: user</span><br><span class="line">password: dev123</span><br><span class="line">email :  dev@domain.com</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="node-sass-修改地址"><a href="#node-sass-修改地址" class="headerlink" title="node-sass 修改地址"></a>node-sass 修改地址</h3><figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Linux 执行命令权限问题，加上参数：</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">--unsafe-perm</span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>VSCode 插件开发</title>
@@ -712,9 +699,71 @@
       </tags>
   </entry>
   <entry>
+    <title>Gradle 插件开发</title>
+    <url>/2020/06/08/plugins/gradle-plugin/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>插件开发</category>
+      </categories>
+      <tags>
+        <tag>plugin</tag>
+        <tag>gradle</tag>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/2020/06/10/redis/redis-script/</url>
     <content><![CDATA[<p>redis-script</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2020/06/16/typescript/android/</url>
+    <content><![CDATA[<p>安装ndk</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">sdkmanager <span class="string">'ndk;21.2.6472646'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>二、安装android-sdk<br>1.下载sdk-tools-linux-4333796.zip</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master share]<span class="comment"># wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip</span></span><br><span class="line">[root@CentOS-Master share]<span class="comment"># unzip sdk-tools-linux-4333796.zip -d android-sdk</span></span><br><span class="line">[root@CentOS-Master share]<span class="comment"># cd android-sdk</span></span><br><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># ls</span></span><br><span class="line"> tools</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>2.配置android环境变量</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># vim /etc/profile</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>输入然后保存</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">"/usr/share/android-sdk"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$ANDROID_HOME</span>/tools:<span class="variable">$ANDROID_HOME</span>/tools/bin:<span class="variable">$ANDROID_HOME</span>/platform-tools:<span class="variable">$PATH</span>"</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>保存配置，重新刷新配置</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># source profile</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装build-tools，platform-tools，platforms的25.0.2版本<br>首先运行：sdkmanager –list</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># sdkmanager --list</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">sdkmanager <span class="string">"build-tools;29.0.3"</span> <span class="string">"platforms;android-29"</span> <span class="string">"ndk-bundle"</span> <span class="string">"extras;android;m2repository"</span> <span class="string">"extras;google;m2repository"</span> <span class="string">"extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"</span> <span class="string">"tools"</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+<p>三、安装JDK<br>下载压缩包并配置环境变量</p>
+<p>保存配置，重新刷新配置</p>
+<figure class="highlight profile"><table><tbody><tr><td class="code"><pre><span class="line">export GRADLE_USER_HOME=/data/.libs/gradle</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/data/services/jdk/<span class="number">11.0</span><span class="number">.5</span></span><br><span class="line">export MAVEN_HOME=/data/services/maven/<span class="number">3.6</span><span class="number">.3</span></span><br><span class="line">export GRADLE_HOME=/data/services/gradle/<span class="number">6.3</span></span><br><span class="line"></span><br><span class="line">export ANDROID_HOME=/data/services/android</span><br><span class="line"></span><br><span class="line">export NODE_HOME=/data/services/nodejs/v12.16.2</span><br><span class="line">export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</span><br><span class="line"></span><br><span class="line">export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$NODE_HOME/bin:$PATH</span><br><span class="line">export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>[root@CentOS-Master android-sdk]# source profile<br>1<br>四、安装Gradle<br>1.下载Gradle-4.6.all.zip包</p>
+<p>[root@CentOS-Master /]# cd /usr/share<br>[root@CentOS-Master share]# wget <a href="https://downloads.gradle.org/distributions/gradle-4.6-all.zip">https://downloads.gradle.org/distributions/gradle-4.6-all.zip</a><br>1<br>2<br>2.解压</p>
+<p>unzip -D gradle-4.6-all.zip<br>1<br>3.配置环境变量</p>
+<p>[root@CentOS-Master android-sdk]# vim /etc/profile<br>1<br>输入然后保存</p>
+<p>export GRADLE_HOME=/usr/share/gradle-4.6<br>export PATH=$PATH:$GRADLE_HOME/bin<br>1<br>2<br>保存配置，重新刷新配置</p>
+<p>[root@CentOS-Master android-sdk]# source profile<br>1<br>五、使用Jenkins配置打包Android工程<br>系统管理-系统设置， 添加ANDROID_HOME</p>
+<p>系统设置-全局工具配置， 添加SDK，Gradle</p>
+<p>2.创建任务, 输入任务名称，选择自由风格的软件项目</p>
+<p>构建参数</p>
+<p>参数化构建过程，我们可以增加一些参数来控制自己的项目的构建，这里对应的变量是工程下面的gradle.properties里面定义的，然后build.gradle脚本会采用这里配置的去动态构建工程，注意一定要与properties文件中一一对应。<br>如果没有安装Git Parameter 插件，先到系统管理–插件管理安装</p>
+<p>源码管理<br>这个tab下面主要就是用来指定源码存放位置的</p>
+<p>构建，选择use gradle wrapper ， 填写Tasks<br>clean<br>assemble$BUILD_TYPE<br>1<br>2<br>点开高级：Pass all job parameters as Project properties，一定要勾选这个选项，代表把你上面的那些参数用来当作gradle构建参数，否则的话是不会起作用的。<br>6.构建后操作，输出文件</p>
+<p>————————————————<br>版权声明：本文为CSDN博主「朱建伟」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/weijizhu1000/java/article/details/95752438">https://blog.csdn.net/weijizhu1000/java/article/details/95752438</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -780,55 +829,6 @@
 <p><a href="https://user-images.githubusercontent.com/25004510/59961497-1de16380-950b-11e9-8a73-9e389fe79d3a.png"><img data-src="https://user-images.githubusercontent.com/25004510/59961497-1de16380-950b-11e9-8a73-9e389fe79d3a.png" alt="image"></a></p>
 <p>嗯，还不错</p>
 <h1 id="完"><a href="#完" class="headerlink" title="完"></a>完</h1><p>差不多就这样了，有缘再见吧。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/06/16/typescript/android/</url>
-    <content><![CDATA[<p>安装ndk</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">sdkmanager <span class="string">'ndk;21.2.6472646'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>二、安装android-sdk<br>1.下载sdk-tools-linux-4333796.zip</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master share]<span class="comment"># wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip</span></span><br><span class="line">[root@CentOS-Master share]<span class="comment"># unzip sdk-tools-linux-4333796.zip -d android-sdk</span></span><br><span class="line">[root@CentOS-Master share]<span class="comment"># cd android-sdk</span></span><br><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># ls</span></span><br><span class="line"> tools</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>2.配置android环境变量</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># vim /etc/profile</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>输入然后保存</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">"/usr/share/android-sdk"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$ANDROID_HOME</span>/tools:<span class="variable">$ANDROID_HOME</span>/tools/bin:<span class="variable">$ANDROID_HOME</span>/platform-tools:<span class="variable">$PATH</span>"</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p>保存配置，重新刷新配置</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># source profile</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>安装build-tools，platform-tools，platforms的25.0.2版本<br>首先运行：sdkmanager –list</p>
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">[root@CentOS-Master android-sdk]<span class="comment"># sdkmanager --list</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">sdkmanager <span class="string">"build-tools;29.0.3"</span> <span class="string">"platforms;android-29"</span> <span class="string">"ndk-bundle"</span> <span class="string">"extras;android;m2repository"</span> <span class="string">"extras;google;m2repository"</span> <span class="string">"extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"</span> <span class="string">"tools"</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-<p>三、安装JDK<br>下载压缩包并配置环境变量</p>
-<p>保存配置，重新刷新配置</p>
-<figure class="highlight profile"><table><tbody><tr><td class="code"><pre><span class="line">export GRADLE_USER_HOME=/data/.libs/gradle</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/data/services/jdk/<span class="number">11.0</span><span class="number">.5</span></span><br><span class="line">export MAVEN_HOME=/data/services/maven/<span class="number">3.6</span><span class="number">.3</span></span><br><span class="line">export GRADLE_HOME=/data/services/gradle/<span class="number">6.3</span></span><br><span class="line"></span><br><span class="line">export ANDROID_HOME=/data/services/android</span><br><span class="line"></span><br><span class="line">export NODE_HOME=/data/services/nodejs/v12.16.2</span><br><span class="line">export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</span><br><span class="line"></span><br><span class="line">export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$NODE_HOME/bin:$PATH</span><br><span class="line">export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>[root@CentOS-Master android-sdk]# source profile<br>1<br>四、安装Gradle<br>1.下载Gradle-4.6.all.zip包</p>
-<p>[root@CentOS-Master /]# cd /usr/share<br>[root@CentOS-Master share]# wget <a href="https://downloads.gradle.org/distributions/gradle-4.6-all.zip">https://downloads.gradle.org/distributions/gradle-4.6-all.zip</a><br>1<br>2<br>2.解压</p>
-<p>unzip -D gradle-4.6-all.zip<br>1<br>3.配置环境变量</p>
-<p>[root@CentOS-Master android-sdk]# vim /etc/profile<br>1<br>输入然后保存</p>
-<p>export GRADLE_HOME=/usr/share/gradle-4.6<br>export PATH=$PATH:$GRADLE_HOME/bin<br>1<br>2<br>保存配置，重新刷新配置</p>
-<p>[root@CentOS-Master android-sdk]# source profile<br>1<br>五、使用Jenkins配置打包Android工程<br>系统管理-系统设置， 添加ANDROID_HOME</p>
-<p>系统设置-全局工具配置， 添加SDK，Gradle</p>
-<p>2.创建任务, 输入任务名称，选择自由风格的软件项目</p>
-<p>构建参数</p>
-<p>参数化构建过程，我们可以增加一些参数来控制自己的项目的构建，这里对应的变量是工程下面的gradle.properties里面定义的，然后build.gradle脚本会采用这里配置的去动态构建工程，注意一定要与properties文件中一一对应。<br>如果没有安装Git Parameter 插件，先到系统管理–插件管理安装</p>
-<p>源码管理<br>这个tab下面主要就是用来指定源码存放位置的</p>
-<p>构建，选择use gradle wrapper ， 填写Tasks<br>clean<br>assemble$BUILD_TYPE<br>1<br>2<br>点开高级：Pass all job parameters as Project properties，一定要勾选这个选项，代表把你上面的那些参数用来当作gradle构建参数，否则的话是不会起作用的。<br>6.构建后操作，输出文件</p>
-<p>————————————————<br>版权声明：本文为CSDN博主「朱建伟」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/weijizhu1000/java/article/details/95752438">https://blog.csdn.net/weijizhu1000/java/article/details/95752438</a></p>
 ]]></content>
   </entry>
   <entry>

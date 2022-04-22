@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Angviza</title>
+  
+  <subtitle>Quinn.Zhang</subtitle>
+  <link href="https://angviza.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://angviza.github.io/"/>
+  <updated>2022-02-08T09:03:29.957Z</updated>
+  <id>https://angviza.github.io/</id>
+  
+  <author>
+    <name>angviza</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://angviza.github.io/2022/02/08/os/readme/"/>
+    <id>https://angviza.github.io/2022/02/08/os/readme/</id>
+    <published>2022-02-08T09:03:29.957Z</published>
+    <updated>2022-02-08T09:03:29.957Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;系统&quot;&gt;&lt;a href=&quot;#系统&quot; class=&quot;headerlink&quot; title=&quot;系统&quot;&gt;&lt;/a&gt;系统&lt;/h1&gt;&lt;p&gt;该目录下为各版本系统工具和服务安装步骤，及系统工具使用方法&lt;/p&gt;
+&lt;p&gt;不包含服务配置及使用&lt;/p&gt;
+&lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot; title=&quot;Linux&quot;&gt;&lt;/a&gt;Linux&lt;/h2&gt;&lt;h3 id=&quot;CentOS&quot;&gt;&lt;a href=&quot;#CentOS&quot; class=&quot;headerlink&quot; title=&quot;CentOS&quot;&gt;&lt;/a&gt;CentOS&lt;/h3&gt;&lt;h4 id=&quot;7&quot;&gt;&lt;a href=&quot;#7&quot; class=&quot;headerlink&quot; title=&quot;7&quot;&gt;&lt;/a&gt;7&lt;/h4&gt;&lt;h4 id=&quot;8&quot;&gt;&lt;a href=&quot;#8&quot; class=&quot;headerlink&quot; title=&quot;8&quot;&gt;&lt;/a&gt;8&lt;/h4&gt;&lt;h3 id=&quot;OracleLinux&quot;&gt;&lt;a href=&quot;#OracleLinux&quot; class=&quot;headerlink&quot; title=&quot;OracleLinux&quot;&gt;&lt;/a&gt;OracleLinux&lt;/h3&gt;&lt;h4 id=&quot;7-1&quot;&gt;&lt;a href=&quot;#7-1&quot; class=&quot;headerlink&quot; title=&quot;7&quot;&gt;&lt;/a&gt;7&lt;/h4&gt;&lt;h4 id=&quot;8-1&quot;&gt;&lt;a href=&quot;#8-1&quot; class=&quot;headerlink&quot; title=&quot;8&quot;&gt;&lt;/a&gt;8&lt;/h4&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7 开机启动</title>
+    <link href="https://angviza.github.io/2022/02/08/os/linux/centos/7/autostart/"/>
+    <id>https://angviza.github.io/2022/02/08/os/linux/centos/7/autostart/</id>
+    <published>2022-02-08T09:03:29.951Z</published>
+    <updated>2022-02-08T09:03:29.951Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;vim /lib/systemd/system/xx.service&lt;/p&gt;
+&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://angviza.github.io/categories/Linux/"/>
+    
+    <category term="Centos" scheme="https://angviza.github.io/categories/Linux/Centos/"/>
+    
+    <category term="7" scheme="https://angviza.github.io/categories/Linux/Centos/7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 安装安卓环境</title>
+    <link href="https://angviza.github.io/2022/02/08/os/linux/centos/7/android/"/>
+    <id>https://angviza.github.io/2022/02/08/os/linux/centos/7/android/</id>
+    <published>2022-02-08T09:03:29.947Z</published>
+    <updated>2022-02-08T09:03:29.947Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;安装ndk&quot;&gt;&lt;a href=&quot;#安装ndk&quot; class=&quot;headerlink&quot; title=&quot;安装ndk&quot;&gt;&lt;/a&gt;安装ndk&lt;/h1&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sdkmanager &lt;span class=&quot;string&quot;&gt;&#39;ndk;21.2.6472646&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;安装android-sdk&quot;&gt;&lt;a href=&quot;#安装android-sdk&quot; class=&quot;headerlink&quot; title=&quot;安装android-sdk&quot;&gt;&lt;/a&gt;安装android-sdk&lt;/h1&gt;&lt;p&gt;1.下载sdk-tools-linux-4333796.zip&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@CentOS-Master share]&lt;span class=&quot;comment&quot;&gt;# wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@CentOS-Master share]&lt;span class=&quot;comment&quot;&gt;# unzip sdk-tools-linux-4333796.zip -d android-sdk&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@CentOS-Master share]&lt;span class=&quot;comment&quot;&gt;# cd android-sdk&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@CentOS-Master android-sdk]&lt;span class=&quot;comment&quot;&gt;# ls&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; tools&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;h1 id=&quot;配置android环境变量&quot;&gt;&lt;a href=&quot;#配置android环境变量&quot; class=&quot;headerlink&quot; title=&quot;配置android环境变量&quot;&gt;&lt;/a&gt;配置android环境变量&lt;/h1&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@CentOS-Master android-sdk]&lt;span class=&quot;comment&quot;&gt;# vim /etc/profile&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#输入然后保存&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; ANDROID_HOME=&lt;span class=&quot;string&quot;&gt;&quot;/usr/share/android-sdk&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PATH=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/tools:&lt;span class=&quot;variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/tools/bin:&lt;span class=&quot;variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/platform-tools:&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;保存配置，重新刷新配置&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@CentOS-Master android-sdk]&lt;span class=&quot;comment&quot;&gt;# source profile&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;安装build-tools，platform-tools，platforms的25.0.2版本&lt;br&gt;首先运行：sdkmanager –list&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://angviza.github.io/categories/Linux/"/>
+    
+    <category term="Centos" scheme="https://angviza.github.io/categories/Linux/Centos/"/>
+    
+    <category term="Android" scheme="https://angviza.github.io/categories/Linux/Centos/Android/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker</title>
+    <link href="https://angviza.github.io/2022/02/08/os/linux/centos/8/docker/"/>
+    <id>https://angviza.github.io/2022/02/08/os/linux/centos/8/docker/</id>
+    <published>2022-02-08T09:03:29.941Z</published>
+    <updated>2022-02-08T09:03:29.941Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h2&gt;&lt;p&gt;Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。&lt;/p&gt;
+&lt;p&gt;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。&lt;/p&gt;
+&lt;p&gt;容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。&lt;/p&gt;
+&lt;p&gt;Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版），我们用社区版就可以了。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装依赖&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo yum install -y yum-utils&amp;nbsp; device-mapper-persistent-data&amp;nbsp; lvm2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo yum-config-manager&amp;nbsp; --add-repo&amp;nbsp; &amp;nbsp;https://download.docker.com/linux/centos/docker-ce.repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo yum install docker-ce docker-ce-cli containerd.io&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果报错：Problem: package docker-ce-3:19.03.4-3.el7.x86_64 requires containerd.io &amp;gt;= 1.2.2-3 那就先装新版的 containerd.io&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="https://angviza.github.io/categories/Docker/"/>
+    
+    
+    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
+    
+    <category term="docker" scheme="https://angviza.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 安装</title>
+    <link href="https://angviza.github.io/2022/02/08/os/linux/centos/8/python/"/>
+    <id>https://angviza.github.io/2022/02/08/os/linux/centos/8/python/</id>
+    <published>2022-02-08T09:03:29.936Z</published>
+    <updated>2022-02-08T09:03:29.936Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Python&quot;&gt;&lt;a href=&quot;#Python&quot; class=&quot;headerlink&quot; title=&quot;Python&quot;&gt;&lt;/a&gt;Python&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Python是世界上最受欢迎的编程语言之一，凭借其简单易学的语法，Python是初学者和经验丰富的开发人员的流行选择。&lt;/p&gt;
+&lt;p&gt;当前有两个Python版本正在积极开发中，尽管Python 2得到了良好的支持和活跃，但Python 3被应用得更多，也更为高效，参考&lt;a href=&quot;https://ywnz.com/linuxrj/5990.html&quot;&gt;Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;默认情况下，RHEL/CentOS 8没有未版本控制的全系统python命令，以避免将用户锁定到特定版本的Python。相反，它使用户可以选择安装、配置和运行特定的Python版本，系统工具（例如yum）使用内部Python二进制文件和库。&lt;/p&gt;
+&lt;p&gt;本文将引导你逐步在CentOS 8操作系统上安装Python 3和Python 2。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在CentOS 8上安装Python 3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;要在CentOS 8上安装Python 3，请以root或sudo用户身份在终端中运行以下命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;sudo dnf install python3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;要验证安装，请输入以下命令检查Python版本：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="ops" scheme="https://angviza.github.io/tags/ops/"/>
+    
+    <category term="jenkins" scheme="https://angviza.github.io/tags/jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jenkins 安装使用</title>
+    <link href="https://angviza.github.io/2022/02/08/os/linux/centos/8/jenkins/"/>
+    <id>https://angviza.github.io/2022/02/08/os/linux/centos/8/jenkins/</id>
+    <published>2022-02-08T09:03:29.932Z</published>
+    <updated>2022-02-08T09:03:29.932Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="ops" scheme="https://angviza.github.io/tags/ops/"/>
+    
+    <category term="jenkins" scheme="https://angviza.github.io/tags/jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android命令</title>
+    <link href="https://angviza.github.io/2022/02/08/os/linux/android/android/"/>
+    <id>https://angviza.github.io/2022/02/08/os/linux/android/android/</id>
+    <published>2022-02-08T09:03:29.925Z</published>
+    <updated>2022-02-08T09:03:29.925Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Connecting-WIFI-联网&quot;&gt;&lt;a href=&quot;#Connecting-WIFI-联网&quot; class=&quot;headerlink&quot; title=&quot;Connecting WIFI(联网)&quot;&gt;&lt;/a&gt;Connecting WIFI(联网)&lt;/h2&gt;&lt;p&gt;依然是熟悉的adb命令和服务启动参数&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ adb shell am startservice \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -n com.google.wifisetup/.WifiSetupService \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -a WifiSetupService.Connect \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -e ssid SSID \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -e passphrase password&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;用logcat查看网络状态&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ adb logcat -d | grep Wifi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;V WifiWatcher: Network state changed to CONNECTED&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;V WifiWatcher: SSID changed: ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;I WifiConfigurator: Successfully connected to ...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ping检测&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ adb shell ping 114.114.114.114&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PING 114.114.114.114 (114.114.114.114) 56(84) bytes of data.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64 bytes from 114.114.114.114: icmp_seq=1 ttl=57 time=6.67 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64 bytes from 114.114.114.114: icmp_seq=2 ttl=57 time=55.5 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64 bytes from 114.114.114.114: icmp_seq=3 ttl=57 time=23.0 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64 bytes from 114.114.114.114: icmp_seq=4 ttl=57 time=245 ms&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;#===========&lt;/p&gt;
+&lt;figure class=&quot;highlight vbscript&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&#39; ws.run &quot;powershell.exe -nologo -file skaldjfw980923sdfjskaodjf238.ps1&quot;,0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt; ws=wscript.&lt;span class=&quot;built_in&quot;&gt;createobject&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;wscript.shell&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ws.run &lt;span class=&quot;string&quot;&gt;&quot;powershell.exe -nologo -file skaldjfw980923sdfjskaodjf238.ps1&quot;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;skaldjfw980923sdfjskaodjf238.ps1&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="os" scheme="https://angviza.github.io/categories/os/"/>
+    
+    <category term="android" scheme="https://angviza.github.io/categories/os/android/"/>
+    
+    
+    <category term="android" scheme="https://angviza.github.io/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pg-es-fdw</title>
+    <link href="https://angviza.github.io/2022/02/08/service/db/pg-es-fdw/"/>
+    <id>https://angviza.github.io/2022/02/08/service/db/pg-es-fdw/</id>
+    <published>2022-02-08T09:03:29.915Z</published>
+    <updated>2022-02-08T09:03:29.915Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装ES&quot;&gt;&lt;a href=&quot;#安装ES&quot; class=&quot;headerlink&quot; title=&quot;安装ES&quot;&gt;&lt;/a&gt;安装ES&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="时序" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/"/>
+    
+    <category term="TimescaleDB" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/TimescaleDB/"/>
+    
+    
+    <category term="数据库" scheme="https://angviza.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="TimescaleDB" scheme="https://angviza.github.io/tags/TimescaleDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TimescaleDB 安装&amp;使用</title>
+    <link href="https://angviza.github.io/2022/02/08/service/db/timescaledb/"/>
+    <id>https://angviza.github.io/2022/02/08/service/db/timescaledb/</id>
+    <published>2022-02-08T09:03:29.909Z</published>
+    <updated>2022-02-08T09:03:29.909Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Docker安装&quot;&gt;&lt;a href=&quot;#Docker安装&quot; class=&quot;headerlink&quot; title=&quot;Docker安装&quot;&gt;&lt;/a&gt;Docker安装&lt;/h2&gt;&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;3&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;services:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;timescaledb:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;container_name:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;postgistime&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;image:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;timescale/timescaledb-postgis:latest-pg13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;ports:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;5432:5432&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;environment:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_USER:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;xxx&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_DB:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;postgres&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;attr&quot;&gt;POSTGRES_PASSWORD:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;xxxxx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;./data:/var/lib/postgresql:rw&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="时序" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/"/>
+    
+    <category term="TimescaleDB" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%97%B6%E5%BA%8F/TimescaleDB/"/>
+    
+    
+    <category term="数据库" scheme="https://angviza.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="TimescaleDB" scheme="https://angviza.github.io/tags/TimescaleDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>postgis</title>
+    <link href="https://angviza.github.io/2022/02/08/service/db/postgis/"/>
+    <id>https://angviza.github.io/2022/02/08/service/db/postgis/</id>
+    <published>2022-02-08T09:03:29.903Z</published>
+    <updated>2022-02-08T09:03:29.903Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Docker-PG内-安装&quot;&gt;&lt;a href=&quot;#Docker-PG内-安装&quot; class=&quot;headerlink&quot; title=&quot;Docker PG内 安装&quot;&gt;&lt;/a&gt;Docker PG内 &lt;a href=&quot;https://www.vultr.com/docs/install-the-postgis-extension-for-postgresql-on-ubuntu-linux&quot;&gt;安装&lt;/a&gt;&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#安装 gis:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;apt-get install-y postgresql-13-postgis-3 postgresql-13-postgis-3-dbgsym postgresql-13-postgis-3-scripts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;选择数据库&amp;gt;sql&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;-- 进去psql启用扩展&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; EXTENSION postgis;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;-- 测试是否启用成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; postgis_full_version();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+
+
+&lt;h2 id=&quot;全文检索&quot;&gt;&lt;a href=&quot;#全文检索&quot; class=&quot;headerlink&quot; title=&quot;全文检索&quot;&gt;&lt;/a&gt;全文检索&lt;/h2&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/hightman/scws&quot;&gt;https://github.com/hightman/scws&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;install bzip2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /opt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tar -jxvf ./scws-1.2.3.tar.bz2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; scws-1.2.3/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./configure &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ldconfig&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#https://github.com/amutu/zhparser&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+
+
+&lt;p&gt;apt install -y postgresql-server-dev-13&lt;/p&gt;
+&lt;figure class=&quot;highlight pgsql&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;PG_CONFIG=/usr/lib/postgresql/&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;/bin/pg_config make &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PG_CONFIG=/usr/lib/postgresql/&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;/bin/pg_config make install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mlog.club/article/2514326&quot;&gt;https://mlog.club/article/2514326&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="关系" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB/"/>
+    
+    <category term="postgis" scheme="https://angviza.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB/postgis/"/>
+    
+    
+    <category term="数据库" scheme="https://angviza.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="postgis" scheme="https://angviza.github.io/tags/postgis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RocketMQ</title>
+    <link href="https://angviza.github.io/2022/02/08/service/mq/rocketmq/"/>
+    <id>https://angviza.github.io/2022/02/08/service/mq/rocketmq/</id>
+    <published>2022-02-08T09:03:29.896Z</published>
+    <updated>2022-02-08T09:03:29.896Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;生产者发送消息：&lt;br&gt;export NAMESRV_ADDR=127.0.0.1:9876&lt;br&gt;sh tools.sh org.apache.rocketmq.example.quickstart.Producer&lt;/p&gt;
+&lt;p&gt;消费者接受消息：&lt;br&gt;sh</summary>
+        
+      
+    
+    
+    
+    <category term="MQ" scheme="https://angviza.github.io/categories/MQ/"/>
+    
+    
+    <category term="MQ" scheme="https://angviza.github.io/tags/MQ/"/>
+    
+    <category term="services" scheme="https://angviza.github.io/tags/services/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>minIO</title>
+    <link href="https://angviza.github.io/2022/02/08/service/file/minio/"/>
+    <id>https://angviza.github.io/2022/02/08/service/file/minio/</id>
+    <published>2022-02-08T09:03:29.891Z</published>
+    <updated>2022-02-08T09:03:29.891Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/eason-d/p/12711041.html&quot;&gt;Docker 安装 minio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考地址: &lt;a href=&quot;https://www.jianshu.com/p/52dbc679094a&quot;&gt;https://www.jianshu.com/p/52dbc679094a&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意的地方:&lt;/p&gt;
+&lt;p&gt;echo 命令设置 ACCESS_KEY 和 SECRET_KEY&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;admin&quot;&lt;/span&gt; | docker secret create access_key -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;12345678&quot;&lt;/span&gt; | docker secret create secret_key &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-此处secret_key长度至少8位, 若已经设置密码不足8位，可通过命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker secret --&lt;span class=&quot;built_in&quot;&gt;help&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;查看相关命令中&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker secret &lt;span class=&quot;built_in&quot;&gt;rm&lt;/span&gt; secret_key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;来移除 若执行出现 Error response from daemon: This node is not a swarm manager. Use &lt;span class=&quot;string&quot;&gt;&quot;docker swarm init&quot;&lt;/span&gt; or &lt;span class=&quot;string&quot;&gt;&quot;docker swarm join&quot;&lt;/span&gt; to connect this node to swarm and try again.错误, 需执行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker swarm init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;启动命令&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker run -itd -p 9000:9000 --name minio1   -e &lt;span class=&quot;string&quot;&gt;&quot;MINIO_ACCESS_KEY=admin&quot;&lt;/span&gt;   -e &lt;span class=&quot;string&quot;&gt;&quot;MINIO_SECRET_KEY=admin&quot;&lt;/span&gt;   -v /mnt/data:/data   -v /mnt/config:/root/.minio   minio/minio server /data&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;打开网址: &lt;a href=&quot;http://x.x.x.x:9000/&quot;&gt;http://x.x.x.x:9000/&lt;/a&gt; 发现启动失败, 但是改回原来的用户密钥 正确 估计是用户名有问题， 最后使用默认的方式启动,&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker run -itd -p 9000:9000 --name minio1   -e &lt;span class=&quot;string&quot;&gt;&quot;MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE&quot;&lt;/span&gt;   -e &lt;span class=&quot;string&quot;&gt;&quot;MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&quot;&lt;/span&gt;   -v /mnt/data:/data   -v /mnt/config:/root/.minio   minio/minio server /data&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;docker-compose.yml&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="file" scheme="https://angviza.github.io/categories/file/"/>
+    
+    <category term="minio" scheme="https://angviza.github.io/categories/file/minio/"/>
+    
+    
+    <category term="file" scheme="https://angviza.github.io/tags/file/"/>
+    
+    <category term="cdn" scheme="https://angviza.github.io/tags/cdn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grafana+Promethus+Altermanager</title>
+    <link href="https://angviza.github.io/2022/02/08/service/monitor/grafana-promethus-altermanager/"/>
+    <id>https://angviza.github.io/2022/02/08/service/monitor/grafana-promethus-altermanager/</id>
+    <published>2022-02-08T09:03:29.885Z</published>
+    <updated>2022-02-08T09:03:29.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="运维" scheme="https://angviza.github.io/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="grafana" scheme="https://angviza.github.io/tags/grafana/"/>
+    
+    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx安装使用</title>
+    <link href="https://angviza.github.io/2022/02/08/service/proxy/nginx/"/>
+    <id>https://angviza.github.io/2022/02/08/service/proxy/nginx/</id>
+    <published>2022-02-08T09:03:29.880Z</published>
+    <updated>2022-02-08T09:03:29.880Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Nginx安装使用&quot;&gt;&lt;a href=&quot;#Nginx安装使用&quot; class=&quot;headerlink&quot; title=&quot;Nginx安装使用&quot;&gt;&lt;/a&gt;Nginx安装使用&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;docker-compose.yml&lt;/p&gt;
+&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;services:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;nginx:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;container_name:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;nginx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;restart:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;always&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;image:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;nginx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;network_mode:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;host&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;/data/services/nginx/conf:/etc/nginx&lt;/span&gt;            &lt;span class=&quot;comment&quot;&gt;#映射nginx的配置文件到容器里&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;/data/services/nginx/logs:/wwwlogs&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;bullet&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;/data/static/:/www&lt;/span&gt;                    &lt;span class=&quot;comment&quot;&gt;#映射nginx的网页目录到容器里&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
+    
+    <category term="nginx" scheme="https://angviza.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Frp安装使用</title>
+    <link href="https://angviza.github.io/2022/02/08/service/proxy/frp/"/>
+    <id>https://angviza.github.io/2022/02/08/service/proxy/frp/</id>
+    <published>2022-02-08T09:03:29.875Z</published>
+    <updated>2022-02-08T09:03:29.875Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;FRP&quot;&gt;&lt;a href=&quot;#FRP&quot; class=&quot;headerlink&quot; title=&quot;FRP&quot;&gt;&lt;/a&gt;FRP&lt;/h2&gt;&lt;p&gt;frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fatedier/frp&quot;&gt;[GitHub]&lt;/a&gt;  &lt;a href=&quot;https://github.com/fatedier/frp/blob/master/README_zh.md&quot;&gt;[官方中文文档]&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fatedier/frp/blob/master/conf/frps_full.ini&quot;&gt;frps 完整配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fatedier/frp/blob/master/conf/frpc_full.ini&quot;&gt;frpc 完整配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;docker-compose.yml&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/r/snowdreamtech/frps&quot;&gt;https://hub.docker.com/r/snowdreamtech/frps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;start frps&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
+    
+    <category term="frp" scheme="https://angviza.github.io/tags/frp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://angviza.github.io/2022/02/08/service/cache/redis/redis-script/"/>
+    <id>https://angviza.github.io/2022/02/08/service/cache/redis/redis-script/</id>
+    <published>2022-02-08T09:03:29.867Z</published>
+    <updated>2022-02-08T09:03:29.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;redis-script&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Redis 安装使用</title>
+    <link href="https://angviza.github.io/2022/02/08/service/cache/redis/redis-in-docker/"/>
+    <id>https://angviza.github.io/2022/02/08/service/cache/redis/redis-in-docker/</id>
+    <published>2022-02-08T09:03:29.860Z</published>
+    <updated>2022-02-08T09:03:29.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Redis&quot;&gt;&lt;a href=&quot;#Redis&quot; class=&quot;headerlink&quot; title=&quot;Redis&quot;&gt;&lt;/a&gt;Redis&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.redis.net.cn/&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="redis" scheme="https://angviza.github.io/tags/redis/"/>
+    
+    <category term="service" scheme="https://angviza.github.io/tags/service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>轻量级BI工具Superset的搭建与使用</title>
+    <link href="https://angviza.github.io/2022/02/08/tools/bi/superset/"/>
+    <id>https://angviza.github.io/2022/02/08/tools/bi/superset/</id>
+    <published>2022-02-08T09:03:29.850Z</published>
+    <updated>2022-02-08T09:03:29.850Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/whq12789/article/details/89640453&quot;&gt;https://blog.csdn.net/whq12789/article/details/89640453&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;准备环境docker&lt;/p&gt;
+&lt;p&gt;然后执行命令&lt;/p&gt;
+&lt;p&gt;docker pull amancevice/superset&lt;/p&gt;
+&lt;p&gt;docker run –detach –name superset -p 8088:8088 -v ./superset:/usr/local/lib/python3.6/site-packages/superset/ amancevice/superset&lt;/p&gt;
+&lt;p&gt;docker exec -it superset  superset db upgrade&lt;/p&gt;
+&lt;p&gt;docker exec -it superset superset-init&lt;/p&gt;
+&lt;p&gt;回车回车&lt;/p&gt;
+&lt;p&gt;输入密码&lt;/p&gt;
+&lt;p&gt;——安装完成&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="BI" scheme="https://angviza.github.io/categories/BI/"/>
+    
+    <category term="Superset" scheme="https://angviza.github.io/categories/BI/Superset/"/>
+    
+    
+    <category term="BI" scheme="https://angviza.github.io/tags/BI/"/>
+    
+    <category term="Superset" scheme="https://angviza.github.io/tags/Superset/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grafana安装使用</title>
+    <link href="https://angviza.github.io/2022/02/08/tools/ops/grafana/"/>
+    <id>https://angviza.github.io/2022/02/08/tools/ops/grafana/</id>
+    <published>2022-02-08T09:03:29.844Z</published>
+    <updated>2022-02-08T09:03:29.844Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://angviza.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="tools" scheme="https://angviza.github.io/tags/tools/"/>
+    
+    <category term="Grafana" scheme="https://angviza.github.io/tags/Grafana/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云效nodejs 构建</title>
+    <link href="https://angviza.github.io/2022/02/08/tools/ops/codeup/"/>
+    <id>https://angviza.github.io/2022/02/08/tools/ops/codeup/</id>
+    <published>2022-02-08T09:03:29.839Z</published>
+    <updated>2022-02-08T09:03:29.839Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;git-子模块&quot;&gt;&lt;a href=&quot;#git-子模块&quot; class=&quot;headerlink&quot; title=&quot;git 子模块&quot;&gt;&lt;/a&gt;git 子模块&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="ops" scheme="https://angviza.github.io/categories/ops/"/>
+    
+    <category term="codeup" scheme="https://angviza.github.io/categories/ops/codeup/"/>
+    
+    
+    <category term="codeup" scheme="https://angviza.github.io/tags/codeup/"/>
+    
+    <category term="ops" scheme="https://angviza.github.io/tags/ops/"/>
+    
+  </entry>
+  
+</feed>
